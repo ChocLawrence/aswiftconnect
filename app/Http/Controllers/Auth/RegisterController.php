@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo;
 
     /**
      * Create a new controller instance.
@@ -37,6 +38,18 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+        if (Auth::check() && Auth::user()->role->id == 1)
+        {
+            $this->redirectTo = route('admin.dashboard');
+
+        }elseif(Auth::check() && Auth::user()->role->id == 2)
+        {
+            $this->redirectTo = route('author.dashboard');
+        
+        } else {
+
+            $this->redirectTo = route('freelancer.dashboard');
+        }
         $this->middleware('guest');
     }
 
@@ -49,9 +62,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'name' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+            'terms'=>'required'
         ]);
     }
 
@@ -63,10 +78,26 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        //fix registraion role id
+        if($data['role_id']=='3'){
+           
+            $role_id=3;
+            $status=0;
+
+        }else{
+            $role_id=2;
+            $status=1;
+        }
+        
+        $user = User::create([
+            'role_id' => $role_id,
             'name' => $data['name'],
+            'username' => str_slug($data['username']),
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'status'=> $status
         ]);
+
+        return $user;
     }
 }
