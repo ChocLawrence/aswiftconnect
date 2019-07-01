@@ -536,7 +536,7 @@
 
                 <div class="col-twelve">
                     <div class="copyright">
-                        <span>© Copyright ASwiftConnect 2019.</span>
+                        <span>© Copyright ASwiftConnect 2019. All Rights Reserved</span>
                         <!-- <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>		         	 -->
                     </div>
 
