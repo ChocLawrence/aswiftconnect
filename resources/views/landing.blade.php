@@ -65,7 +65,7 @@
             <ul class="header-main-nav">
                 <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll" href="#fields" title="pricing">Fields</a></li>
+                <li><a class="smoothscroll" href="#pricing" title="pricing">Fields</a></li>
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
                 <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
             </ul>
@@ -290,7 +290,7 @@
 
     <!-- pricing
     ================================================== -->
-    <section id="fields">
+    <section id="pricing">
         <div class="row pricing-content">
 
             <div class="col-four pricing-intro">
