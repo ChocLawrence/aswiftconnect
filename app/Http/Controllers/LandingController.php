@@ -23,6 +23,6 @@ class LandingController extends Controller
     {
         $categories = Category::all();
         $posts = Post::latest()->approved()->published()->take(6)->get();
-        return view('public',compact('categories','posts'));
+        return view('landing',compact('categories','posts'));
     }
 }

@@ -12,7 +12,7 @@
 */
 
 Route::get('', 'LandingController@index')->name('landing');
-//Route::get('home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 Route::post('home','HomeController@store')->name('home.store');
 Route::get('faqs', 'FaqsController@index')->name('faqs');
 Route::get('terms', 'TermsController@index')->name('terms');
