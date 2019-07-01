@@ -346,7 +346,7 @@
                                     <li><span>486</span> Cameroon</li>
                                     <li><span>335</span> Nigeria</li>
                                     <li><span>113</span> Australia</li>
-                                    <li><span>243</span> Sout Africa</li>
+                                    <li><span>243</span> South Africa</li>
                                     <li><span>103</span> Kenya</li>
                                     <li><span>392</span> Ghana</li>
                                 </ul>
