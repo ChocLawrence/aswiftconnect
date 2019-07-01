@@ -29,6 +29,10 @@
             background-color: #eee;
         }
 
+        .btn {
+            white-space: normal;
+        }
+
 
         .faq-nav {
             flex-direction: column;
@@ -137,12 +141,12 @@
 
 </head>
 
-<body>
+<body style=" word-wrap: break-word;">
     <div class="container">
         <div class="pull-left" style="margin:10px;">
             <a href="{{route('landing')}}" title="Go Back to Homepage" style="margin:0 auto;">
-            <i class="fa fa-arrow-left fa-lg"></i>
-            <img style="border-radius: 50%;" width="50" height="50"
+                <i class="fa fa-arrow-left fa-lg"></i>
+                <img style="border-radius: 50%;" width="50" height="50"
                     src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="AVATAR"></a>
             <span><strong>ASWIFTCONNECT</strong></span>
         </div><br>
@@ -196,11 +200,14 @@
                                     aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
                                     <div class="card-body">
                                         <p>
-                                            No, you can't. Only one job at a time is allowed and you should be aware we will be the ones
-                                            assigning freelancers to projects to work on. In the case of a team, we will handle the assignment
+                                            No, you can't. Only one job at a time is allowed and you should be aware we
+                                            will be the ones
+                                            assigning freelancers to projects to work on. In the case of a team, we will
+                                            handle the assignment
                                             off site.
                                         </p>
-                                        <p><strong>Hint: </strong>Add to favorites,the projects you would love to work on.!</p>
+                                        <p><strong>Hint: </strong>Add to favorites,the projects you would love to work
+                                            on.!</p>
                                     </div>
                                 </div>
                             </div>
@@ -210,17 +217,19 @@
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-1-content-2" aria-expanded="false"
                                             aria-controls="accordion-tab-1-content-2">
-                                            As an author,When am I to pay for a job?
+                                            As an author, when am I to pay for a job?
                                         </button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-1-content-2"
                                     aria-labelledby="accordion-tab-1-heading-2" data-parent="#accordion-tab-1">
                                     <div class="card-body">
-                                        <p>Once a project is posted, our administrators will review it and when you receive an invoice,
-                                            that is when you will be allowed to make a payment on our website. 
+                                        <p>Once a project is posted, our administrators will review it and when you
+                                            receive an invoice,
+                                            that is when you will be allowed to make a payment on our website.
                                         </p>
-                                        <p><strong>Hint: </strong> Pay within 24 hours so a freelancer will be assigned to the project.</p>
+                                        <p><strong>Hint: </strong> Pay within 24 hours so a freelancer will be assigned
+                                            to the project.</p>
                                     </div>
                                 </div>
                             </div>
@@ -229,20 +238,23 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-1-content-3" aria-expanded="false"
-                                            aria-controls="accordion-tab-1-content-3">         
-                                              What happens if the Freelancer doesn't do my job to my satisfaction?
+                                            aria-controls="accordion-tab-1-content-3">
+                                            What happens if the Freelancer doesn't do my job to my satisfaction?
                                         </button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-1-content-3"
                                     aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
                                     <div class="card-body">
-                                        <p>If this happens, we will first review the project in your description and 
-                                            understand what was and wasn't done. If our freelancer is at fault, we will assign
-                                            a new freelancer to work on the project.If that doesn't work well with the project owner,
+                                        <p>If this happens, we will first review the project in your description and
+                                            understand what was and wasn't done. If our freelancer is at fault, we will
+                                            assign
+                                            a new freelancer to work on the project.If that doesn't work well with the
+                                            project owner,
                                             a refund will be made.
                                         </p>
-                                        <p><strong>Hint: </strong>Always make your requirements clear when posting a project.</p>
+                                        <p><strong>Hint: </strong>Always make your requirements clear when posting a
+                                            project.</p>
                                     </div>
                                 </div>
                             </div>
@@ -260,10 +272,12 @@
                                     aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
                                     <div class="card-body">
                                         <p>
-                                            Rating a freelancer can be done on the comments section of the project posted.There we will
+                                            Rating a freelancer can be done on the comments section of the project
+                                            posted.There we will
                                             get to know how you feel about the job done and how it could be made better.
                                         </p>
-                                        <p><strong>Hint: </strong>Mention all which you described in the project which wasn't done well.</p>
+                                        <p><strong>Hint: </strong>Mention all which you described in the project which
+                                            wasn't done well.</p>
                                     </div>
                                 </div>
                             </div>
@@ -284,8 +298,9 @@
                                 <div class="collapse show" id="accordion-tab-2-content-1"
                                     aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
                                     <div class="card-body">
-                                        <p>A review of the platform for now is not set.You can simply email us at info@aswiftconnect.com
-                                           for feedback
+                                        <p>A review of the platform for now is not set.You can simply email us at
+                                            info@aswiftconnect.com
+                                            for feedback
                                         </p>
                                         <p><strong>Hint: </strong>Be clear as to what you need.</p>
                                     </div>
@@ -304,10 +319,12 @@
                                 <div class="collapse" id="accordion-tab-2-content-2"
                                     aria-labelledby="accordion-tab-2-heading-2" data-parent="#accordion-tab-2">
                                     <div class="card-body">
-                                        <p>Your personal information is safe with us.Our system is secure and we do not give out information to 
+                                        <p>Your personal information is safe with us.Our system is secure and we do not
+                                            give out information to
                                             any third party.
                                         </p>
-                                        <p><strong>Hint: </strong>We have a safe way to recover password in case you forgot.</p>
+                                        <p><strong>Hint: </strong>We have a safe way to recover password in case you
+                                            forgot.</p>
                                     </div>
                                 </div>
                             </div>
@@ -324,8 +341,10 @@
                                 <div class="collapse" id="accordion-tab-2-content-3"
                                     aria-labelledby="accordion-tab-2-heading-3" data-parent="#accordion-tab-2">
                                     <div class="card-body">
-                                        <p>If your payment was declined, you either do not have enough money in the paypal Account
-                                            you were trying to access or your connection was interupted at the moment of payment.
+                                        <p>If your payment was declined, you either do not have enough money in the
+                                            paypal Account
+                                            you were trying to access or your connection was interupted at the moment of
+                                            payment.
                                         </p>
                                         <p><strong>Hint: </strong> Ensure you have a good internet connection.</p>
                                     </div>
