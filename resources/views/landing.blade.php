@@ -49,7 +49,7 @@
 
 </head>
 
-<body id="top">
+<body id="home">
 
     <!-- header 
    ================================================== -->
@@ -65,9 +65,9 @@
             <ul class="header-main-nav">
                 <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll" href="#pricing" title="pricing">Fields</a></li>
-                <li><a class="smoothscroll" href="#testimonials" title="testimonials">Expectations</a></li>
-                <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
+                <li><a class="smoothscroll" href="#fields" title="fields">Fields</a></li>
+                <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
+                <li><a href="{{ route('home') }}" title="projects">Projects</a></li>
             </ul>
 
             <a href="{{ route('login') }}" title="login to ASwiftConnect" class="button button-primary cta">Login</a>
@@ -288,9 +288,9 @@
     </section> <!-- end about -->
 
 
-    <!-- pricing
+    <!-- fields
     ================================================== -->
-    <section id="pricing">
+    <section id="fields">
         <div class="row pricing-content">
 
             <div class="col-four pricing-intro">
@@ -363,7 +363,7 @@
     </section> <!-- end pricing -->
 
 
-    <!-- Testimonials Section
+    <!-- testimonials Section
     ================================================== -->
     <section id="testimonials">
 
@@ -381,9 +381,26 @@
 
                     <div>
                         <p>
+                            When I needed help with a project, I quicky posted a job here based on an advert I saw.
+                            To my surprise, everything happened so fast and after a couple of days, a completed project
+                            was emailed to me.Thanks to ASwiftConnect.
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="{{ asset('assets/frontend/images/julie.png')}}" alt="Author image">
+                            <div class="author-info">
+                                Julie Bes
+                                <span>Student, Cameroon</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
                             Your work is going to be done as fast as possible considering your
                             requirements.With my fitness company, I easily got some software done and will always stay
-                            in touch.
+                            in touch anytime I need any tech service.
                         </p>
 
                         <div class="testimonial-author">
@@ -391,28 +408,12 @@
                                 alt="Author image">
                             <div class="author-info">
                                 Matthew Spahr
-                                <span>Spahr Fit - Chicago Illinois </span>
+                            <span>Spahr Fit - Chicago,USA</span>
                             </div>
                         </div>
                     </div>
 
-                    <div>
-                        <p>
-                            When I needed help with a project, I quicky posted a job here based on an advert I saw.
-                            To my surprise, everything happened to fast and after a couple of days, a completed project
-                            was
-                            emailed to me.Thanks to ASwiftConnect.
-                        </p>
 
-                        <div class="testimonial-author">
-                            <img src="{{ asset('assets/frontend/images/julie.jpg')}}"
-                                alt="Author image">
-                            <div class="author-info">
-                                Julie Bes
-                                <span>Student, University of Buea</span>
-                            </div>
-                        </div>
-                    </div>
 
 
 
@@ -488,10 +489,10 @@
                     <h4>Site Links</h4>
 
                     <ul class="list-links">
-                        <li><a href="#top">Home</a></li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#pricing">Fields</a></li>
-                        <li><a href="#testimonials">Expectations</a></li>
+                        <li><a href="#fields">Fields</a></li>
+                        <li><a href="#testimonials">testimonials</a></li>
                     </ul>
                     <a href="{{route('faqs')}}">FAQS</a>
 
