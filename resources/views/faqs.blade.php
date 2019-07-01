@@ -156,7 +156,7 @@
                         aria-selected="true">
                         <i class="mdi mdi-help-circle"></i> Frequently Asked Questions
                     </a>
-                    <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2"
+                    {{-- <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2"
                         aria-selected="false">
                         <i class="mdi mdi-account"></i> Profile
                     </a>
@@ -175,7 +175,7 @@
                     <a href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
                         aria-selected="false">
                         <i class="mdi mdi-help"></i> General help
-                    </a>
+                    </a> --}}
                 </div>
             </div>
             <div class="col-lg-8">
@@ -187,21 +187,20 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-1-content-1" aria-expanded="false"
-                                            aria-controls="accordion-tab-1-content-1">Just once I'd like to eat dinner
-                                            with a celebrity?</button>
+                                            aria-controls="accordion-tab-1-content-1">
+                                            Can I work on more than one Job at once?
+                                        </button>
                                     </h5>
                                 </div>
                                 <div class="collapse show" id="accordion-tab-1-content-1"
                                     aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
                                     <div class="card-body">
-                                        <p>Yes, if you make it look like an electrical fire. When you do things right,
-                                            people won't be sure you've done anything at all. I was having the most
-                                            wonderful dream. Except you were there, and you were there, and you were
-                                            there! No argument here. Goodbye, cruel world. Goodbye, cruel lamp. Goodbye,
-                                            cruel velvet drapes, lined with what would appear to be some sort of cruel
-                                            muslin and the cute little pom-pom curtain pull cords. Cruel though they may
-                                            be.</p>
-                                        <p><strong>Example: </strong>Shut up and get to the point!</p>
+                                        <p>
+                                            No, you can't. Only one job at a time is allowed and you should be aware we will be the ones
+                                            assigning freelancers to projects to work on. In the case of a team, we will handle the assignment
+                                            off site.
+                                        </p>
+                                        <p><strong>Hint: </strong>Add to favorites,the projects you would love to work on.!</p>
                                     </div>
                                 </div>
                             </div>
@@ -210,18 +209,18 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-1-content-2" aria-expanded="false"
-                                            aria-controls="accordion-tab-1-content-2">Bender, I didn't know you liked
-                                            cooking?</button>
+                                            aria-controls="accordion-tab-1-content-2">
+                                            As an author,When am I to pay for a job?
+                                        </button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-1-content-2"
                                     aria-labelledby="accordion-tab-1-heading-2" data-parent="#accordion-tab-1">
                                     <div class="card-body">
-                                        <p>That's so cute. Can we have Bender Burgers again? Is the Space Pope
-                                            reptilian!? I wish! It's a nickel. Bender! Ship! Stop bickering or I'm going
-                                            to come back there and change your opinions manually!</p>
-                                        <p><strong>Example: </strong>Okay, I like a challenge. Is that a cooking show?
-                                            No argument here.</p>
+                                        <p>Once a project is posted, our administrators will review it and when you receive an invoice,
+                                            that is when you will be allowed to make a payment on our website. 
+                                        </p>
+                                        <p><strong>Hint: </strong> Pay within 24 hours so a freelancer will be assigned to the project.</p>
                                     </div>
                                 </div>
                             </div>
@@ -230,18 +229,20 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-1-content-3" aria-expanded="false"
-                                            aria-controls="accordion-tab-1-content-3">My fellow Earthicans?</button>
+                                            aria-controls="accordion-tab-1-content-3">         
+                                              What happens if the Freelancer doesn't do my job to my satisfaction?
+                                        </button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-1-content-3"
                                     aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
                                     <div class="card-body">
-                                        <p>As I have explained in my book 'Earth in the Balance', and the much more
-                                            popular 'Harry Potter and the Balance of Earth', we need to defend our
-                                            planet against pollution. Also dark wizards. Fry, you can't just sit here in
-                                            the dark listening to classical music.</p>
-                                        <p><strong>Example: </strong>Actually, that's still true. Well, let's just dump
-                                            it in the sewer and say we delivered it.</p>
+                                        <p>If this happens, we will first review the project in your description and 
+                                            understand what was and wasn't done. If our freelancer is at fault, we will assign
+                                            a new freelancer to work on the project.If that doesn't work well with the project owner,
+                                            a refund will be made.
+                                        </p>
+                                        <p><strong>Hint: </strong>Always make your requirements clear when posting a project.</p>
                                     </div>
                                 </div>
                             </div>
@@ -250,19 +251,19 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-1-content-4" aria-expanded="false"
-                                            aria-controls="accordion-tab-1-content-4">Who am I making this out
-                                            to?</button>
+                                            aria-controls="accordion-tab-1-content-4">
+                                            How do I rate the freelancer?
+                                        </button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-1-content-4"
                                     aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
                                     <div class="card-body">
-                                        <p>Morbo can't understand his teleprompter because he forgot how you say that
-                                            letter that's shaped like a man wearing a hat. Also Zoidberg. Can we have
-                                            Bender Burgers again? Goodbye, cruel world. Goodbye, cruel lamp. Goodbye,
-                                            cruel velvet drapes, lined with what would appear to be some sort of cruel
-                                            muslin and the cute little pom-pom curtain pull cords.</p>
-                                        <p><strong>Example: </strong>Cruel though they may be...</p>
+                                        <p>
+                                            Rating a freelancer can be done on the comments section of the project posted.There we will
+                                            get to know how you feel about the job done and how it could be made better.
+                                        </p>
+                                        <p><strong>Hint: </strong>Mention all which you described in the project which wasn't done well.</p>
                                     </div>
                                 </div>
                             </div>
@@ -275,19 +276,18 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-2-content-1" aria-expanded="false"
-                                            aria-controls="accordion-tab-2-content-1">Does anybody else feel jealous and
-                                            aroused and worried?</button>
+                                            aria-controls="accordion-tab-2-content-1">
+                                            How do I leave a review for the platform ?
+                                        </button>
                                     </h5>
                                 </div>
                                 <div class="collapse show" id="accordion-tab-2-content-1"
                                     aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
                                     <div class="card-body">
-                                        <p>Kif, I have mated with a woman. Inform the men. This is the worst part. The
-                                            calm before the battle. Bender, being God isn't easy. If you do too much,
-                                            people get dependent on you, and if you do nothing, they lose hope. You have
-                                            to use a light touch. Like a safecracker, or a pickpocket.</p>
-                                        <p><strong>Example: </strong>There's no part of that sentence I didn't like!
-                                            You, a bobsleder!? That I'd like to see!</p>
+                                        <p>A review of the platform for now is not set.You can simply email us at info@aswiftconnect.com
+                                           for feedback
+                                        </p>
+                                        <p><strong>Hint: </strong>Be clear as to what you need.</p>
                                     </div>
                                 </div>
                             </div>
@@ -296,19 +296,18 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-2-content-2" aria-expanded="false"
-                                            aria-controls="accordion-tab-2-content-2">This opera's as lousy as it is
-                                            brilliant?</button>
+                                            aria-controls="accordion-tab-2-content-2">
+                                            Is my personal information safe?
+                                        </button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-2-content-2"
                                     aria-labelledby="accordion-tab-2-heading-2" data-parent="#accordion-tab-2">
                                     <div class="card-body">
-                                        <p>Your lyrics lack subtlety. You can't just have your characters announce how
-                                            they feel. That makes me feel angry! It's okay, Bender. I like cooking too.
-                                            Interesting. No, wait, the other thing: tedious.</p>
-                                        <p><strong>Example: </strong>Of all the friends I've had… you're the first. But
-                                            I know you in the future. I cleaned your poop. Then we'll go with that data
-                                            file!</p>
+                                        <p>Your personal information is safe with us.Our system is secure and we do not give out information to 
+                                            any third party.
+                                        </p>
+                                        <p><strong>Hint: </strong>We have a safe way to recover password in case you forgot.</p>
                                     </div>
                                 </div>
                             </div>
@@ -317,20 +316,18 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-2-content-3" aria-expanded="false"
-                                            aria-controls="accordion-tab-2-content-3">Who are you, my
-                                            warranty?!</button>
+                                            aria-controls="accordion-tab-2-content-3">
+                                            Why was my payment declined?
+                                        </button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-2-content-3"
                                     aria-labelledby="accordion-tab-2-heading-3" data-parent="#accordion-tab-2">
                                     <div class="card-body">
-                                        <p>Oh, I think we should just stay friends. I'll tell them you went down prying
-                                            the wedding ring off his cold, dead finger. Aww, it's true. I've been hiding
-                                            it for so long. Say it in Russian! Then throw her in the laundry room, which
-                                            will hereafter be referred to as "the brig".</p>
-                                        <p><strong>Example: </strong> We're rescuing ya. Robot 1-X, save my friends! And
-                                            Zoidberg! <em>Then we'll go with that data file!</em> Okay, I like a
-                                            challenge.</p>
+                                        <p>If your payment was declined, you either do not have enough money in the paypal Account
+                                            you were trying to access or your connection was interupted at the moment of payment.
+                                        </p>
+                                        <p><strong>Hint: </strong> Ensure you have a good internet connection.</p>
                                     </div>
                                 </div>
                             </div>

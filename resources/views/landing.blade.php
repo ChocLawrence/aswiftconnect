@@ -171,7 +171,7 @@
 
                 <div class="fluid-video-wrapper">
                     <iframe
-                        src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39"
+                        src="https://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39"
                         width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
                         allowfullscreen></iframe>
                 </div>
@@ -391,28 +391,30 @@
                                 alt="Author image">
                             <div class="author-info">
                                 Matthew Spahr
-                                <span class="position">Spahr Fit - Chicago Illinois </span>
+                                <span>Spahr Fit - Chicago Illinois </span>
                             </div>
                         </div>
                     </div>
 
                     <div>
                         <p>
-                            Our platform is based on professionalism which will reflect in the projects done by our
-                            workers.
-                            We ensure that the client is satisfied and the professional is skilled enough to take
-                            on any task.
+                            When I needed help with a project, I quicky posted a job here based on an advert I saw.
+                            To my surprise, everything happened to fast and after a couple of days, a completed project
+                            was
+                            emailed to me.Thanks to ASwiftConnect.
                         </p>
 
                         <div class="testimonial-author">
-                            <img src="{{ asset('assets/frontend/css/landing/images/avatars/user-03.jpg')}}"
+                            <img src="{{ asset('assets/frontend/images/julie.jpg')}}"
                                 alt="Author image">
                             <div class="author-info">
-                                Mary Walker
-                                <span>HR, ASwiftConnect</span>
+                                Julie Bes
+                                <span>Student, University of Buea</span>
                             </div>
                         </div>
                     </div>
+
+
 
                 </div> <!-- end slides -->
 
