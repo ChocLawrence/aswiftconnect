@@ -49,7 +49,7 @@
 
 </head>
 
-<body id="home">
+<body id="top">
 
     <!-- header 
    ================================================== -->
@@ -65,9 +65,9 @@
             <ul class="header-main-nav">
                 <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll" href="#fields" title="fields">Fields</a></li>
+                <li><a class="smoothscroll" href="#fields" title="pricing">Fields</a></li>
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
-                <li><a href="{{ route('home') }}" title="projects">Projects</a></li>
+                <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
             </ul>
 
             <a href="{{ route('login') }}" title="login to ASwiftConnect" class="button button-primary cta">Login</a>
@@ -288,7 +288,7 @@
     </section> <!-- end about -->
 
 
-    <!-- fields
+    <!-- pricing
     ================================================== -->
     <section id="fields">
         <div class="row pricing-content">
@@ -363,7 +363,7 @@
     </section> <!-- end pricing -->
 
 
-    <!-- testimonials Section
+    <!-- Testimonials Section
     ================================================== -->
     <section id="testimonials">
 
@@ -392,7 +392,7 @@
                                 Julie Bes
                                 <span>Student, Cameroon</span>
                             </div>
-                           
+
                         </div>
                     </div>
 
@@ -408,12 +408,10 @@
                                 alt="Author image">
                             <div class="author-info">
                                 Matthew Spahr
-                            <span>Spahr Fit - Chicago,USA</span>
+                                <span>Spahr Fit - Chicago,USA</span>
                             </div>
                         </div>
                     </div>
-
-
 
 
 
@@ -489,10 +487,10 @@
                     <h4>Site Links</h4>
 
                     <ul class="list-links">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#top">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#fields">Fields</a></li>
-                        <li><a href="#testimonials">testimonials</a></li>
+                        <li><a href="#pricing">Fields</a></li>
+                        <li><a href="#testimonials">Expectations</a></li>
                     </ul>
                     <a href="{{route('faqs')}}">FAQS</a>
 
