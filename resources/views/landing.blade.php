@@ -108,9 +108,9 @@
                     </h1>
 
                     <div class="buttons" data-aos="fade-up">
-                        <a href="" class="button stroke">
+                        <a href="{{route('freelancer')}}" class="button stroke">
                             <span class="icon-circle-down" aria-hidden="true"></span>
-                            Join As Professional
+                            Join As Freelancer
                         </a>
                         <a href="{{route('register')}}" class="button stroke">
                             <span class="icon-play" aria-hidden="true"></span>
