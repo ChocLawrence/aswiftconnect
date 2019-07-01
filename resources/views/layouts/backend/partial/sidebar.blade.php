@@ -2,7 +2,11 @@
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <img src="{{ Storage::disk('public')->url('profile/'.Auth::user()->image)  }}" width="48" height="48" alt="User" />
+                    @if(File::exists(Storage::disk('public')->url('profile/'.Auth::user()->image))==true)
+                      <img src="{{ Storage::disk('public')->url('profile/'.Auth::user()->image)  }}" width="48" height="48" alt="User" />
+                    @elseif(File::exists(Storage::disk('public')->url('profile/'.Auth::user()->image))==false)  
+                      <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
+                    @endif
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Auth::user()->name}}</div>
