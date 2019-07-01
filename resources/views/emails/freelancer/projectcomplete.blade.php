@@ -551,18 +551,19 @@
                                                     <li><a href="https://www.facebook.com/aswiftconnect/"
                                                             target="_blank"><img
                                                                 src="{{ asset('assets/frontend/images/facebook.png')}}"
-                                                                alt=""
+                                                                alt="Facebook Logo ASwiftConnect"
                                                                 style="width: 40px !important; max-width: 50px; height: auto; display: block;"></a>
                                                     </li>
                                                     <li><a href="https://www.instagram.com/aswiftconnect/"
-                                                            target="_blank"><img
-                                                                src="{{ asset('assets/frontend/images/instagram.png')}}"
-                                                                alt=""
+                                                            target="_blank">
+                                                            <img src="{{ asset('assets/frontend/images/instagram.png')}}"
+                                                                alt="Instagram Logo ASwiftConnect"
                                                                 style="width: 50px !important; max-width: 40px; height: auto; display: block;"></a>
                                                     </li>
-                                                    <li><img src="{{ asset('assets/frontend/images/twitter.png]')}}"
-                                                            alt=""
-                                                            style="width: 30px; max-width: 40px; height: auto; display: block;">
+                                                    <li><a href="https://twitter.com/ASwiftConnect1" target="_blank">
+                                                            <img src="{{ asset('assets/frontend/images/twitter.png')}}"
+                                                                alt=" Twitter logo ASwiftconnect"
+                                                                style="width: 30px; max-width: 40px; height: auto; display: block;"></a>
                                                     </li>
                                                 </ul>
                                             </td>

@@ -139,7 +139,7 @@
                         class="fa fa-facebook-square"></i></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-twitter" target="_blank"></i></a>
+                <a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="fa fa-twitter" target="_blank"></i></a>
             </li>
             <li>
                 <a href="https://www.instagram.com/aswiftconnect/" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -448,7 +448,7 @@
                                     class="fa fa-facebook-square"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter" target="_blank"></i></a>
+                            <a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="fa fa-twitter" target="_blank"></i></a>
                         </li>
                         {{-- <li>
                             <a href="#"><i class="fa fa-behance"></i></a>

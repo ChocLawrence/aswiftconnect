@@ -9,11 +9,11 @@
                     {{--<a class="logo" href="#"><img src="images/logo.png" alt="Logo Image"></a>--}}
                     <p class="copyright">{{ config('app.name') }} @ 2019. All rights reserved.</p>
                     <ul class="icons">
-                        <li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
-                        <li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
-                        <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-                        <li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
-                        <li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+                        <li><a href="https://www.facebook.com/aswiftconnect/" target="_blank"><i class="ion-social-facebook-outline"></i></a></li>
+                        <li><a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="ion-social-twitter-outline"></i></a></li>
+                        <li><a href="https://www.instagram.com/aswiftconnect/" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
+                        {{-- <li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
+                        <li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li> --}}
                     </ul>
 
                 </div><!-- footer-section -->

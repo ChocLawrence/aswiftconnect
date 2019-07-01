@@ -92,9 +92,9 @@
 
                             <ul class="icons">
                                 <li>SHARE : </li>
-                                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url()->current()}}&display=popup"><i class="ion-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url()->current()}}&display=popup" target="_blank"><i class="ion-social-facebook-outline"></i></a></li>
+                                <li><a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="ion-social-twitter-outline"></i></a></li>
+                                <li><a href="https://www.instagram.com/aswiftconnect/" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
                             </ul>
                         </div>
 

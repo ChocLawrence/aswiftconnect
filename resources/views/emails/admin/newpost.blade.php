@@ -497,7 +497,7 @@ ul.social li{
                       	<ul class="social" style="margin-left:10px;">
                       		<li><a href="https://www.facebook.com/aswiftconnect/" target="_blank"><img src="{{ asset('assets/frontend/images/facebook.png')}}" alt="" style="width: 30px !important; max-width: 600px; height: auto; display: block;"></a></li>
                       		<li><a  href="https://www.instagram.com/aswiftconnect/"  target="_blank"><img src="{{ asset('assets/frontend/images/instagram.png')}}" alt="" style="width: 30px !important; max-width: 600px; height: auto; display: block;"></a></li>
-                      		<li><img src="{{ asset('assets/frontend/images/twitter.png]')}}" alt="" style="width: 30px; max-width: 600px; height: auto; display: block;"></li>
+                      		<li><a href="https://twitter.com/ASwiftConnect1" target="_blank"><img src="{{ asset('assets/frontend/images/twitter.png')}}" alt="" style="width: 30px; max-width: 600px; height: auto; display: block;"></a></li>
                       	</ul>
                       </td>
                     </tr>
