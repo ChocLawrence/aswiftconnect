@@ -33,7 +33,7 @@
 		<div class="container-login100">
 
 			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
+				<div class="login100-pic js-tilt" style="margin-top:12%;" data-tilt>
 					<img src="{{ asset('assets/frontend/css/register/images/img-01.jpg')}}" alt="employers-image-page">
 					<a href="{{route('freelancer')}}">
 						<button class="login100-form-btn1">
@@ -41,14 +41,15 @@
 						</button>
 					</a>
 				</div>
-				<div>
-					<a href="{{route('landing')}}" title="Go Back to Homepage" style="margin:0 auto;"><img
-							style="border-radius: 50%;margin-top:30px;" width="50" height="50"
-							src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="AVATAR"></a>
-
-				</div>
 				<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
 					@csrf
+
+					<div style="text-align:center;padding-bottom:10px;">
+						<a href="{{route('landing')}}" title="Go Back to Homepage"><img style="border-radius: 50%;"
+								width="50" height="50"
+								src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="AVATAR"></a>
+
+					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<input id="name" class="input100 form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
@@ -148,8 +149,16 @@
 					</div>
 					<div class="text-center p-t-13">
 						<strong>
+							<a class="txt3" href="{{route('freelancer')}}">
+								Sign up as freelancer?
+								<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+							</a>
+						</strong>
+					</div>
+					<div class="text-center p-t-13">
+						<strong>
 							<a class="txt2" href="{{route('login')}}">
-								Already a signed Up? Login
+								Already signed Up? Login
 								<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 							</a>
 						</strong>
