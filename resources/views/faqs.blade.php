@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
     <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <title>Frequently Asked Questions | ASwiftConnect</title>
 
     <!-- favicons
 	================================================== -->
