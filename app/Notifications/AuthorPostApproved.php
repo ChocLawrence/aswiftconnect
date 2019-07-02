@@ -40,7 +40,8 @@ class AuthorPostApproved extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->subject("Post Successfully Approved")->markdown('emails.author.approvedpost', ['post' => $this->post]);
+        return (new MailMessage)->from('info@aswiftconnect.com')
+        ->subject("Post Successfully Approved")->markdown('emails.author.approvedpost', ['post' => $this->post]);
     }
 
     /**

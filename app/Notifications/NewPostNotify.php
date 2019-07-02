@@ -35,7 +35,8 @@ class NewPostNotify extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-       return (new MailMessage)->subject("New Post Available")->markdown('emails.subscriber.newpost', ['post' => $this->post]);
+       return (new MailMessage)->from('info@aswiftconnect.com')
+       ->subject("New Post Available")->markdown('emails.subscriber.newpost', ['post' => $this->post]);
     }
     /**
      * Get the array representation of the notification.

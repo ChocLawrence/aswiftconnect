@@ -42,7 +42,8 @@ class FreelancerAssign extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->subject("Congratulations, you have been assigned a project")->markdown('emails.freelancer.assigned', ['post' => $this->post,'freelancer'=>$this->freelancer]);               
+        return (new MailMessage)->from('info@aswiftconnect.com')
+        ->subject("Congratulations, you have been assigned a project")->markdown('emails.freelancer.assigned', ['post' => $this->post,'freelancer'=>$this->freelancer]);               
     }
 
     /**

@@ -35,6 +35,7 @@ class EmailSubscriber extends Mailable  implements ShouldQueue
     public function build()
     {
 
-        return $this->subject('New Post on ASwiftConnect')->markdown('emails.subscriber.newpost');
+        return $this->from('info@aswiftconnect.com')
+        ->subject('New Post on ASwiftConnect')->markdown('emails.subscriber.newpost');
     }
 }
