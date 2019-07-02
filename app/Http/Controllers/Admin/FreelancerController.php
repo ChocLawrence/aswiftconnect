@@ -43,9 +43,7 @@ class FreelancerController extends Controller
 
     public function setvetinfo(Request $request, $id)
     {
-        Log::info("freelancer id");
-        Log::info($id);
-
+       
         $user = User::find($id);
         $this->validate($request,[
             'time' => 'required',
@@ -55,6 +53,12 @@ class FreelancerController extends Controller
         $user->vet_time=$request->time;
         $user->vet_date=$request->date;
         $user->save();
+
+        Log::info("freelancer ");
+        Log::info($user);
+
+
+
 
         //send notification to freelancer
 

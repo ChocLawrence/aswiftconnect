@@ -522,8 +522,8 @@
                     <td class="bg_dark email-section" style="text-align:center;">
                         <div class="heading-section heading-section-white">
                             <h2>We will be glad to have you on our platform</h2>
-                            <p>Your meeting has been scheduled. Talk to you on {{$this->freelancer->vet_date}}<br>
-                                The time for this meeting is at GMT'{{$this->freelancer->vet_time }}<br>
+                            <p>Your meeting has been scheduled. Talk to you on {{$freelancer->vet_date}}<br>
+                                The time for this meeting is at GMT'{{$freelancer->vet_time }}<br>
                                 Endeavour to be on time and you have a steady internet connection including a good
                                 microphone and webcam. <br>
                                 We will have this meeting on hangouts<br>
