@@ -560,43 +560,16 @@
 													<p>Our freelancers are working from anywhere. </p>
 													<a href="{{route('home')}}" class="btn btn-primary">Go To Site</a>
 												</div>
-											<td valign="top" width="50%">
-												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
-													width="100%">
-													<tr>
-														<td style="padding-top: 20px; padding-right: 10px;">
-															<div><img
-																	src="{{ asset('assets/frontend/images/destination-1.jpg')}}"
-																	alt=""
-																	style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-															</div>
-															<div class="text-tour" style="text-align: center;">
-																<h3>Switzerland</h3>
-															</div>
-														</td>
-														<td style="padding-top: 20px; padding-right: 10px;">
-															<div><img
-																	src="{{ asset('assets/frontend/images/destination-2.jpg')}}"
-																	alt=""
-																	style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-															</div>
-															<div class="text-tour" style="text-align: center;">
-																<h3>Miami,USA</h3>
-															</div>
-														</td>
-													</tr>
-												</table>
 											</td>
+										</tr><!-- end: tr -->
+
+									</table>
+
 								</td>
-							</tr><!-- end: tr -->
-
+							</tr><!-- end:tr -->
 						</table>
-
 					</td>
-				</tr><!-- end:tr -->
-			</table>
-			</td>
-			</tr>
+				</tr>
 			</table>
 			<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
 				style="margin: auto;">
