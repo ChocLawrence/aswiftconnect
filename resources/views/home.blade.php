@@ -63,9 +63,15 @@
                         <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/'.$post->image) }}"
                                 alt="{{ $post->title }}"></div>
 
-                        <a class="avatar" href="{{ route('author.profile',$post->user->username) }}"><img
-                                src="{{ Storage::disk('public')->url('profile/'.$post->user->image) }}"
-                                alt="Profile Image"></a>
+                        <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+                            
+                              @if(File::exists(Storage::disk('public')->url('profile/'.$post->user->image))==true)
+                                <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}"  alt="User" />
+                              @elseif(File::exists(Storage::disk('public')->url('profile/'.Auth::user()->image))==false)  
+                                <img src="{{  asset('assets/frontend/images/default.png') }}" alt="Profile Image" />
+                              @endif
+                        
+                        </a>
 
                         <div class="blog-info">
 
