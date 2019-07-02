@@ -26,7 +26,8 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Author</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
                                     <th>Status</th>
                                     <th>Meeting</th>
                                     <th>Joined</th>
@@ -36,7 +37,8 @@
                             <tfoot>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Author</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
                                     <th>Status</th>
                                     <th>Meeting</th>
                                     <th>Joined</th>
@@ -48,6 +50,7 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $freelancer->name }}</td>
+                                    <td>{{ $freelancer->email }}</td>
                                     <td>
                                         @if($freelancer->status == true)
                                            <span class="badge bg-blue">vetted</span>
