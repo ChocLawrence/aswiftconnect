@@ -54,6 +54,7 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin','middleware'
     Route::resource('post','PostController');
     Route::resource('freelancer','FreelancerController');
 
+    Route::get('/freelancer/{id}/setvetinfo','FreelancerController@setvetinfo')->name('freelancer.setvetinfo');
     Route::get('/pending/post','PostController@pending')->name('post.pending');
     Route::put('/post/{id}/approve','PostController@approval')->name('post.approve');
     Route::put('/post/{id}/setinvoice','PostController@setinvoice')->name('post.setinvoice');
