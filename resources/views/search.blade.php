@@ -47,10 +47,10 @@
                                     </div>
 
                                     <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
-                                        @if(File::exists(Storage::disk('public')->url('profile/'.$post->user->image))==true)
-                                            <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image) }}" alt="Profile Image">
-                                        @elseif(File::exists(Storage::disk('public')->url('profile/'.$post->user->image))==false)  
-                                            <img src="{{  asset('assets/frontend/images/default.png') }}" alt="Default Image" />
+                                        @if(Storage::disk('public')->exists('profile/'.$post->user->image))
+                                          <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
+                                        @else
+                                          <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
                                         @endif
                                     </a>
 

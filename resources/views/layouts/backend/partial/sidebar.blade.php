@@ -2,9 +2,9 @@
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    @if(File::exists(Storage::disk('public')->url('profile/'.Auth::user()->image))==true)
+                    @if(Storage::disk('public')->exists('profile/'.Auth::user()->image))
                       <img src="{{ Storage::disk('public')->url('profile/'.Auth::user()->image)  }}" width="48" height="48" alt="User" />
-                    @elseif(File::exists(Storage::disk('public')->url('profile/'.Auth::user()->image))==false)  
+                    @else
                       <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
                     @endif
                 </div>
