@@ -32,6 +32,6 @@ class SubscribeMail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->from('info@aswiftconnect.com')->subject('Successfully Subscribed to ASwiftConnect Newsletter')->markdown('emails.subscribe');
+        return $this->from(['address' =>'info@aswiftconnect.com','name' => 'ASwiftConnect Inc'])->subject('Successfully Subscribed to ASwiftConnect Newsletter')->markdown('emails.subscribe');
     }
 }
