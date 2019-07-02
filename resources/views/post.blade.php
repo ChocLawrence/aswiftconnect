@@ -45,7 +45,13 @@
                             <div class="post-info">
 
                                 <div class="left-area">
-                                    <a class="avatar" href="#"><img src="{{ Storage::disk('public')->url('profile/'.$post->user->image) }}" alt="Profile Image"></a>
+                                    <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+                                        @if(File::exists(Storage::disk('public')->url('profile/'.$post->user->image))==true)
+                                            <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image) }}" alt="Profile Image">
+                                        @elseif(File::exists(Storage::disk('public')->url('profile/'.$post->user->image))==false)  
+                                            <img src="{{  asset('assets/frontend/images/default.png') }}" alt="Default Image" />
+                                        @endif
+                                    </a>
                                 </div>
 
                                 <div class="middle-area">

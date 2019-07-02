@@ -47,7 +47,7 @@
                                                 <img src="{{ Storage::disk('public')->url('post/'.$post->image) }}" alt="{{ $post->title }}">
                                         </div>
 
-                                        <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+                                        <a class="avatar" href="#">
                                             @if(File::exists(Storage::disk('public')->url('profile/'.$post->user->image))==true)
                                                 <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image) }}" alt="Profile Image">
                                             @elseif(File::exists(Storage::disk('public')->url('profile/'.$post->user->image))==false)  
