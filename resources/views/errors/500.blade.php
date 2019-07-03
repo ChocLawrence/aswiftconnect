@@ -268,7 +268,7 @@ const perspecNodes = document.querySelectorAll('.perspec');
 const perspec = document.querySelector('.perspec');
 const card = document.querySelector('.card');
 
-let counter = stackContainer.children.length;
+let counter = 3;
 
 //function to generate random number
 function randomIntFromInterval(min, max) {
