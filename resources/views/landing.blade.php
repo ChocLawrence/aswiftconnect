@@ -139,7 +139,8 @@
                         class="fa fa-facebook-square"></i></a>
             </li>
             <li>
-                <a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="fa fa-twitter" target="_blank"></i></a>
+                <a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="fa fa-twitter"
+                        target="_blank"></i></a>
             </li>
             <li>
                 <a href="https://www.instagram.com/aswiftconnect/" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -381,6 +382,22 @@
 
                     <div>
                         <p>
+                            For all the software solutions I need, I am sure to be covered by ASwiftConnect. They are reliable and can 
+                            be counted on. Link up with them and have affordable rates.
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="{{ asset('assets/frontend/images/jasmine.jpg')}}" alt="Author image">
+                            <div class="author-info">
+                                Jasmine White
+                                <span>Billionaire Factory,Baltimore -USA</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
                             When I needed help with a project, I quicky posted a job here based on an advert I saw.
                             To my surprise, everything happened so fast and after a couple of days, a completed project
                             was emailed to me.Thanks to ASwiftConnect.
@@ -448,7 +465,8 @@
                                     class="fa fa-facebook-square"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="fa fa-twitter" target="_blank"></i></a>
+                            <a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="fa fa-twitter"
+                                    target="_blank"></i></a>
                         </li>
                         {{-- <li>
                             <a href="#"><i class="fa fa-behance"></i></a>
