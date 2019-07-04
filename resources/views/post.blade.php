@@ -177,7 +177,13 @@
                                     <div class="post-info">
 
                                         <div class="left-area">
-                                            <a class="avatar" href="#"><img src="{{ Storage::disk('public')->url('profile/'.$comment->user->image) }}" alt="Profile Image"></a>
+                                            <a class="avatar" href="#">
+                                                @if(Storage::disk('public')->exists('profile/'.$comment->user->image))
+                                                    <img src="{{ Storage::disk('public')->url('profile/'.$comment->user->image)  }}" alt="Profile Image" />
+                                                @else
+                                                    <img src="{{  asset('assets/frontend/images/default.png') }}" alt="Profile Default Image" />
+                                                @endif
+                                            </a>
                                         </div>
 
                                         <div class="middle-area">
