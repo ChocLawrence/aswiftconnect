@@ -460,7 +460,7 @@ ul.social li{
         <table>
             <tr>
             <td><h4>A new Post needs Approval</h4></td>
-            <td><a href="{{route('')}}"><img src="{{ asset('assets/frontend/images/logo.png')}}" alt="Logo" border="0" width="48"
+            <td><a href="{{route('landing')}}"><img src="{{ asset('assets/frontend/images/logo.png')}}" alt="Logo" border="0" width="48"
             style="display: block; width:485px; max-width: 48px; min-width: 48px;"></a></td>
             </tr>
         </table>

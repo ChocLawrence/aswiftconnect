@@ -558,7 +558,7 @@
 													style="text-align: center; padding: 0 30px;">
 													<h2>Want to Have a look at our projects</h2>
 													<p>Our freelancers are working from anywhere. </p>
-													<a href="{{route('')}}" class="btn btn-primary">Go To Site</a>
+													<a href="{{route('landing')}}" class="btn btn-primary">Go To Site</a>
 												</div>
 											</td>
 										</tr><!-- end: tr -->
