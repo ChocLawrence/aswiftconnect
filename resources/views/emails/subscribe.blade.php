@@ -557,6 +557,16 @@
             color: rgba(255, 255, 255, 1);
         }
 
+        .icons{
+            position: relative;
+            float: left;
+            width:  60px !important;
+            height: 60px !important;
+            background-position: 50% 50%;
+            background-repeat:   no-repeat;
+            background-size:     cover;
+        }
+
 
         @media screen and (max-width: 500px) {
 
@@ -672,21 +682,21 @@
                                                 <ul class="social">
                                                     <li><a href="https://www.facebook.com/aswiftconnect/"
                                                             target="_blank">
-                                                            <img
+                                                            <img 
                                                                 src="{{ asset('assets/frontend/images/facebook.png')}}"
                                                                 alt="Facebook Logo ASwiftConnect"
-                                                                style="width: 50px !important; max-width: 60px; height: 50px; display: block;"></a>
+                                                                class="icons"></a>
                                                     </li>
                                                     <li><a href="https://www.instagram.com/aswiftconnect/"
                                                             target="_blank">
                                                             <img src="{{ asset('assets/frontend/images/instagram.png')}}"
                                                                 alt="Instagram Logo ASwiftConnect"
-                                                                style="width: 50px !important; max-width: 60px; height: 50px; display: block;"></a>
+                                                                class="icons"></a>
                                                     </li>
                                                     <li><a href="https://twitter.com/ASwiftConnect1" target="_blank">
                                                             <img src="{{ asset('assets/frontend/images/twitter.png')}}"
                                                                 alt=" Twitter logo ASwiftconnect"
-                                                                style="width: 50px; max-width: 60px; height: 50px; display: block;"></a>
+                                                                class="icons"></a>
                                                     </li>
                                                 </ul>
                                             </td>
