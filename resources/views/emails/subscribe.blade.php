@@ -15,7 +15,7 @@
         id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!--Pulling Awesome Font -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
 
@@ -705,6 +705,19 @@
                 <tr>
                     <td valign="middle" class="bg_black footer email-section">
                         <table>
+							<tr>
+								<div class="col-md-12" style="padding:20px;">
+									<ul class="social-network social-circle">
+										<!----li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li-->
+										<li><a href="https://www.facebook.com/aswiftconnect/" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/ASwiftConnect1" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.instagram.com/aswiftconnect/" target="_blank" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+										<!----li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a>
+										</li>
+										<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li-->
+									</ul>
+								</div>
+							</tr>
                             <tr>
                                 <td valign="top" width="50%">
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -723,24 +736,11 @@
                                         info@aswiftconnect.com <br>
                                         Phone: +1 800-537-6821<br>
                                     </p>
-                                    <p style="color: rgba(255,255,255,.4);">Unsubscribe</p>
+                                    <p style="text-align: right;color: rgba(255,255,255,.4);">Unsubscribe</p>
                                 </td>
                             </tr>
                         </table>
                     </td>
-                </tr>
-                <tr>
-                    <div class="col-md-12" style="padding:20px;">
-                        <ul class="social-network social-circle">
-                            <!----li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li-->
-                            <li><a href="https://www.facebook.com/aswiftconnect/" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://twitter.com/ASwiftConnect1" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.instagram.com/aswiftconnect/" target="_blank" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                            <!----li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a>
-                            </li>
-                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li-->
-                        </ul>
-                    </div>
                 </tr>
             </table>
 
