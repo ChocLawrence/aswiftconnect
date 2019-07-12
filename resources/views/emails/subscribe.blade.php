@@ -690,17 +690,14 @@
 								<li><a href="https://www.facebook.com/aswiftconnect/" target="_blank" class="icoFacebook" title="Facebook">
 								<img
                                                                 src="{{ asset('assets/frontend/images/facebook.png')}}"
-                                                                alt="Facebook Logo ASwiftConnect"
-                                                                style="width: 40px !important; max-width: 50px; height: auto; display: block;">
+                                                                alt="Facebook Logo ASwiftConnect">
 							    </a></li>
 								<li><a href="https://twitter.com/ASwiftConnect1" target="_blank" class="icoTwitter" title="Twitter">
 								 <img src="{{ asset('assets/frontend/images/twitter.png')}}"
-                                                                alt=" Twitter logo ASwiftconnect"
-                                                                style="width: 30px; max-width: 40px; height: auto; display: block;"></a></li>
+                                                                alt=" Twitter logo ASwiftconnect"></a></li>
 								<li><a href="https://www.instagram.com/aswiftconnect/" target="_blank" class="icoInstagram" title="Instagram">
 								<img src="{{ asset('assets/frontend/images/instagram.png')}}"
-                                                                alt="Instagram Logo ASwiftConnect"
-                                                                style="width: 50px !important; max-width: 40px; height: auto; display: block;">
+                                                                alt="Instagram Logo ASwiftConnect">
 							     </a></li>
 								<!----li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a>
 								</li>
