@@ -681,7 +681,8 @@
                     </td>
                 </tr>
 			</table>
-			<table>
+			<table cellspacing="0" cellpadding="0" border="0" width="100%"
+                style="margin: auto;">
 
 					<tr>
 						<div class="col-md-12" style="padding:20px;">
