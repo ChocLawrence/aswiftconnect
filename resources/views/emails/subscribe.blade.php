@@ -681,7 +681,7 @@
                     </td>
                 </tr>
 			</table>
-			<table align="center">
+			<table>
 
 					<tr>
 						<div class="col-md-12" style="padding:20px;">
