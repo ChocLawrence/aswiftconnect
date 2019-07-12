@@ -16,6 +16,7 @@ Route::get('home', 'HomeController@index')->name('home');
 Route::post('home','HomeController@store')->name('home.store');
 Route::get('faqs', 'FaqsController@index')->name('faqs');
 Route::get('terms', 'TermsController@index')->name('terms');
+Route::get('privacy', 'PrivacyController@index')->name('privacy');
 
 Route::get('posts','PostController@index')->name('post.index');
 Route::get('post/{slug}','PostController@details')->name('post.details');
