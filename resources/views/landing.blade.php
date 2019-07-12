@@ -102,9 +102,9 @@
                     <h3 data-aos="fade-up">Welcome to ASWIFTCONNECT</h3>
 
                     <h1 data-aos="fade-up">
-                        We provide Professional <br>
-                        Freelancer Services <br>
-                        For our great clients.<br>
+                        We provide professional <br>
+                        freelancer services, <br>
+                        for our great clients.<br>
                     </h1>
 
                     <div class="buttons" data-aos="fade-up">
