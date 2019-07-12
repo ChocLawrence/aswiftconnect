@@ -23,7 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $userId=Auth::user()->role_id;
+        if(Auth::check()){
+            $userId= Auth::user()->role_id;
+        }else{
+            $userId=2; 
+        }
+        
         Log::info($userId);
         $categories = Category::all();
         $posts = Post::latest()->approved()->published()->take(6)->get();
