@@ -7,9 +7,30 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <title>ASwiftConnect | Vet Meeting</title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!--Pulling Awesome Font -->
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/frontend/css/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/css/landing/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/css/landing/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/css/landing/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('assets/frontend/css/landing/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{ asset('assets/frontend/css/landing/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
     <!-- CSS Reset : BEGIN -->
     <style>
@@ -91,6 +112,13 @@
             display: none !important;
         }
 
+        /*icons*/
+
+        /* footer social icons */
+        a {
+            background-color: #D3D3D3;
+        }
+
         /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
         /* Create one of these media queries for each additional viewport size you'd like to fix */
 
@@ -144,30 +172,6 @@
             padding: 2.5em;
         }
 
-        /*BUTTON*/
-        .btn {
-            padding: 5px 15px;
-            display: inline-block;
-        }
-
-        .btn.btn-primary {
-            border-radius: 5px;
-            background: #f5564e;
-            color: #ffffff;
-        }
-
-        .btn.btn-white {
-            border-radius: 5px;
-            background: #ffffff;
-            color: #000000;
-        }
-
-        .btn.btn-white-outline {
-            border-radius: 5px;
-            background: transparent;
-            border: 1px solid #fff;
-            color: #fff;
-        }
 
         h1,
         h2,
@@ -272,7 +276,7 @@
 
         .heading-section h2 {
             color: #000000;
-            font-size: 24px;
+            font-size: 15px;
             margin-top: 0;
             line-height: 1.4;
             font-weight: 700;
@@ -305,8 +309,7 @@
         }
 
         .heading-section-white h2 {
-            font-family:
-                line-height: 1;
+            font-family: line-height: 1;
             padding-bottom: 0;
         }
 
@@ -328,7 +331,6 @@
             text-align: center;
         }
 
-        .icon img {}
 
 
         /*SERVICES*/
@@ -436,25 +438,17 @@
             font-size: 13px;
         }
 
-
-        ul.social {
-            padding: 0;
-        }
-
-        ul.social li {
-            display: inline-block;
-        }
-
         /*FOOTER*/
 
         .footer {
+            padding-top: 15px;
             color: rgba(255, 255, 255, .5);
 
         }
 
         .footer .heading {
             color: #ffffff;
-            font-size: 20px;
+            font-size: 15px;
         }
 
         .footer ul {
@@ -471,6 +465,44 @@
             color: rgba(255, 255, 255, 1);
         }
 
+
+        #social {
+            margin: 20px 10px;
+            text-align: center;
+        }
+
+        /* footer social icons */
+        ul.social-network {
+            list-style: none;
+            display: inline;
+            margin-left: 0 !important;
+            padding: 0;
+        }
+
+        ul.social-network li {
+            display: inline;
+            margin: 0 5px;
+        }
+
+
+        /* footer social icons */
+
+        .social-circle li a {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        /* a {
+            background-color: #D3D3D3;
+        } */
 
         @media screen and (max-width: 500px) {
 
@@ -532,92 +564,61 @@
                                 Set it up and if you will like to have the meeting with an email of your choice, let us
                                 know.
                                 Thank you for trusting AswiftConnect!');</p>
+                            <p><a href="{{url(route('landing'))}}"
+                            class="btn btn-primary">Go To Site</a></p> 
                             <p>Thanks for trusting AswiftConnect</p>
                         </div>
                     </td>
                 </tr><!-- end: tr -->
 
             </table>
+            <table align="center" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center;">
+                <div class="col-md-12" style="padding:20px;">
+                    <h5>Follow us</h5>
+                    <ul class="social-network social-circle">
+                        <li><a href="https://www.facebook.com/aswiftconnect/" target="_blank" class="icoFacebook"
+                                title="Facebook">
+                                <img src="{{ asset('assets/frontend/images/facebook.png')}}" width="50" height="50"
+                                    alt="Facebook Logo ASwiftConnect" style="padding:10px;">
+                            </a></li>
+                        <li><a href="https://twitter.com/ASwiftConnect1" target="_blank" class="icoTwitter"
+                                title="Twitter">
+                                <img src="{{ asset('assets/frontend/images/twitter.png')}}" width="50" height="50"
+                                    alt="Twitter Logo ASwiftConnect" style="padding:10px;">
+                            </a></li>
+                        <li><a href="https://www.instagram.com/aswiftconnect/" target="_blank" class="icoInstagram"
+                                title="Instagram">
+                                <img src="{{ asset('assets/frontend/images/instagram.png')}}" width="50" height="50"
+                                    alt="Instagram Logo ASwiftConnect" style="padding:10px;">
+                            </a></li>
+                    </ul>
+                </div>
+
+            </table>
+
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
                 style="margin: auto;">
                 <tr>
                     <td valign="middle" class="bg_black footer email-section">
                         <table>
                             <tr>
-                                <td valign="top" width="60%">
-                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                        <tr>
-                                            <td style="text-align: left; padding-right: 10px; padding-top:5px;">
-                                                <h5 class="heading" style="margin-left:10px;">Meet us on Social Media
-                                                </h5>
-                                                <ul class="social" style="margin-left:10px;">
-                                                    <li><a href="https://www.facebook.com/aswiftconnect/"
-                                                            target="_blank"><img
-                                                                src="{{ asset('assets/frontend/images/facebook.png')}}"
-                                                                alt="Facebook Logo ASwiftConnect"
-                                                                style="width: 40px !important; max-width: 50px; height: auto; display: block;"></a>
-                                                    </li>
-                                                    <li><a href="https://www.instagram.com/aswiftconnect/"
-                                                            target="_blank">
-                                                            <img src="{{ asset('assets/frontend/images/instagram.png')}}"
-                                                                alt="Instagram Logo ASwiftConnect"
-                                                                style="width: 50px !important; max-width: 40px; height: auto; display: block;"></a>
-                                                    </li>
-                                                    <li><a href="https://twitter.com/ASwiftConnect1" target="_blank">
-                                                            <img src="{{ asset('assets/frontend/images/twitter.png')}}"
-                                                                alt=" Twitter logo ASwiftconnect"
-                                                                style="width: 30px; max-width: 40px; height: auto; display: block;"></a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                <td valign="top" width="50%" style="text-align: left; color:white;">
+                                    <p>&copy; 2019 AswiftConnect. All Rights Reserved</p>
                                 </td>
-                                <td valign="top" width="40%">
-                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                        <tr>
-                                            <td
-                                                style="text-align: right; padding-right: 5px;color:white;padding-top:5px;">
-                                                <h5 class="heading" style="margin-right:10px;">Contact Info</h5>
-                                                <p style="text-align: right; " style="margin-right:10px;">
-                                                    info@aswiftconnect.com <br>
-                                                    Phone: +1 800-537-6821<br>
-                                                </p>
-                                            </td>
-                                        </tr>
-                                    </table>
+
+                                <td valign="top" width="50%" style="text-align: right; color:white;">
+                                    <p style="text-align: right;" style="margin-right:10px;">
+                                        info@aswiftconnect.com <br>
+                                        Phone: +1 800-537-6821<br>
+                                    </p>
+                                    <p style="text-align: right;color: rgba(255,255,255,.4);">Unsubscribe</p>
                                 </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr><!-- end: tr -->
-                <tr>
-                    <td valign="middle" class="bg_black footer email-section">
-                        <table>
-                            <tr>
-                                <td valign="top" width="33.333%">
-                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                        <tr>
-                                            <td style="text-align: center; padding-right: 10px; color:white;">
-                                                <p>&copy; 2019 AswiftConnect. All Rights Reserved</p>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                {{-- <td valign="top" width="33.333%">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                    <tr>
-                                        <td style="text-align: right; padding-left: 5px; padding-right: 5px;">
-                                            <p style="color: rgba(255,255,255,.4);">Unsubcribe</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td> --}}
                             </tr>
                         </table>
                     </td>
                 </tr>
             </table>
+
         </div>
     </center>
 </body>

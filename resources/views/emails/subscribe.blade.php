@@ -613,7 +613,7 @@
                                                     style="text-align: center; padding: 0 30px;">
                                                     <h2>Want to Have a look at our projects</h2>
                                                     <p>Our freelancers are working from anywhere. </p>
-                                                    <a href="{{route('landing')}}" class="btn btn-primary">Go To
+                                                    <a href="{{url(route('landing'))}}" class="btn btn-primary">Go To
                                                         Site</a>
                                                 </div>
                                             </td>
@@ -658,11 +658,11 @@
                     <td valign="middle" class="bg_black footer email-section">
                         <table>
                             <tr>
-                                <td valign="top" width="50%" style="text-align: left; color:white;">
+                                <td valign="top" width="60%" style="text-align: left; color:white;">
                                     <p>&copy; 2019 AswiftConnect. All Rights Reserved</p>
                                 </td>
 
-                                <td valign="top" width="50%"
+                                <td valign="top" width="40%"
                                     style="text-align: right; color:white;">
                                     <p style="text-align: right;" style="margin-right:10px;">
                                         info@aswiftconnect.com <br>
