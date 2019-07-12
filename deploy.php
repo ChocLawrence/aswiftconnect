@@ -12,6 +12,8 @@ set('repository', 'git@github.com:ChocLawrence/aswiftconnect.git');
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
 
+set('use_relative_symlinks', false);
+
 // Shared files/dirs between deploys 
 add('shared_files', []);
 add('shared_dirs', []);
