@@ -558,8 +558,9 @@
             -webkit-border-radius: 50%;
             border-radius: 50%;
             text-align: center;
-            width: 60px !important;
-            height: 60px !important;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
         }
 
         .social-circle li i {
