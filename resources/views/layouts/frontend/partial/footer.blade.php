@@ -22,7 +22,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="footer-section">
                     <h4 class="title"><strong>CATEGORIES</strong></h4>
-                    <ul>
+                    <ul style="text-align: justify;">
                         @foreach($categories as $category)
                             <li  style="color:white;"><a href="{{ route('category.posts',$category->slug) }}">{{ $category->name }}</a></li>
                         @endforeach
