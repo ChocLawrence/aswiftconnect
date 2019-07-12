@@ -667,9 +667,9 @@
                                 <td valign="top" width="100%">
                                     <table  cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
-                                            <td style="margin:0 auto; padding:20px;">
+                                            <td style="align:center; padding:20px;">
                                                 </h5>
-                                                <ul class="social" style="margin:0 auto;">
+                                                <ul class="social">
                                                     <li><a href="https://www.facebook.com/aswiftconnect/"
                                                             target="_blank"><img
                                                                 src="{{ asset('assets/frontend/images/facebook.png')}}"
