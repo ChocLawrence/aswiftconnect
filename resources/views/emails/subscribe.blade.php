@@ -667,7 +667,7 @@
                 </tr>
             </table>
 <table align="center" cellspacing="0" cellpadding="0" border="0" width="100%"
-                style="margin: auto;">
+                style="text-align:center;">
                 <tr>
                     <td valign="middle">
                         <table>
@@ -675,7 +675,7 @@
                                 <td valign="top" width="100%">
                                     <table  cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
-                                            <td style="text-align:center; padding:20px;">
+                                            <td style="padding:20px;">
                                                 </h5>
                                                 <ul class="social">
                                                     <li><a href="https://www.facebook.com/aswiftconnect/"
