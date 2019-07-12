@@ -655,21 +655,14 @@
                 style="margin: auto;">
                 <tr>
                     <td valign="middle" class="bg_black footer email-section">
-                        <table>
+                        <table style="padding:10px;">
                             <tr>
-                                <td valign="top" width="50%">
-                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                        <tr>
-                                            <td style="text-align: center; padding-right: 10px; color:white;">
-                                                <p>&copy; 2019 AswiftConnect. All Rights Reserved</p>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                <td valign="top" width="50%" style="text-align: left; color:white;">
+                                    <p>&copy; 2019 AswiftConnect. All Rights Reserved</p>
                                 </td>
 
                                 <td valign="top" width="50%"
-                                    style="text-align: right; padding-right: 5px;color:white;padding-top:5px;">
-                                    <h5 class="heading" style="margin-right:10px;">Contact Info</h5>
+                                    style="text-align: right; color:white;">
                                     <p style="text-align: right;" style="margin-right:10px;">
                                         info@aswiftconnect.com <br>
                                         Phone: +1 800-537-6821<br>
