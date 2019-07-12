@@ -113,88 +113,65 @@
         /*icons*/
 
         /* footer social icons */
-        .social-network a.icoRss:hover {
-            background-color: #F56505;
-        }
+        // Variables
+@colorBase: rgba(68, 138, 175, 1);
 
-        .social-network a.icoFacebook:hover {
-            background-color: #3B5998;
-        }
+// Mixins
+.transition (@prop: all, @time: 1s, @ease: linear) {
+	-webkit-transition: @prop @time @ease;
+	-moz-transition: @prop @time @ease;
+	-o-transition: @prop @time @ease;
+	-ms-transition: @prop @time @ease;
+	transition: @prop @time @ease;
+}
+.universal-inline-block {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
 
-        .social-network a.icoTwitter:hover {
-            background-color: #33ccff;
-        }
+// Styles
+.social-icons {
+  text-align: center;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.5em;
+  color: @colorBase;
+  h1 {
+    margin: 40px 0;
+  }
+  ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			.universal-inline-block;
+			vertical-align:  middle;
+			a {
+				display: block;
+				font-size: 1.4em;
+				margin: 0 5px;
+				text-decoration: none;
+				i {
+					color: @colorBase;
+					.transition(all, 0.2s, ease-in);
+				}
+				&:hover {
+					i {
+						color: darken(@colorBase, 20%);
+					}
+				}
+				&:focus, &:active {
+					i {
+						transition: none;
+						color: darken(@colorBase, 40%);
+					}
+				}
+			}
+		}
+	}
+}
 
-        .social-network a.icoInstagram:hover {
-            background-color: #833AB4;
-        }
-
-        .social-network a.icoGoogle:hover {
-            background-color: #BD3518;
-        }
-
-        .social-network a.icoVimeo:hover {
-            background-color: #0590B8;
-        }
-
-        .social-network a.icoLinkedin:hover {
-            background-color: #007bb7;
-        }
-
-        .social-network a.icoRss:hover i,
-        .social-network a.icoFacebook:hover i,
-        .social-network a.icoTwitter:hover i,
-        .social-network a.icoGoogle:hover i,
-        .social-network a.icoVimeo:hover i,
-        .social-network a.icoLinkedin:hover i {
-            color: #fff;
-        }
-
-        a.socialIcon:hover,
-        .socialHoverClass {
-            color: #44BCDD;
-        }
-
-        .social-circle li a {
-            display: inline-block;
-            position: relative;
-            margin: 0 auto 0 auto;
-            -moz-border-radius: 50%;
-            -webkit-border-radius: 50%;
-            border-radius: 50%;
-            text-align: center;
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-        }
-
-        .social-circle li i {
-            margin: 0;
-            line-height: 50px;
-            text-align: center;
-        }
-
-        .social-circle li a:hover i,
-        .triggeredHover {
-            -moz-transform: rotate(360deg);
-            -webkit-transform: rotate(360deg);
-            -ms--transform: rotate(360deg);
-            transform: rotate(360deg);
-            -webkit-transition: all 0.2s;
-            -moz-transition: all 0.2s;
-            -o-transition: all 0.2s;
-            -ms-transition: all 0.2s;
-            transition: all 0.2s;
-        }
-
-        .social-circle i {
-            color: #fff;
-            -webkit-transition: all 0.8s;
-            -moz-transition: all 0.8s;
-            -o-transition: all 0.8s;
-            -ms-transition: all 0.8s;
-            transition: all 0.8s;
-        }
 
         a {
             background-color: #D3D3D3;
@@ -680,34 +657,32 @@
                         </table>
                     </td>
                 </tr>
-			</table>
-			<table cellspacing="0" cellpadding="0" border="0" width="100%"
-                style="margin: auto;">
+            </table>
+            
+            <div class="container">
+	<div class="row">
+		<div class="span10 offset1">
+			<div class="social-icons">
+				<ul>
 
-					<tr>
-						<div class="col-md-12" style="padding:20px;">
-							<ul class="social-network social-circle">
-								<!----li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li-->
-								<li><a href="https://www.facebook.com/aswiftconnect/" target="_blank" class="icoFacebook" title="Facebook">
-								<img
+                    <li><a href="https://www.facebook.com/aswiftconnect/">
+                    <img
                                                                 src="{{ asset('assets/frontend/images/facebook.png')}}"
                                                                 alt="Facebook Logo ASwiftConnect">
-							    </a></li>
-								<li><a href="https://twitter.com/ASwiftConnect1" target="_blank" class="icoTwitter" title="Twitter">
-								 <img src="{{ asset('assets/frontend/images/twitter.png')}}"
+                    </a></li>
+                    <li><a href="https://twitter.com/ASwiftConnect1">
+                    <img src="{{ asset('assets/frontend/images/twitter.png')}}"
                                                                 alt=" Twitter logo ASwiftconnect"></a></li>
-								<li><a href="https://www.instagram.com/aswiftconnect/" target="_blank" class="icoInstagram" title="Instagram">
-								<img src="{{ asset('assets/frontend/images/instagram.png')}}"
+                    <li><a href="https://www.instagram.com/aswiftconnect/">
+                    <img src="{{ asset('assets/frontend/images/instagram.png')}}"
                                                                 alt="Instagram Logo ASwiftConnect">
-							     </a></li>
-								<!----li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a>
-								</li>
-								<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li-->
-							</ul>
-						</div>
-					</tr>
+                   </a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
 
-			</table>
 
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
                 style="margin: auto;">
