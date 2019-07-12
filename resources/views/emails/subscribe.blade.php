@@ -558,8 +558,6 @@
         }
 
         .icons{
-            position: relative;
-            float: left;
             width:  60px !important;
             height: 60px !important;
             background-position: 50% 50%;
