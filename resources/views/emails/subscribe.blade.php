@@ -15,21 +15,22 @@
         id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!--Pulling Awesome Font -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/frontend/css/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
 
-     <!-- Favicon-->
-     <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
-     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/css/landing/apple-touch-icon.png')}}">
-     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/css/landing/favicon-32x32.png')}}">
-     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/css/landing/favicon-16x16.png')}}">
-     <link rel="manifest" href="{{ asset('assets/frontend/css/landing/site.webmanifest')}}">
-     <link rel="mask-icon" href="{{ asset('assets/frontend/css/landing/safari-pinned-tab.svg')}}" color="#5bbad5">
-     <meta name="msapplication-TileColor" content="#da532c">
-     <meta name="theme-color" content="#ffffff">
-     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
- 
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/css/landing/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/css/landing/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/css/landing/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('assets/frontend/css/landing/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{ asset('assets/frontend/css/landing/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+
     <!-- CSS Reset : BEGIN -->
     <style>
         /* What it does: Remove spaces around the email design added by some email clients. */
@@ -113,66 +114,6 @@
         /*icons*/
 
         /* footer social icons */
-        // Variables
-@colorBase: rgba(68, 138, 175, 1);
-
-// Mixins
-.transition (@prop: all, @time: 1s, @ease: linear) {
-	-webkit-transition: @prop @time @ease;
-	-moz-transition: @prop @time @ease;
-	-o-transition: @prop @time @ease;
-	-ms-transition: @prop @time @ease;
-	transition: @prop @time @ease;
-}
-.universal-inline-block {
-	display: inline-block;
-	zoom: 1;
-	*display: inline;
-}
-
-// Styles
-.social-icons {
-  text-align: center;
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.5em;
-  color: @colorBase;
-  h1 {
-    margin: 40px 0;
-  }
-  ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		li {
-			.universal-inline-block;
-			vertical-align:  middle;
-			a {
-				display: block;
-				font-size: 1.4em;
-				margin: 0 5px;
-				text-decoration: none;
-				i {
-					color: @colorBase;
-					.transition(all, 0.2s, ease-in);
-				}
-				&:hover {
-					i {
-						color: darken(@colorBase, 20%);
-					}
-				}
-				&:focus, &:active {
-					i {
-						transition: none;
-						color: darken(@colorBase, 40%);
-					}
-				}
-			}
-		}
-	}
-}
-
-
         a {
             background-color: #D3D3D3;
         }
@@ -391,8 +332,7 @@
         }
 
         .heading-section-white h2 {
-            font-family:
-                line-height: 1;
+            font-family: line-height: 1;
             padding-bottom: 0;
         }
 
@@ -414,7 +354,6 @@
             text-align: center;
         }
 
-        .icon img {}
 
 
         /*SERVICES*/
@@ -522,15 +461,6 @@
             font-size: 13px;
         }
 
-
-        ul.social {
-            padding: 0;
-        }
-
-        ul.social li {
-            display: inline-block;
-        }
-
         /*FOOTER*/
 
         .footer {
@@ -557,14 +487,113 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        .icons{
-            width:  60px !important;
-            height: 60px !important;
-            background-position: 50% 50%;
-            background-repeat:   no-repeat;
-            background-size:     cover;
+
+        #social {
+            margin: 20px 10px;
+            text-align: center;
         }
 
+        /* footer social icons */
+        ul.social-network {
+            list-style: none;
+            display: inline;
+            margin-left: 0 !important;
+            padding: 0;
+        }
+
+        ul.social-network li {
+            display: inline;
+            margin: 0 5px;
+        }
+
+
+        /* footer social icons */
+        .social-network a.icoRss:hover {
+            background-color: #F56505;
+        }
+
+        .social-network a.icoFacebook:hover {
+            background-color: #3B5998;
+        }
+
+        .social-network a.icoTwitter:hover {
+            background-color: #33ccff;
+        }
+
+        .social-network a.icoInstagram:hover {
+            background-color: #d11d95;
+        }
+
+        .social-network a.icoGoogle:hover {
+            background-color: #BD3518;
+        }
+
+        .social-network a.icoVimeo:hover {
+            background-color: #0590B8;
+        }
+
+        .social-network a.icoLinkedin:hover {
+            background-color: #007bb7;
+        }
+
+        .social-network a.icoRss:hover i,
+        .social-network a.icoFacebook:hover i,
+        .social-network a.icoTwitter:hover i,
+        .social-network a.icoGoogle:hover i,
+        .social-network a.icoVimeo:hover i,
+        .social-network a.icoLinkedin:hover i {
+            color: #fff;
+        }
+
+        a.socialIcon:hover,
+        .socialHoverClass {
+            color: #44BCDD;
+        }
+
+        .social-circle li a {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        .social-circle li i {
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .social-circle li a:hover i,
+        .triggeredHover {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+
+        .social-circle i {
+            color: #fff;
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            transition: all 0.8s;
+        }
+
+        a {
+            background-color: #D3D3D3;
+        }
 
         @media screen and (max-width: 500px) {
 
@@ -666,46 +695,27 @@
                     </td>
                 </tr>
             </table>
-<table align="center" cellspacing="0" cellpadding="0" border="0" width="100%"
-                style="text-align:center;">
-                <tr>
-                    <td valign="middle">
-                        <table>
-                            <tr>
-                                <td valign="top" width="100%">
-                                    <table  cellspacing="0" cellpadding="0" border="0" width="100%">
-                                        <tr>
-                                            <td style="padding:20px;">
-                                                </h5>
-                                                <ul class="social">
-                                                    <li><a href="https://www.facebook.com/aswiftconnect/"
-                                                            target="_blank">
-                                                            <img 
-                                                                src="{{ asset('assets/frontend/images/facebook.png')}}"
-                                                                alt="Facebook Logo ASwiftConnect"
-                                                                class="icons"></a>
-                                                    </li>
-                                                    <li><a href="https://www.instagram.com/aswiftconnect/"
-                                                            target="_blank">
-                                                            <img src="{{ asset('assets/frontend/images/instagram.png')}}"
-                                                                alt="Instagram Logo ASwiftConnect"
-                                                                class="icons"></a>
-                                                    </li>
-                                                    <li><a href="https://twitter.com/ASwiftConnect1" target="_blank">
-                                                            <img src="{{ asset('assets/frontend/images/twitter.png')}}"
-                                                                alt=" Twitter logo ASwiftconnect"
-                                                                class="icons"></a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr><!-- end: tr -->
-                
+            <table align="center" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center;">
+                <div class="col-md-12" style="padding:20px;">
+                    <ul class="social-network social-circle">
+                        <li><a href="https://www.facebook.com/aswiftconnect/" target="_blank" class="icoFacebook" title="Facebook">
+                            <img 
+                            src="{{ asset('assets/frontend/images/facebook.png')}}" width="50" height="50"
+                            alt="Facebook Logo ASwiftConnect" style="padding:10px;">
+                        </a></li>
+                        <li><a href="https://twitter.com/ASwiftConnect1" target="_blank" class="icoTwitter" title="Twitter">
+                            <img 
+                            src="{{ asset('assets/frontend/images/twitter.png')}}" width="50" height="50"
+                            alt="Twitter Logo ASwiftConnect" style="padding:10px;">
+                        </a></li>
+                        <li><a href="https://www.instagram.com/aswiftconnect/" target="_blank"  class="icoInstagram" title="Instagram">
+                            <img 
+                            src="{{ asset('assets/frontend/images/instagram.png')}}" width="50" height="50"
+                            alt="Instagram Logo ASwiftConnect" style="padding:10px;">
+                        </a></li>
+                    </ul>
+                </div>
+
             </table>
 
 
