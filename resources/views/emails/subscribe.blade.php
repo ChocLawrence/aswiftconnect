@@ -558,9 +558,8 @@
             -webkit-border-radius: 50%;
             border-radius: 50%;
             text-align: center;
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
+            width: 60px !important;
+            height: 60px !important;
         }
 
         .social-circle li i {
@@ -591,9 +590,9 @@
             transition: all 0.8s;
         }
 
-        a {
+        /* a {
             background-color: #D3D3D3;
-        }
+        } */
 
         @media screen and (max-width: 500px) {
 
