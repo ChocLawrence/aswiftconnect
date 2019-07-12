@@ -667,25 +667,26 @@
                                 <td valign="top" width="100%">
                                     <table  cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
-                                            <td style="align:center; padding:20px;">
+                                            <td style="text-align:center; padding:20px;">
                                                 </h5>
                                                 <ul class="social">
                                                     <li><a href="https://www.facebook.com/aswiftconnect/"
-                                                            target="_blank"><img
+                                                            target="_blank">
+                                                            <img
                                                                 src="{{ asset('assets/frontend/images/facebook.png')}}"
                                                                 alt="Facebook Logo ASwiftConnect"
-                                                                style="width: 50px !important; max-width: 60px; height: auto; display: block;"></a>
+                                                                style="width: 50px !important; max-width: 60px; height: 50px; display: block;"></a>
                                                     </li>
                                                     <li><a href="https://www.instagram.com/aswiftconnect/"
                                                             target="_blank">
                                                             <img src="{{ asset('assets/frontend/images/instagram.png')}}"
                                                                 alt="Instagram Logo ASwiftConnect"
-                                                                style="width: 50px !important; max-width: 60px; height: auto; display: block;"></a>
+                                                                style="width: 50px !important; max-width: 60px; height: 50px; display: block;"></a>
                                                     </li>
                                                     <li><a href="https://twitter.com/ASwiftConnect1" target="_blank">
                                                             <img src="{{ asset('assets/frontend/images/twitter.png')}}"
                                                                 alt=" Twitter logo ASwiftconnect"
-                                                                style="width: 50px; max-width: 60px; height: auto; display: block;"></a>
+                                                                style="width: 50px; max-width: 60px; height: 50px; display: block;"></a>
                                                     </li>
                                                 </ul>
                                             </td>
