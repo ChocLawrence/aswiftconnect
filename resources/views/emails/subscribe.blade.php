@@ -464,6 +464,7 @@
         /*FOOTER*/
 
         .footer {
+            padding-top:15px;
             color: rgba(255, 255, 255, .5);
 
         }
@@ -653,7 +654,6 @@
 
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
                 style="margin: auto;">
-                <br>
                 <tr>
                     <td valign="middle" class="bg_black footer email-section">
                         <table>
