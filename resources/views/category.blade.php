@@ -20,7 +20,10 @@
 
 @section('content')
     <div class="slider display-table center-text">
-        <h1 class="title display-table-cell"><b>{{ $category->name }}</b></h1>
+        <h1 class="title display-table-cell"><span style="font-weight: 600;
+             color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;">{{ $category->name }}</span></h1>
     </div><!-- slider -->
 
     <section class="blog-area section">
