@@ -628,6 +628,7 @@
             </table>
             <table align="center" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center;">
                 <div class="col-md-12" style="padding:20px;">
+                    <h5>Follow us</h5>
                     <ul class="social-network social-circle">
                         <li><a href="https://www.facebook.com/aswiftconnect/" target="_blank" class="icoFacebook" title="Facebook">
                             <img 
