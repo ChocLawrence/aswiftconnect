@@ -658,30 +658,46 @@
                     </td>
                 </tr>
             </table>
-            
-            <div class="container">
-	<div class="row">
-		<div class="span10 offset1">
-			<div class="social-icons">
-				<ul>
-
-                    <li><a href="https://www.facebook.com/aswiftconnect/">
-                    <img
+<table align="center" cellspacing="0" cellpadding="0" border="0" width="100%"
+                style="margin: auto;">
+                <tr>
+                    <td valign="middle" class="bg_black footer email-section">
+                        <table>
+                            <tr>
+                                <td valign="top" width="100%">
+                                    <table  cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-right: 10px; padding-top:5px;">
+                                                </h5>
+                                                <ul class="social" style="margin-left:10px;">
+                                                    <li><a href="https://www.facebook.com/aswiftconnect/"
+                                                            target="_blank"><img
                                                                 src="{{ asset('assets/frontend/images/facebook.png')}}"
-                                                                alt="Facebook Logo ASwiftConnect">
-                    </a></li>
-                    <li><a href="https://twitter.com/ASwiftConnect1">
-                    <img src="{{ asset('assets/frontend/images/twitter.png')}}"
-                                                                alt=" Twitter logo ASwiftconnect"></a></li>
-                    <li><a href="https://www.instagram.com/aswiftconnect/">
-                    <img src="{{ asset('assets/frontend/images/instagram.png')}}"
-                                                                alt="Instagram Logo ASwiftConnect">
-                   </a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
+                                                                alt="Facebook Logo ASwiftConnect"
+                                                                style="width: 40px !important; max-width: 50px; height: auto; display: block;"></a>
+                                                    </li>
+                                                    <li><a href="https://www.instagram.com/aswiftconnect/"
+                                                            target="_blank">
+                                                            <img src="{{ asset('assets/frontend/images/instagram.png')}}"
+                                                                alt="Instagram Logo ASwiftConnect"
+                                                                style="width: 50px !important; max-width: 40px; height: auto; display: block;"></a>
+                                                    </li>
+                                                    <li><a href="https://twitter.com/ASwiftConnect1" target="_blank">
+                                                            <img src="{{ asset('assets/frontend/images/twitter.png')}}"
+                                                                alt=" Twitter logo ASwiftconnect"
+                                                                style="width: 30px; max-width: 40px; height: auto; display: block;"></a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr><!-- end: tr -->
+                
+            </table>
 
 
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
