@@ -112,25 +112,6 @@
 
         /*icons*/
 
-
-        /*=========================
-  Icons
- ================= */
-
-        /* footer social icons */
-        ul.social-network {
-            list-style: none;
-            display: inline;
-            margin-left: 0 !important;
-            padding: 0;
-        }
-
-        ul.social-network li {
-            display: inline;
-            margin: 0 5px;
-        }
-
-
         /* footer social icons */
         .social-network a.icoRss:hover {
             background-color: #F56505;
@@ -633,7 +614,7 @@
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                                 <td width="40%" class="logo" style="text-align: left;">
-                                    <h1><a href="#">ASWIFTCONNECT</a></h1>
+                                    <h1>ASWIFTCONNECT</h1>
                                 </td>
                                 <td width="60%" class="logo" style="text-align: right;">
                                     <ul class="navigation">
@@ -737,7 +718,7 @@
                                 <td valign="top" width="50%"
                                     style="text-align: right; padding-right: 5px;color:white;padding-top:5px;">
                                     <h5 class="heading" style="margin-right:10px;">Contact Info</h5>
-                                    <p style="text-align: right; " style="margin-right:10px;">
+                                    <p style="text-align: right;" style="margin-right:10px;">
                                         info@aswiftconnect.com <br>
                                         Phone: +1 800-537-6821<br>
                                     </p>
