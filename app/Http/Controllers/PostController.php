@@ -15,6 +15,7 @@ class PostController extends Controller
 
     public function index()
     {
+        
        // $posts=Post::paginate(2);
         $posts = Post::latest()->approved()->published()->paginate(2);
         Log::info("posts");
@@ -24,6 +25,7 @@ class PostController extends Controller
     public function details($slug)
     {
         $url=URL::current();
+        $categories=Category::all();
         $post = Post::where('slug',$slug)->approved()->published()->first();
 
         $blogKey = 'blog_' . $post->id;
@@ -33,7 +35,7 @@ class PostController extends Controller
             Session::put($blogKey,1);
         }
         $randomposts = Post::approved()->published()->take(3)->inRandomOrder()->get();
-        return view('post',compact('post','randomposts','url'));
+        return view('post',compact('post','randomposts','url','categories'));
 
     }
 
