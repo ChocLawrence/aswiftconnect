@@ -653,9 +653,9 @@
 
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
                 style="margin: auto;">
-                <tr style="margin-top:10px">
+                <tr>
                     <td valign="middle" class="bg_black footer email-section">
-                        <table style="padding:10px;">
+                        <table style="margin-top:10px;">
                             <tr>
                                 <td valign="top" width="50%" style="text-align: left; color:white;">
                                     <p>&copy; 2019 AswiftConnect. All Rights Reserved</p>
