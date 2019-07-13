@@ -602,7 +602,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
 
                     <h4>Contact</h4>
                     <p>
-                        Information Technology Company<br>
+                        ASwiftConnect LLC<br>
                         332 S Michigan Ave #10-A81,<br>
                         Chicago,Illinois 60604<br>
                         USA
