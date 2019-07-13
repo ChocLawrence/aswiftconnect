@@ -144,7 +144,7 @@
 					<div class="contact100-form-checkbox validate-input">
 						<input class="input-checkbox100" id="terms" type="checkbox" name="terms" value="1">
 						<label class="label-checkbox100" for="terms">
-								I Agree to <a href="{{ url('/terms') }}">Terms and Conditions</a><br>& <a href="{{ url('/privacy') }}">Privacy Policy</a><span
+								I Agree to the <a href="{{ url('/terms') }}">Terms and Conditions</a><br>& <a href="{{ url('/privacy') }}">Privacy Policy</a><span
 									style="color:red;">*</span>
 						</label><br>
 						@if ($errors->has('terms'))
