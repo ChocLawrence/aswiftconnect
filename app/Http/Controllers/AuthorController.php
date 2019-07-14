@@ -9,8 +9,10 @@ class AuthorController extends Controller
 {
     public function profile($username)
     {
+
+        $categories=Category::all();
         $author = User::where('username',$username)->first();
         $posts = $author->posts()->approved()->published()->get();
-        return view('profile',compact('author','posts'));
+        return view('profile',compact('author','posts','categories'));
     }
 }
