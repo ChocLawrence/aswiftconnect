@@ -10,10 +10,15 @@ class AuthorController extends Controller
 {
     public function profile($username)
     {
+        if(Auth::check()){
+            $userId= Auth::user()->role_id;
+        }else{
+            $userId=2; 
+        }
 
         $categories=Category::all();
         $author = User::where('username',$username)->first();
         $posts = $author->posts()->approved()->published()->get();
-        return view('profile',compact('author','posts','categories'));
+        return view('profile',compact('author','posts','categories','userId'));
     }
 }
