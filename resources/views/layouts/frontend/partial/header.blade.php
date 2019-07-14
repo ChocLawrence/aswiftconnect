@@ -1,7 +1,7 @@
 <header>
     <div class="container-fluid position-relative no-side-padding">
 
-        <a href="{{ route('landing') }}" class="logo">ASwiftConnect</a>
+        <a href="{{ route('landing') }}" class="logo" style=" font-family: montserrat-bold, sans-serif;font-weight:400;font-size:15px;">ASWIFTCONNECT</a>
 
         <div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 
