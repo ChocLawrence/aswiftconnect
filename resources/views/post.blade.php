@@ -234,23 +234,33 @@
                                         <h4 class="title"><a href="{{ route('post.details',$randompost->slug) }}"><b>{{ $randompost->title }}</b></a></h4>
     
                                         <div>
-                                            @if($post->is_paid==true)
-                                                <span class="label badge-inverse" style="float:left;color:white"><strong>$ {{$post->amount}}</strong></span>
-                                                <span class="label label-success" style="float:right;color:white"><strong>Paid</strong></span>
-                                            @elseif($post->is_paid!=true)
-                                                <span class="label label-large label-pink" style="float:right;color:white"><strong>Unpaid</strong></span>
-                                            @endif 
-    
-                                            @if($post->assigned_to!=null)
-                                                <span class="label label-info" style="float:right;color:white"><strong>Assigned</strong></span>
-                                                @if($post->is_completed==true)
-                                                <span class="label label-success" style="float:right;color:white"><strong>Completed</strong></span>
-                                                @elseif($post->is_completed==false)
-                                                    <span class="label label-large label-grey" style="float:right;color:white"><strong>In Progress</strong></span>
+
+                                            @if($userId===1)
+                                                @if($post->is_paid==true)
+                                                    <span class="label badge-inverse" style="float:left;color:white"><strong>$ {{$post->amount}}</strong></span>
+                                                    <span class="label label-success" style="float:right;color:white"><strong>Paid</strong></span>
+                                                @elseif($post->is_paid!=true)
+                                                    <span class="label label-large label-pink" style="float:right;color:white"><strong>Unpaid</strong></span>
+                                                @endif 
+        
+                                                @if($post->assigned_to!=null)
+                                                    <span class="label label-info" style="float:right;color:white"><strong>Assigned</strong></span>
+                                                    @if($post->is_completed==true)
+                                                    <span class="label label-success" style="float:right;color:white"><strong>Completed</strong></span>
+                                                    @elseif($post->is_completed==false)
+                                                        <span class="label label-large label-grey" style="float:right;color:white"><strong>In Progress</strong></span>
+                                                    @endif
+                                                @elseif($post->assigned_to==null)
+                                                    <span class="label label-large label-grey" style="float:right;color:white"><strong>Unassigned</strong></span>
                                                 @endif
-                                            @elseif($post->assigned_to==null)
-                                                <span class="label label-large label-grey" style="float:right;color:white"><strong>Unassigned</strong></span>
-                                            @endif
+                                            @else
+                                    
+                                                @if($post->is_completed==true)
+                                                <span class="label label-success"
+                                                    style="float:right;color:white"><strong>Completed</strong></span>
+                                                @endif
+                                             
+                                            @endif      
                                         </div>
                                         <ul class="post-footer">
     

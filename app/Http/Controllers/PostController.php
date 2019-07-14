@@ -31,6 +31,11 @@ class PostController extends Controller
     }
     public function details($slug)
     {
+        if(Auth::check()){
+            $userId= Auth::user()->role_id;
+        }else{
+            $userId=2; 
+        }
         $url=URL::current();
         $categories=Category::all();
         $post = Post::where('slug',$slug)->approved()->published()->first();
@@ -42,7 +47,7 @@ class PostController extends Controller
             Session::put($blogKey,1);
         }
         $randomposts = Post::approved()->published()->take(3)->inRandomOrder()->get();
-        return view('post',compact('post','randomposts','url','categories'));
+        return view('post',compact('post','randomposts','url','categories','userId'));
 
     }
 
