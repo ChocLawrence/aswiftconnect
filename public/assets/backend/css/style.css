@@ -4028,7 +4028,7 @@ section.content {
   color: #fff; }
 
 .datepicker.datepicker-dropdown.dropdown-menu {
-  margin-top: 0 !important; }
+  margin-top: 0 !important; max-width: 20%;}
 
 .datepicker table tr td.active {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#009688), to(#009688));
