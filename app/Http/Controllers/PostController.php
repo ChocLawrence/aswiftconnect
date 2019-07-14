@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Post;
 use App\Tag;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -17,11 +18,16 @@ class PostController extends Controller
     {
         
        // $posts=Post::paginate(2);
+        if(Auth::check()){
+            $userId= Auth::user()->role_id;
+        }else{
+            $userId=2; 
+        }
         $categories=Category::all();
         $posts = Post::latest()->approved()->published()->paginate(2);
         Log::info("posts");
         Log::info($posts);
-        return view('posts',compact('posts','categories'));
+        return view('posts',compact('posts','categories','userId'));
     }
     public function details($slug)
     {

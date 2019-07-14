@@ -78,7 +78,7 @@
                             <h4 class="title"><a href="{{ route('post.details',$post->slug) }}"
                                     style="color:black;"><strong>{{ $post->title }}</strong></a></h4>
                             <div>
-                                  @if($userId===1)
+                                @if($userId===1)
                                     @if($post->is_paid==true)
                                     <span class="label badge-inverse" style="float:left;color:white"><strong>$
                                             {{$post->earning}}</strong></span>
@@ -103,14 +103,14 @@
                                     <span class="label label-large label-grey"
                                         style="float:right;color:white"><strong>Unassigned</strong></span>
                                     @endif
-                                 @else
+                                @else
                                     
                                     @if($post->is_completed==true)
                                     <span class="label label-success"
                                         style="float:right;color:white"><strong>Completed</strong></span>
                                     @endif
                                  
-                                 @endif
+                                @endif
                             </div>
 
                             <ul class="post-footer">
