@@ -17,10 +17,11 @@ class PostController extends Controller
     {
         
        // $posts=Post::paginate(2);
+        $categories=Category::all();
         $posts = Post::latest()->approved()->published()->paginate(2);
         Log::info("posts");
         Log::info($posts);
-        return view('posts',compact('posts'));
+        return view('posts',compact('posts','categories'));
     }
     public function details($slug)
     {
