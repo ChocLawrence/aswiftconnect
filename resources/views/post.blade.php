@@ -227,8 +227,14 @@
     
                                     <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/'.$randompost->image) }}" alt="{{ $randompost->title }}"></div>
     
-                                    <a class="avatar" href="#"><img src="{{ Storage::disk('public')->url('profile/'.$randompost->user->image) }}" alt="Profile Image"></a>
-    
+                                    <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+                                        @if(Storage::disk('public')->exists('profile/'.$post->user->image))
+                                            <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
+                                        @else
+                                            <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
+                                        @endif
+                                    </a>
+
                                     <div class="blog-info">
     
                                         <h4 class="title"><a href="{{ route('post.details',$randompost->slug) }}"><b>{{ $randompost->title }}</b></a></h4>
