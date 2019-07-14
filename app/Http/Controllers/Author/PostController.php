@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
@@ -52,6 +53,7 @@ class PostController extends Controller
     {
         $this->validate($request,[
             'title' => 'required',
+            'image' => 'required',
             'categories' => 'required',
             'tags' => 'required',
             'body' => 'required',
@@ -235,7 +237,6 @@ class PostController extends Controller
         if($status==='COMPLETED'){
             //SEND EMAIL,UPDATE DB
 
-            
             $post->payment_date=$date;
             $post->is_paid=true;
             $post->transaction_id=$transactionId;
@@ -244,9 +245,11 @@ class PostController extends Controller
 
             $user= User::find($userId);
             Notification::route('mail',$user->email)
-            ->notify(new  PaymentComplete($post));
+             ->notify(new  PaymentComplete($post));
 
         }
+
+      //  Log::info("not completed"); 
         
         dd($date);
         return view('author.post.show',compact('post'));

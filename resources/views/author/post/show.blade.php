@@ -43,9 +43,9 @@
             </div>
 
 
-            <a class="btn btn-danger waves-effect pull-right" title="Awaiting approval so you can make a payment">
-                <i class="material-icons">cancel</i>
-                <span>UnApproved</span>
+            <a class="btn btn-success waves-effect">
+                <i class="material-icons">done</i>
+                <span>Approved</span>
             </a>
         </div>
         @elseif($post->is_paid == true)
@@ -76,7 +76,7 @@
             <span class="badge bg-red">Unassigned</span>
             @endif
     
-            <span class="badge bg-blue">{{ $post->is_completed ? 'Completed' : 'In progress' }}</span>
+            <span class="badge bg-blue">{{ $post->is_completed ? 'Completed' : 'Incomplete' }}</span>
 
         @endif
 
@@ -259,6 +259,13 @@
                       status:details.status};
         console.log(formData);
 
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+
         // Call your server to save the transaction
         $.ajax({
             type: 'PUT',
@@ -266,7 +273,7 @@
             data:JSON.stringify(formData),  
             success: function() {
                 toastr.success('Check your email for details', 'Success');
-                setTimeout(function(){// wait for 5 secs(2)
+                setTimeout(function(){// wait for 1 secs(2)
                     location.reload(); // then reload the page.(3)
                 }, 1000);
             },

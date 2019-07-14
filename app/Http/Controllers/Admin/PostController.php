@@ -6,7 +6,6 @@ use App\Category;
 use App\Notifications\AuthorPostApproved;
 use App\Notifications\FreelancerAssign;
 use App\Notifications\ProjectAssign;
-use App\Notifications\InvoiceSetPost;
 use App\Notifications\JobCompletedToFreelancer;
 use App\Notifications\JobCompletedToAuthor;
 use App\Notifications\JobInCompleteToFreelancer;
