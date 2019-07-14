@@ -4,7 +4,7 @@
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
                 data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="{{route('landing')}}"><strong class="brand">ASWIFTCONNECT</strong></a>
+            <a class="navbar-brand brand" href="{{route('landing')}}" style=" font-family: montserrat-bold, sans-serif;font-weight:400;font-size:15px;">ASWIFTCONNECT</a>
         </div>
         <div class="pull-right">
             <ul class="nav">
