@@ -18,6 +18,7 @@
     <!-- mobile specific metas
    ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="eN4C0is58cktJ0lC3SMuGVW5MX6kWopf4_Hj2r5kkM4" />
 
     <!-- CSS
    ================================================== -->
