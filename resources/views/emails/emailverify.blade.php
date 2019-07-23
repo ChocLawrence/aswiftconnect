@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <title>ASwiftConnect | Verify Email</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
  
@@ -149,6 +149,7 @@
          }
  
  
+         p,
          h1,
          h2,
          h3,
@@ -156,7 +157,7 @@
          h5,
          h6 {
              font-family: 'Nunito Sans', sans-serif;
-             color: #000000;
+             color: #ffffff;
              margin-top: 0;
          }
  

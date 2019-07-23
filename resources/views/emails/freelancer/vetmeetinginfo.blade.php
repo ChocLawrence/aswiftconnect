@@ -169,7 +169,7 @@
              padding: 2.5em;
          }
  
- 
+         p,
          h1,
          h2,
          h3,
@@ -177,7 +177,7 @@
          h5,
          h6 {
              font-family: 'Nunito Sans', sans-serif;
-             color: #000000;
+             color: #ffffff;
              margin-top: 0;
          }
  
@@ -558,21 +558,42 @@
                 </tr><!-- end tr -->
                 <tr>
                     <td class="bg_dark email-section" style="text-align:center;">
-                        <div class="heading-section heading-section-white">
-                            <h2>We will be glad to have you on our platform</h2>
-                            <p>Your meeting has been scheduled. Talk to you on {{$freelancer->vet_date}}<br>
-                                The time for this meeting is at GMT'{{$freelancer->vet_time }}<br>
-                                Endeavour to be on time and you have a steady internet connection including a good
-                                microphone and webcam. <br>
-                                We will have this meeting on hangouts<br>
-                                We would also like to know more about you and your experience.prepare your portfolio
-                                online.We will have to share screens.
-                                Set it up and if you will like to have the meeting with an email of your choice, let us
-                                know.
-                                Thank you for trusting AswiftConnect!');</p>
-                            <p><a href="{{route('landing')}}" class="btn btn-primary">Go To Site</a></p> 
-                            <p>Thanks for trusting AswiftConnect</p>
-                        </div>
+                        @if($freelancer->vet_url===null)
+                            <div class="heading-section heading-section-white">
+                                <h2>We will be glad to have you on our platform</h2>
+                                <p>Your meeting has been scheduled. Talk to you on {{$freelancer->vet_date}}<br>
+                                    The time for this meeting is at GMT'{{$freelancer->vet_time }}<br>
+                                    Endeavour to be on time and you have a steady internet connection including a good
+                                    microphone and webcam. <br>
+                                    We will have this meeting on hangouts<br>
+                                    We would also like to know more about you and your experience.prepare your portfolio
+                                    online.We will have to share screens.
+                                    Set it up and if you will like to have the meeting with an email of your choice, let us
+                                    know.
+                                    Thank you for trusting AswiftConnect!');</p>
+                                <p><a href="{{route('landing')}}" class="btn btn-primary">Go To Site</a></p> 
+                                <p>Thanks for trusting AswiftConnect</p>
+                            </div>
+                        @else
+                            <div class="heading-section heading-section-white">
+                                <h2>We will be glad to have you on our platform</h2>
+                                <p>Your meeting has been scheduled. Talk to you on {{$freelancer->vet_date}}<br>
+                                    The time for this meeting is at GMT' {{$freelancer->vet_time }}<br>
+                                    Endeavour to be on time and you have a steady internet connection <br>
+                                    Your test will take place on hackerrank<br>
+                                    You must complete the test within 48 hours  from the stated date above.
+                                    Once you complete the test, we will be notified and will get back to you within 2 business days
+                                    Thank you for trusting AswiftConnect!');</p>
+                                <h3>Your Hackerrank test can be taken at <a href="{{$freelancer->vet_url }}">Click Here</a></h3> 
+                                <p>Wishing you all the very best</p>    
+                                <p>If you cannot access the link above, copy this and place in your browser 
+                                    <a href="{{$freelancer->vet_url }}">{{$freelancer->vet_url }}</a></p>
+                                <p><a href="{{route('landing')}}" class="btn btn-primary">Go To Site</a></p> 
+                                <p>Thanks for trusting AswiftConnect</p>
+
+                            </div>
+
+                        @endif
                     </td>
                 </tr><!-- end: tr -->
 

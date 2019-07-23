@@ -31,12 +31,16 @@
                     <h2>
                         SET VETTING INFO
                     </h2>
+                    <p>Set test url from Hackerrank if freelancer is a developer</p>
+
                 </div>
                 <div class="body">
                     <form action="{{ route('admin.freelancer.setvetinfo',$freelancer->id) }}" method="POST">
                         @csrf
                         @method('PUT')
-                        <div class="row clearfix">
+                        <div class="col clearfix">
+
+                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -58,7 +62,18 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
 
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" id="vet_url" class="form-control" name="vet_url"
+                                        value="{{ $freelancer->vet_url }}" style="margin-top:5px;">
+                                    <label class="form-label">Test URL</label>
+                                </div>
+                            </div>
+                          
+                           
+    
                             <div class="form-group">
                                 <button class="btn btn-danger m-t-15 waves-effect pull-left" data-dismiss="modal">
                                     <i class="material-icons">cancel</i>
@@ -69,7 +84,10 @@
                                     <span>SUBMIT</span>
                                 </button>
                             </div>
+                        
                         </div>
+
+                        
                     </form>
                 </div>
             </div>

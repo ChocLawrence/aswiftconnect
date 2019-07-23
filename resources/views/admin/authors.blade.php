@@ -27,9 +27,10 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Phone</th>
                                     <th>Posts</th>
                                     <th>Comments</th>
-                                    <th>Favorite Posts</th>
+                                    <th>Favorites</th>
                                     <th>Created At</th>
                                     <th>Action</th>
                                 </tr>
@@ -39,9 +40,10 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Phone</th>
                                     <th>Posts</th>
                                     <th>Comments</th>
-                                    <th>Favorite Posts</th>
+                                    <th>Favorites</th>
                                     <th>Created At</th>
                                     <th>Action</th>
                                 </tr>
@@ -52,6 +54,7 @@
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $author->name }}</td>
                                             <td>{{ $author->email }}</td>
+                                            <td>{{ $author->phone }}</td>
                                             <td>{{ $author->posts_count }}</td>
                                             <td>{{ $author->comments_count }}</td>
                                             <td>{{ $author->favorite_posts_count }}</td>

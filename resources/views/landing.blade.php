@@ -52,7 +52,7 @@
     <style>
        
     body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-h1, h2, h3, h4, h5, h6 { color: #113d71; margin: 0px 0px 12px 0px;font-weight: 400; line-height: 1; }
+h1, h2, h3, h4, h5, h6 { color: black; margin: 0px 0px 12px 0px;font-weight: 400; line-height: 1; }
 h1 { font-size: 36px; }
 h2 { font-size: 26px; line-height: 38px; }
 h3 { font-size: 22px; line-height: 32px; }
@@ -123,6 +123,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                 <li><a class="smoothscroll" href="#pricing" title="pricing">Fields</a></li>
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
                 <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
+                <li><a href="{{ route('browse') }}" title="Freelancers">Freelancers</a></li>
             </ul>
 
             <a href="{{ route('login') }}" title="login to ASwiftConnect" class="button button-primary cta">Login</a>
@@ -145,7 +146,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
     <!-- home
    ================================================== -->
     <section id="home" data-parallax="scroll"
-        data-image-src="{{ asset('assets/frontend/css/landing/images/hero-bg.png')}}" data-natural-width=3000
+        data-image-src="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg')}}" data-natural-width=3000
         data-natural-height=2000>
 
         <div class="overlay"></div>
@@ -230,67 +231,8 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                         src="https://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39"
                         width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
                         allowfullscreen></iframe> --}}
-                        <div class="row">
-                                <h5 style="margin-left:20px;color:black;">Our Top Freelancers</h5>
-                                <!-- team-block -->
-                                <div class="col-three">
-                                    <div data-aos="fade-up" class="team-block active">
-                                        <div class="team-img">
-                                            <a href="#">
-                                                <img src="https://easetemplate.com/free-website-templates/practical/images/team_img_1.jpg" alt="" class="img-fluid">
-                                                <div class="social-media" style="text-align:center;">
-                                                    <a href="#" class="fa fa-facebook"></a>
-                                                    <a href="#" class="fa fa-twitter"></a>
-                                                    <a href="#" class="fa fa-instagram"></a>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="team-content" style="text-align:center;">
-                                            <h6>William B. Smith</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.team-block -->
-                                <!-- team-block -->
-                                <div class="col-three">
-                                    <div data-aos="fade-up" class="team-block">
-                                        <div class="team-img">
-                                            <a href="#">
-                                                <img src="https://easetemplate.com/free-website-templates/practical/images/team_img_2.jpg" alt="" class="img-fluid">
-                                                <div class="social-media" style="text-align:center;">
-                                                    <a href="#" class="fa fa-facebook"></a>
-                                                    <a href="#" class="fa fa-twitter"></a>
-                                                    <a href="#" class="fa fa-instagram"></a>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="team-content" style="text-align:center;">
-                                            <h6>Ronald P. Lomas </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.team-block -->
-                                <!-- team-block -->
-                                <div class="col-three">
-                                    <div data-aos="fade-up" class="team-block">
-                                        <div class="team-img">
-                                            <a href="#">
-                                                <img src="https://easetemplate.com/free-website-templates/practical/images/team_img_3.jpg" alt="" class="img-fluid">
-                                                <div class="social-media" style="text-align:center;">
-                                                    <a href="#" class="fa fa-facebook"></a>
-                                                    <a href="#" class="fa fa-twitter"></a>
-                                                    <a href="#" class="fa fa-instagram"></a>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="team-content" style="text-align:center;">
-                                            <h6>Jose B. Banks</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.team-block -->
-                                
-                            </div>
+                        
+                        <img src="{{ asset('assets/frontend/images/zoom.jpeg')}}" alt="About image">         
                 </div>
 
             </div>
@@ -300,7 +242,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                     ASwiftConnect is a platform which brings together professionals and employers who
                     want to get their projects done in the least possible amount of time and at the least cost.
                     We pay great attention to all our customers and ensure the best results.Never fail to Contact
-                    us for anything.
+                    us for anything. We encourage youths to join the platform in ever growing numbers
                 </p>
             </div>
 

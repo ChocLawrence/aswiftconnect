@@ -111,6 +111,22 @@
 						@endif
 					</div>
 
+					<div class="wrap-input100 validate-input" data-validate="Phone number is required">
+						<input id="phone" type="number"
+							class="input100 form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}"
+							name="phone" value="{{ old('phone') }}" placeholder="Phone Number">
+
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</span>
+						@if ($errors->has('phone'))
+						<span class="invalid-feedback">
+							<strong>{{ $errors->first('phone') }}</strong>
+						</span>
+						@endif
+					</div>
+
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<input id="password" type="password"
 							class="input100 form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
@@ -158,15 +174,6 @@
 						<button type="submit" class="login100-form-btn">
 							{{ __('Register') }} As Freelancer
 						</button>
-					</div>
-
-					<div class="text-center p-t-13">
-						<strong>
-							<a class="txt3" href="{{route('register')}}">
-								Sign up as employer?
-								<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-							</a>
-						</strong>
 					</div>
 					<div class="text-center p-t-13">
 						<strong>

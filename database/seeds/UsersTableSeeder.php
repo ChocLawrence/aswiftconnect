@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'MD.Admin',
             'username' => 'admin',
             'email' => 'admin@blog.com',
-            'password' => bcrypt('adminblog'),
+            'password' => bcrypt('chocolate'),
         ]);
 
         DB::table('users')->insert([
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'MD.Author',
             'username' => 'author',
             'email' => 'author@blog.com',
-            'password' => bcrypt('authorblog'),
+            'password' => bcrypt('chocolate'),
         ]);
 
         DB::table('users')->insert([
@@ -34,7 +34,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'MD.Freelancer',
             'username' => 'freelancer',
             'email' => 'freelancer@blog.com',
-            'password' => bcrypt('freelancerblog'),
+            'password' => bcrypt('chocolate'),
         ]);
     }
 }

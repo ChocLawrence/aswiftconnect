@@ -169,6 +169,7 @@
          }
  
  
+         p,
          h1,
          h2,
          h3,
@@ -176,7 +177,7 @@
          h5,
          h6 {
              font-family: 'Nunito Sans', sans-serif;
-             color: #000000;
+             color: #ffffff;
              margin-top: 0;
          }
  

@@ -52,6 +52,11 @@ class FreelancerController extends Controller
 
         $user->vet_time=$request->time;
         $user->vet_date=$request->date;
+
+        if(isset($request->vet_url)){
+            $user->vet_url=$request->vet_url;
+        }
+        
         $user->save();
 
         Log::info("freelancer ");

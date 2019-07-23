@@ -41,13 +41,29 @@
 
                                 <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/'.$post->image) }}" alt="{{ $post->title }}"></div>
 
-                                <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
-                                    @if(Storage::disk('public')->exists('profile/'.$post->user->image))
-                                     <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
-                                    @else
-                                     <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
-                                    @endif
-                                </a>
+                                @if($post->assigned_to===$userId  || $userId!==3)        
+                                    <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+                                        
+                                        @if(Storage::disk('public')->exists('profile/'.$post->user->image))
+                                            <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
+                                        @else
+                                            <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
+                                        @endif
+                                    
+                                    </a>
+                                @else
+        
+                                    <a class="avatar">
+                                        
+                                        @if(Storage::disk('public')->exists('profile/'.$post->user->image))
+                                            <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
+                                        @else
+                                            <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
+                                        @endif
+                                    
+                                    </a>
+                                
+                                @endif
 
                                 <div class="blog-info">
 

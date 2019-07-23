@@ -53,10 +53,15 @@ class PostController extends Controller
 
     public function postByCategory($slug)
     {
+        if(Auth::check()){
+            $userId= Auth::user()->role_id;
+        }else{
+            $userId=2; 
+        }
         $categories = Category::all();
         $category = Category::where('slug',$slug)->first();
         $posts = $category->posts()->approved()->published()->get();
-        return view('category',compact('category','posts','categories'));
+        return view('category',compact('category','posts','categories','userId'));
     }
 
     public function postByTag($slug)

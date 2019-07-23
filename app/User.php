@@ -17,7 +17,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'role_id','name','username','email', 'password','status',
+        'role_id','name','username','email','phone', 'password','status',
     ];
 
     /**
@@ -36,6 +36,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function posts()
     {
         return $this->hasMany('App\Post');
+    }
+
+    public function projects()
+    {
+        return $this->hasMany('App\Project');
     }
 
     public function favorite_posts()
