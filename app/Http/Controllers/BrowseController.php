@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use App\User;
+use App\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -26,7 +27,7 @@ class BrowseController extends Controller
 
         //$project_owners= User::findMany($ids);
        
-       
+        $categories=Category::all();
         $query = $request->input('query');
        // $projects =  $project_owners->where('name','LIKE',"%$query%");
        $project_owners = User::whereHas(
@@ -37,7 +38,7 @@ class BrowseController extends Controller
         Log::info("project owner searched");    
         Log::info($project_owners);
 
-        return view('browse',compact('query','project_owners'));
+        return view('browse',compact('query','project_owners','categories'));
     }
 
     public function details($name)
@@ -49,6 +50,7 @@ class BrowseController extends Controller
             $userId=2; 
         }
 
+        $categories=Category::all();
         $userInfo = User::where('name',$name)->first();
         $all_projects=Project::where('user_id', $userInfo->id)->get();
         $count=Project::where('user_id', $userInfo->id)->count();
@@ -62,7 +64,7 @@ class BrowseController extends Controller
         //     Session::put($blogKey,1);
         // }
         // $randomposts = Post::approved()->published()->take(3)->inRandomOrder()->get();
-        return view('freelancerdetails',compact('userInfo','all_projects','count'));
+        return view('freelancerdetails',compact('userInfo','all_projects','count','categories'));
 
     }
 }
