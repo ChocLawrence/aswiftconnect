@@ -232,7 +232,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                         width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
                         allowfullscreen></iframe> --}}
                         
-                        <img src="{{ asset('assets/frontend/images/zoom.jpeg')}}" alt="About image">         
+                        <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">         
                 </div>
 
             </div>
