@@ -524,10 +524,10 @@
                     <td valign="top" class="bg_white" style="padding: 1em 2.5em;">
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
-                                <td width="40%" class="logo" style="text-align: left;">
+                                <td width="80%" class="logo" style="text-align: left;">
                                     <h1><a href="#">ASWIFTCONNECT</a></h1>
                                 </td>
-                                <td width="60%" class="logo" style="text-align: right;">
+                                <td width="20%" class="logo" style="text-align: right;">
                                     <ul class="navigation">
                                         <li><a href="#"><img src="{{ asset('assets/frontend/images/logo.png')}}"
                                                     alt="Logo" border="0" width="48"
