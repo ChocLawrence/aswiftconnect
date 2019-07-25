@@ -30,7 +30,8 @@ class SettingsController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required'
+            'phone' => 'required',
+            'about' => 'required'
         ]);
         $image = $request->file('image');
         $slug = str_slug($request->name);
@@ -61,6 +62,35 @@ class SettingsController extends Controller
         if (isset($image)){
             $user->image = $imageName;
         }
+
+        $country=$request->country;
+        $linkedin_url=$request->linkedin_url;
+        $github_url=$request->github_url;
+        $facebook_url=$request->facebook_url;
+        $twitter_url=$request->twitter_url;
+
+        //check if linkedin,country++
+        if(isset($country)){
+            $user->country = $country;
+        }
+
+        if(isset($linkedin_url)){
+            $user->linkedin_url= $linkedin_url;
+        }
+
+        if(isset($github_url)){
+            $user->github_url= $github_url;
+        }
+
+        if(isset($facebook_url)){
+            $user->facebook_url= $facebook_url;
+        }
+
+        if(isset($twitter_url)){
+            $user->twitter_url= $twitter_url;
+        }
+
+
         $user->about = $request->about;
         $user->save();
         Toastr::success('Profile Successfully Updated :)','Success');

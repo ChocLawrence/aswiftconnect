@@ -94,9 +94,10 @@
                                     <ul class="icons">
                                         <li>SOCIAL: </li>
                                        
-                                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                        <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+                                        <li><a href="{{$userInfo->facebook_url}}"><i class="ion-social-facebook"></i></a></li>
+                                        <li><a href="{{$userInfo->twitter_url}}"><i class="ion-social-twitter"></i></a></li>
+                                        <li><a href="{{$userInfo->github_url}}"><i class="ion-social-github"></i></a></li>
+                                        <li><a href="{{$userInfo->linkedin_url}}"><i class="ion-social-linkedin"></i></a></li>
                                     </ul>
                                 </div>
     

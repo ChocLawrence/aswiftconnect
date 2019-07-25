@@ -23,6 +23,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('image')->default('default.png');
             $table->text('about')->nullable();
+            $table->string('country')->nullable();
+            $table->text('facebook_url')->nullable();
+            $table->text('github_url')->nullable();
+            $table->text('twitter_url')->nullable();
+            $table->text('linkedin_url')->nullable();
             $table->integer('status')->nullable();
             $table->integer('resume')->nullable();
             $table->integer('is_accepted')->nullable();

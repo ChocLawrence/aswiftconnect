@@ -15,7 +15,7 @@
                         <h2>
                             SETTINGS
                         </h2>
-                        <ul class="header-dropdown m-r--5">
+                        {{-- <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <i class="material-icons">more_vert</i>
@@ -26,7 +26,7 @@
                                     <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
                                 </ul>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </div>
                     <div class="body">
                         <!-- Nav tabs -->
@@ -93,11 +93,14 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="phone" class="form-control" placeholder="Enter your Phone number" name="phone" value="{{ Auth::user()->phone }}">
+                                                    <input type="number" id="phone" class="form-control" placeholder="Enter your Phone number" name="phone" value="{{ Auth::user()->phone }}">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                   
+
+                                    <!--Bio-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="email_address_2">About : </label>
@@ -105,13 +108,79 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <textarea rows="5" name="about" class="form-control">{{ Auth::user()->about }}</textarea>
+                                                    <textarea rows="5" name="about" class="form-control" placeholder="tell us about yourself">{{ Auth::user()->about }}</textarea>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
+                                    <!--extra-->
 
+                                    <!--Country-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="country">Country : </label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="country" class="form-control" placeholder="Enter a Country Name" name="country" value="{{ Auth::user()->country }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <!--Social-->
+                                     <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="linkedin">LinkedIn : </label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="linkedin" class="form-control" placeholder="Enter a url to your LinkedIn profile" name="linkedin_url" value="{{ Auth::user()->linkedin_url }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="github">GitHub : </label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="github" class="form-control" placeholder="Enter a url to your GitHub profile"  name="github_url" value="{{ Auth::user()->github_url }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="facebook">Facebook: </label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="facebook" class="form-control" placeholder="Enter a url to your Facebook profile"  name="facebook_url" value="{{ Auth::user()->facebook_url }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="twitter">Twitter: </label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="twitter" class="form-control"  placeholder="Enter a url to your Twitter profile" name="twitter_url" value="{{ Auth::user()->twitter_url }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--end extra-->
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
                                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">UPDATE</button>

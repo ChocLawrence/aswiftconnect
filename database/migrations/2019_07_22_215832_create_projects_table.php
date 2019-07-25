@@ -19,11 +19,6 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('project_link');
-            $table->string('country')->nullable();
-            $table->text('facebook_url')->nullable();
-            $table->text('github_url')->nullable();
-            $table->text('twitter_url')->nullable();
-            $table->text('linkedin_url')->nullable();
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade'); 
