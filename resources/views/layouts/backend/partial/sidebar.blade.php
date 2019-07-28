@@ -175,10 +175,10 @@
                             </a>
                         </li>
                         <li class="header">System</li>
-                        <li class="{{ Request::is('freelancer/profile') ? 'active' : '' }}">
-                            <a href="{{ route('freelancer.profile.index') }}">
+                        <li class="{{ Request::is('freelancer/projects') ? 'active' : '' }}">
+                            <a href="{{ route('freelancer.projects.index') }}">
                                 <i class="material-icons">book</i>
-                                <span>Profile</span>
+                                <span>Projects</span>
                             </a>
                         </li>
                         <li class="{{ Request::is('freelancer/settings') ? 'active' : '' }}">

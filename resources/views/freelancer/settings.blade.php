@@ -15,12 +15,6 @@
                         <h2>
                             SETTINGS
                         </h2>
-                        
-                        @if($freelancer->resume===null)
-                            <span class="badge bg-red pull-right">Upload your resume</span>
-                        @else
-                            <span class="badge bg-green pull-right">Resume uploaded</span>
-                        @endif
                     </div>
                     <div class="body">
                         <!-- Nav tabs -->
@@ -33,11 +27,6 @@
                             <li role="presentation">
                                 <a href="#change_password_with_icon_title" data-toggle="tab">
                                     <i class="material-icons">change_history</i> CHANGE PASSWORD
-                                </a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#profile_with_resume_title" data-toggle="tab">
-                                    <i class="material-icons">book</i> UPLOAD RESUME
                                 </a>
                             </li>
 
@@ -243,55 +232,6 @@
                                 </form>
                             </div>
 
-                             <!-- upload resume -->
-                            <div role="tabpanel" class="tab-pane fade" id="profile_with_resume_title">
-                                <form method="POST" action="{{ route('freelancer.profile.upload') }}" class="form-horizontal" enctype="multipart/form-data">
-                                    @csrf
-                                    @method('PUT')
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Name : </label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="name" class="form-control" placeholder="Enter your name" name="name" value="{{ Auth::user()->name }}">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="email_address_2">Email Address</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="email_address_2" class="form-control" placeholder="Enter your email address" name="email" value="{{ Auth::user()->email }}">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="resume">Resume: </label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="file" name="resume" accept="application/pdf">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row clearfix">
-                                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">UPLOAD RESUME</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
                         </div>
                     </div>
                 </div>

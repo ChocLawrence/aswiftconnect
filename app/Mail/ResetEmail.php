@@ -28,6 +28,6 @@ class ResetEmail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->markdown('emails.reset');
+        return $this->markdown('emails.reset')->from('info@aswiftconnect.com',"ASwiftConnect Inc");
     }
 }

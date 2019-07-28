@@ -35,7 +35,7 @@ class NewAuthorPost extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->from('info@aswiftconnect.com')
+        return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
         ->subject("New Post needs Approval")->markdown('emails.admin.newpost', ['post' => $this->post]);
     }
     /**

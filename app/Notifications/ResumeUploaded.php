@@ -42,7 +42,7 @@ class ResumeUploaded extends Notification
      */
     public function toMail($notifiable)
     {
-         return (new MailMessage)->from('info@aswiftconnect.com')
+         return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
          ->subject("New Freelancer Resume Uploaded")->markdown('emails.admin.resume', ['freelancer' => $this->freelancer])
          ->attach($this->resume, [
             'as' => $this->freelancer->name.'_resume.pdf',

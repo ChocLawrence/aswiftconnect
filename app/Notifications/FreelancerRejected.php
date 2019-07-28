@@ -40,7 +40,7 @@ class FreelancerRejected extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->from('info@aswiftconnect.com')
+        return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
         ->subject("Your AswiftConnect Interview")->markdown('emails.freelancer.rejected', ['freelancer' => $this->freelancer]);             
     }
 

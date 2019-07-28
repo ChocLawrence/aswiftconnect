@@ -41,7 +41,7 @@ class ResumeReceived extends Notification
      */
     public function toMail($notifiable)
     {
-         return (new MailMessage)->from('info@aswiftconnect.com')
+         return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
          ->subject("Your Resume was Received")->markdown('emails.freelancer.resumeReceived', ['freelancer' => $this->freelancer]);      
     }
 

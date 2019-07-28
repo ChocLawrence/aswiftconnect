@@ -60,7 +60,7 @@
 					<div style="text-align:center;padding-bottom:10px;">
 						<a href="{{route('landing')}}" title="Go Back to Homepage"><img style="border-radius: 50%;"
 								width="50" height="50"
-								src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="AVATAR"></a>
+								src="{{ asset('assets/frontend/css/login/images/avatar-01.jpg')}}" alt="AVATAR"></a>
 
 					</div>
 
@@ -205,7 +205,6 @@
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
-
 	</script>
 	<!--===============================================================================================-->
 	<script src="{{ asset('assets/frontend/css/register/js/main.js')}}"></script>

@@ -190,15 +190,15 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
         </div> <!-- end home-content -->
 
         <ul class="home-social-list">
-            <li>
+            <li title="Follow us on Facebook">
                 <a href="https://www.facebook.com/aswiftconnect/" target="_blank"><i
                         class="fa fa-facebook-square"></i></a>
             </li>
-            <li>
-                <a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="fa fa-twitter"
+            <li title="Follow us on Twitter">
+                <a href="https://twitter.com/ASwiftConnect1" target="_blank"><i class="fa fa-twitter-square"
                         target="_blank"></i></a>
             </li>
-            <li>
+            <li title="Follow us on Instagram">
                 <a href="https://www.instagram.com/aswiftconnect/" target="_blank"><i class="fa fa-instagram"></i></a>
             </li>
             {{-- <li>
@@ -310,17 +310,17 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
 
                     <div class="bgrid step" data-item="1">
                         <h3>Registration</h3>
-                        <p>Clients register through the client(employer portal) while
-                            professionals do same through the professionals(freelancer)
+                        <p>Employers register through the employer portal  while
+                            professionals do same through the freelancer
                             portal.
                         </p>
                     </div>
 
                     <div class="bgrid step" data-item="2">
-                        <h3>Job Postings</h3>
-                        <p>Jobs are posted by the clients whenever a job is to be done.Posting
-                            a job requires the client to login to his or her client dashboard and
-                            carry out postings.
+                        <h3>Posting Projects</h3>
+                        <p>Jobs are posted by the employers whenever a job is to be done.Posting
+                            a job requires the employer to login to his or her dashboard and create a post. Our reviewers will review the post and 
+                            either accept or reject based on many criteria which span from clarity to feasibility.
                         </p>
                     </div>
 
@@ -334,7 +334,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                     <div class="bgrid step" data-item="4">
                         <h3>Job Completion</h3>
                         <p>When the freelancer(s) have finished working on the project, payments are then made to
-                            all of them.
+                           them.
                         </p>
                     </div>
 

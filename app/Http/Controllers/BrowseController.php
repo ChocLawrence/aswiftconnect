@@ -32,7 +32,7 @@ class BrowseController extends Controller
        // $projects =  $project_owners->where('name','LIKE',"%$query%");
        $project_owners = User::whereHas(
         'role', function($q){
-            $q->where('role_id', '3');
+            $q->where('role_id', '3')->where('is_accepted', 1);
         })->where('name','LIKE',"%$query%")->get();
 
         Log::info("project owner searched");    

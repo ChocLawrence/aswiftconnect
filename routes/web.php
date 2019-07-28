@@ -114,10 +114,9 @@ Route::group(['as'=>'freelancer.','prefix'=>'freelancer','namespace'=>'Freelance
     Route::get('settings','SettingsController@index')->name('settings');
     Route::put('profile-update','SettingsController@updateProfile')->name('update');
     Route::put('password-update','SettingsController@updatePassword')->name('password.update');
-    Route::put('update-resume','SettingsController@uploadResume')->name('profile.upload');
 
     Route::resource('post','PostController');
-    Route::resource('profile','ProjectController');
+    Route::resource('projects','ProjectController');
     Route::get('/favorite','FavoriteController@index')->name('favorite.index');
 
 

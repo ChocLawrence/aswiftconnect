@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('phone')->default('none');
+            $table->string('specialty')->default('none');
+            $table->integer('resume')->default('none');
             $table->string('password');
             $table->string('image')->default('default.png');
             $table->text('about')->nullable();
@@ -29,7 +31,6 @@ class CreateUsersTable extends Migration
             $table->text('twitter_url')->nullable();
             $table->text('linkedin_url')->nullable();
             $table->integer('status')->nullable();
-            $table->integer('resume')->nullable();
             $table->integer('is_accepted')->nullable();
             $table->date('vet_date')->nullable();
             $table->time('vet_time')->nullable();

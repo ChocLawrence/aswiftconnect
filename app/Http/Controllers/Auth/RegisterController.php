@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
+use App\Notifications\ResumeUploaded;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -68,7 +70,9 @@ class RegisterController extends Controller
             'phone' => 'required|string|max:15|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'terms'=>'required'
+            'specialty' => 'required|in:1,2',
+            'resume' => 'required|mimes:pdf',
+            'terms'=>'required',
         ]);
     }
 
@@ -85,15 +89,17 @@ class RegisterController extends Controller
            
             $role_id=3;
             $status=0;
+            if($data['resume']){
+                $resume=1;
+                $resumePdf=$data['resume'];
+            }
 
         }else{
             $role_id=2;
             $status=1;
         }
 
-        
-        //Log::info($phone);
-        
+       
         $user = User::create([
             'role_id' => $role_id,
             'name' => $data['name'],
@@ -101,8 +107,15 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
-            'status'=> $status
+            'status'=> $status,
+            'specialty' => $data['specialty'],
+            'resume' => $resume
         ]);
+
+        //send notification to infoaswiftconnect
+
+        Notification::route('mail',"info@aswiftconnect.com")
+        ->notify(new  ResumeUploaded($user,$resumePdf));
 
         return $user;
     }

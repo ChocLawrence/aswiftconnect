@@ -42,7 +42,7 @@ class PaymentComplete extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->from('info@aswiftconnect.com')
+        return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
         ->subject("Project Payment Complete")->markdown('emails.author.paymentcomplete', ['post' => $this->post]);
     }
     /**

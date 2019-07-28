@@ -40,7 +40,7 @@ class FreelancerVetMeeting extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-         return (new MailMessage)->from('info@aswiftconnect.com')
+         return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
          ->subject("Your vetting meeting has been set")->markdown('emails.freelancer.vetmeetinginfo', ['freelancer' => $this->freelancer]);              
     }
 

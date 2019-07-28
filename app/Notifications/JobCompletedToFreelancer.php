@@ -42,7 +42,7 @@ class JobCompletedToFreelancer extends Notification implements ShouldQueue
      */
     public function toMail($notifiable){
 
-        return (new MailMessage)->from('info@aswiftconnect.com')
+        return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
         ->subject("You Successfully completed your assigned Project")->markdown('emails.freelancer.projectcomplete', ['post' => $this->post,'freelancer' => $this->freelancer]);              
     }
     /**

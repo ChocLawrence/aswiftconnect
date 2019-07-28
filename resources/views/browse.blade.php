@@ -23,11 +23,12 @@
 
 @section('content')
     <div class="slider display-table center-text">
-        @if(!$query)
-        <h1 class="title display-table-cell"><p style="color:white;"><strong>{{ $project_owners->count() }} freelancer{{$project_owners->count()>1 ?'s' : ''}} found </strong></p></h1>
+        <h2 class="title display-table-cell"><p style="color:white;"><strong>Browse Africa's Tech & Design Talent</strong></p></h2>
+        {{-- @if(!$query)
+        <h4 class="title display-table-cell"><p style="color:white;"><strong>{{ $project_owners->count() }} freelancer{{$project_owners->count()>1 ?'s' : ''}} found </strong></p></h4>
         @else
-          <h1 class="title display-table-cell"><p style="color:white;"><strong>{{ $project_owners->count() }} Result{{$project_owners->count()>1 ?'s' : ''}} for {{ $query }}</strong></p></h1>
-        @endif
+          <h4 class="title display-table-cell"><p style="color:white;"><strong>{{ $project_owners->count() }} Result{{$project_owners->count()>1 ?'s' : ''}} for {{ $query }}</strong></p></h4>
+        @endif --}}
     </div><!-- slider -->
 
     <section class="blog-area section">
@@ -44,6 +45,7 @@
             <div class="row">
                 @if($project_owners->count() > 0)
                     @foreach($project_owners as $project_owner)
+
                         <div class="col-lg-3 col-md-4">
                             <div class="card h-100">
                                 <div class="single-post post-style-2">
@@ -67,6 +69,7 @@
                                 </div><!-- single-post -->
                             </div><!-- card -->
                         </div><!-- col-lg-4 col-md-6 -->
+
                     @endforeach
                 @else
                     <div class="col-lg-12 col-md-12">

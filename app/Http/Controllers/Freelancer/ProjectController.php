@@ -30,12 +30,12 @@ class ProjectController extends Controller
         $user_id = Auth::id();
         $projects = Project::where('user_id',$user_id)->get();
 
-        return view('freelancer.profile.index',compact('projects'));
+        return view('freelancer.projects.index',compact('projects'));
     }
 
     public function create()
     {
-        return view('freelancer.profile.create');
+        return view('freelancer.projects.create');
     }
 
 
@@ -66,7 +66,7 @@ class ProjectController extends Controller
         // $users = User::where('role_id','1')->get();
         // Notification::send($users, new NewAuthorPost($post));
         Toastr::success('Project Successfully Added :)','Success');
-        return redirect()->route('freelancer.profile.index');
+        return redirect()->route('freelancer.projects.index');
     }
 
     /**
@@ -78,7 +78,7 @@ class ProjectController extends Controller
     public function show($project)
     {
         $current_project = Project::findOrFail($project);
-        return view('freelancer.profile.show',compact('current_project'));
+        return view('freelancer.projects.show',compact('current_project'));
     }
 
     public function edit($project)
@@ -91,7 +91,7 @@ class ProjectController extends Controller
             return redirect()->back();
         }
 
-        return view('freelancer.profile.edit',compact('current_project'));
+        return view('freelancer.projects.edit',compact('current_project'));
     }
 
     /**
@@ -127,7 +127,7 @@ class ProjectController extends Controller
         $current_project->save();
 
         Toastr::success('Project Successfully Updated :)','Success');
-        return redirect()->route('freelancer.profile.index');
+        return redirect()->route('freelancer.projects.index');
     }
 
 
