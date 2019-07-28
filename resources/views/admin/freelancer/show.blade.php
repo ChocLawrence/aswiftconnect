@@ -16,6 +16,12 @@
     <!-- Vertical Layout | With Floating Label -->
     <a href="{{ route('admin.freelancer.index') }}" class="btn btn-danger waves-effect">BACK</a>
 
+    @if( $freelancer->specialty==1)
+      <span class="badge bg-green">Developer</span>
+    @elseif( $freelancer->specialty==2)
+      <span class="badge bg-green">Designer</span>
+    @endif
+
     <br>
     <br>
     <div class="row clearfix">
@@ -25,13 +31,12 @@
                     <h2>
                         {{ $freelancer->name }}
                     </h2>
-                    <p> {{ $freelancer->email }}</p>
+                    <p>{{ $freelancer->email }}</p>
                 </div>
                 <div class="header">
                     <h2>
                         SET VETTING INFO
                     </h2>
-                    <p>Set test url from Hackerrank if freelancer is a developer</p>
 
                 </div>
                 <div class="body">
@@ -64,6 +69,7 @@
                             </div>
                             </div>
 
+                            @if($freelancer->specialty==1)
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <input type="text" id="vet_url" class="form-control" name="vet_url"
@@ -71,6 +77,7 @@
                                     <label class="form-label">Test URL</label>
                                 </div>
                             </div>
+                            @endif
                           
                            
     
