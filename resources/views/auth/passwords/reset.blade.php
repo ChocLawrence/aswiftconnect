@@ -5,7 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" style="background-color: black; color:white;">{{ __(' Reset Password') }}</div>
+                <div class="card-header" style="background-color: black; color:white;">ASWIFTCONNECT {{ __(' Reset Password') }} 
+                    <a href="{{route('landing')}}" title="Go Back to Homepage"><img style="border-radius: 50%;"
+                    width="50" height="50"
+                    src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="AVATAR"></a></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.update') }}">

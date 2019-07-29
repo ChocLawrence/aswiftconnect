@@ -53,6 +53,11 @@
                                     <div class="middle-area">
                                         <a class="name" href="#"><b>{{$userInfo->name}}</b></a>
                                         <h6 class="date">  | Joined {{$userInfo->created_at->toDateString()}}</h6>
+                                        @if( $userInfo->specialty==1)
+                                            <span class="badge bg-green">Developer</span>
+                                        @elseif( $userInfo->specialty==2)
+                                            <span class="badge bg-green">Designer</span>
+                                        @endif
                                     </div>
     
                                 </div><!-- post-info -->

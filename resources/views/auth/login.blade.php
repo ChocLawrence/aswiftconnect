@@ -42,7 +42,7 @@
 				   @csrf
 				   
                     <div class="login100-form-avatar" title="Go back to Homepage">
-					   <a href="{{route('landing')}}"><img src="{{ asset('assets/frontend/css/login/images/avatar-01.jpg')}}" alt="Logo"></a>
+					   <a href="{{route('landing')}}"><img src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="Logo"></a>
 					</div>
 
 					

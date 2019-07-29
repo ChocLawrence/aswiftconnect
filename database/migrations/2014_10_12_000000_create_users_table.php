@@ -20,8 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('phone')->default('none');
-            $table->string('specialty')->default('none');
-            $table->string('resume')->default('none');
+            $table->string('specialty')->nullable();
+            $table->string('resume')->nullable();
             $table->string('password');
             $table->string('image')->default('default.png');
             $table->text('about')->nullable();

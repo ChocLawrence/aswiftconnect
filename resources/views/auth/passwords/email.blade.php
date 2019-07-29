@@ -85,6 +85,11 @@
                                 @endif
 
                             </div>
+
+
+                            <a href="{{route('landing')}}" title="Go Back to Homepage"><img style="border-radius: 50%;"
+                                width="50" height="50"
+                                src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="AVATAR"></a>
                         </div>
                     </div>
                 </div>

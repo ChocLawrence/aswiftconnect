@@ -59,7 +59,12 @@
                                                 @endif
                                             </a>
                                             <div class="right-area">
-                                                <a class="name" href="#"><b>{{$project_owner->name}}</b></a>
+                                                <a class="name" href="#"><b>{{$project_owner->name}}</b></a><br>
+                                                @if( $project_owner->specialty==1)
+                                                    <span class="badge bg-green">Developer</span>
+                                                @elseif( $project_owner->specialty==2)
+                                                    <span class="badge bg-green">Designer</span>
+                                                @endif
                                                 <p>Bio:</p>
                                                 <a class="date" href="#"><b>{{substr($project_owner->about,0,20)}}...</b></a>
                                             </div>

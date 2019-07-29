@@ -549,7 +549,7 @@
                             <tr>
                                 <td>
                                     <div class="text" style="text-align: center;">
-                                        <h2>Hello {{$freelancer->name}},your vet interview is set</h2>
+                                        <h2>Hello {{$freelancer->name}},your vetting test has being set, for the first interview</h2>
                                     </div>
                                 </td>
                             </tr>

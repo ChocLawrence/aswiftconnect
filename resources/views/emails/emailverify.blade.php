@@ -558,7 +558,7 @@
                     <td class="bg_dark email-section" style="text-align:center;">
                         <div class="heading-section heading-section-white">
                             <h2>We will be pleased to have you here</h2>
-                            <p>Thank you for registering on our Website. We are a community of top tech and designer freelancers. We are looking forward to working with you.
+                            <p>Thank you for registering on our Website. We are a community of African Top Tech and Designer Freelancers. We are looking forward to working with you.
                               To get started with us, you will need to verify your email address.If you did not create an account, no further action is required.
                             </p>
                             <p><a href="{{$url}}" class="btn btn-primary">Verify Email</a></p>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Register | Freelancer</title>
+	<title>Register  Freelancer | ASwiftConnect</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
@@ -12,7 +12,19 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/freelancer/style.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/frontend/css/freelancer/style.css')}}">
+	
+    <!-- favicons
+	================================================== -->
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/css/landing/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/css/landing/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/css/landing/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('assets/frontend/css/landing/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{ asset('assets/frontend/css/landing/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 </head>
 <body>
 
@@ -24,7 +36,7 @@
 					<img width="683px" height="605px" src="{{ asset('assets/frontend/images/form-img.jpg')}}" alt="">
                     <div class="signup-img-content">
 						<h2>REGISTER</h2>
-						<p>We can't wait to get started!</p><br><br>
+						<p>We can't wait to get you started!</p><br><br>
 						<h2>Join our pool of freelancers</h2>
 						<p>Get jobs right away!</p><br><br>
 						<h2>Our freelancers are professionals</h2>
@@ -40,7 +52,7 @@
 					<div class="center">
 							<a href="{{route('landing')}}" title="Go Back to Homepage"><img style="border-radius: 50%;"
 								width="50" height="50"
-								src="{{ asset('assets/frontend/css/login/images/avatar-01.jpg')}}" alt="AVATAR"></a>
+								src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="AVATAR"></a>
 					</div>
 					<form class="register-form" id="register-form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
 						@csrf

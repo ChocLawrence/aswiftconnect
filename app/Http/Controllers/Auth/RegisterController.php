@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
 use App\Notifications\ResumeUploaded;
+use App\Notifications\ResumeReceived;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -64,16 +65,33 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'username' => 'required|string|max:255|unique:users',
-            'phone' => 'required|string|max:15|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'specialty' => 'required|in:1,2',
-            'resume' => 'required|mimes:pdf',
-            'terms'=>'required',
-        ]);
+
+         //fix registraion role id
+         if($data['role_id']=='3'){
+           
+            return Validator::make($data, [
+                'name' => 'required|string|max:255',
+                'username' => 'required|string|max:255|unique:users',
+                'phone' => 'required|string|max:15|unique:users',
+                'email' => 'required|string|email|max:255|unique:users',
+                'password' => 'required|string|min:6|confirmed',
+                'specialty' => 'required|in:1,2',
+                'resume' => 'required|mimes:pdf',
+                'terms'=>'required',
+            ]);
+
+        }else{
+
+            return Validator::make($data, [
+                'name' => 'required|string|max:255',
+                'username' => 'required|string|max:255|unique:users',
+                'phone' => 'required|string|max:15|unique:users',
+                'email' => 'required|string|email|max:255|unique:users',
+                'password' => 'required|string|min:6|confirmed',
+                'terms'=>'required',
+            ]);
+        }
+       
     }
 
     /**
@@ -94,29 +112,50 @@ class RegisterController extends Controller
                 $resumePdf=$data['resume'];
             }
 
+            $user = User::create([
+                'role_id' => $role_id,
+                'name' => $data['name'],
+                'username' => str_slug($data['username']),
+                'email' => $data['email'],
+                'phone' => $data['phone'],
+                'password' => Hash::make($data['password']),
+                'status'=> $status,
+                'specialty' => $data['specialty'],
+                'resume' => $resume
+            ]);
+
+            //send notification to infoaswiftconnect
+
+            Notification::route('mail',"info@aswiftconnect.com")
+            ->notify(new  ResumeUploaded($user,$resumePdf));
+
+
+            //send notification to freslancer
+
+            Notification::route('mail',$user->email)
+            ->notify(new  ResumeReceived($user));
+
+
+    
+
         }else{
             $role_id=2;
             $status=1;
+
+            $user = User::create([
+                'role_id' => $role_id,
+                'name' => $data['name'],
+                'username' => str_slug($data['username']),
+                'email' => $data['email'],
+                'phone' => $data['phone'],
+                'password' => Hash::make($data['password']),
+                'status'=> $status
+            ]);
         }
 
        
-        $user = User::create([
-            'role_id' => $role_id,
-            'name' => $data['name'],
-            'username' => str_slug($data['username']),
-            'email' => $data['email'],
-            'phone' => $data['phone'],
-            'password' => Hash::make($data['password']),
-            'status'=> $status,
-            'specialty' => $data['specialty'],
-            'resume' => $resume
-        ]);
-
-        //send notification to infoaswiftconnect
-
-        Notification::route('mail',"info@aswiftconnect.com")
-        ->notify(new  ResumeUploaded($user,$resumePdf));
-
+        
+        
         return $user;
     }
 }
