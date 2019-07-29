@@ -1,6 +1,6 @@
 @extends('layouts.frontend.appbrowse')
 
-@section('title')
+@section('title','Browse Freelancers')
 {{ $query }}
 @endsection
 
