@@ -5,7 +5,6 @@
 @endsection
 
 @push('css')
-    <title>Browse Freelancers  | ASwiftConnect</title>
     <link href="{{ asset('assets/frontend/css/category/styles.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/frontend/css/category/responsive.css') }}" rel="stylesheet">
     <style>
