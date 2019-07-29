@@ -290,7 +290,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                         <h3>Bonuses</h3>
 
                         <p>Loyal clients who always work with us are given free bonuses. This includes having a project
-                            done for free whose price is covered by SwiftConnect.We connect with our clients and we keep
+                            done for free whose price is covered by ASwiftConnect.We connect with our clients and we keep
                             them close.</p>
 
                     </div>
