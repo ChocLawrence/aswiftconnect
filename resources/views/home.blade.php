@@ -96,7 +96,7 @@
                         <div class="blog-info">
 
                             <h4 class="title"><a href="{{ route('post.details',$post->slug) }}"
-                                    style="color:black;"><strong>{{ $post->title }}</strong></a></h4>
+                                    style="color:black;"><strong>{{ substr($post->title,0,25)}}.</strong></a></h4>
                             <div>
                                 @if($userId===1)
                                     @if($post->is_paid==true)

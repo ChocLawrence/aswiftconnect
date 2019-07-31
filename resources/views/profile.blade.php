@@ -142,7 +142,7 @@
 
                 </div><!-- col-lg-8 col-md-12 -->
 
-                <div class="col-lg-4 col-md-12 ">
+                <div class="col-lg-4 col-md-12 " style="position: relative; ">
 
                     <div class="single-post info-area ">
 
@@ -150,8 +150,29 @@
                             <h4 class="title"><b>ABOUT AUTHOR</b></h4>
                             <p>{{ $author->name }}</p><br>
                             <p>{{ $author->about }}</p><br>
-                            <strong>Author Since: {{ $author->created_at->toDateString() }}</strong><br>
-                            <strong>Total Posts : {{ $author->posts->count() }}</strong>
+                            <p><strong>Author Since: </strong>{{ $author->created_at->toDateString() }}</p><br>
+                            <p><strong>Total Posts : </strong> {{ $author->posts->count() }}</p>
+                            <div class="icons" style="position: absolute; 
+                            bottom: 0;padding:10px;float:right;">
+                                <ul  style="font-size:20px;">
+                                   
+                                    @if($author->facebook_url!=null)
+                                      <li><a href="{{$author->facebook_url}}" target="_blank"><i class="ion-social-facebook"></i></a></li>
+                                    @endif
+                                    &nbsp;
+                                    @if($author->twitter_url!=null)
+                                     <li><a href="{{$author->twitter_url}}" target="_blank"><i class="ion-social-twitter"></i></a></li>
+                                    @endif
+                                    &nbsp;
+                                    @if($author->github_url!=null)
+                                     <li><a href="{{$author->github_url}}" target="_blank"><i class="ion-social-github"></i></a></li>
+                                    @endif
+                                    &nbsp;
+                                    @if($author->github_url!=null)
+                                     <li><a href="{{$author->linkedin_url}}" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+                                    @endif
+                                </ul>
+                            </div>
                         </div>
 
 

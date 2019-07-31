@@ -97,6 +97,7 @@
                         <small>Posted By <strong> <a href="">{{ $post->user->name }}</a></strong> on
                             {{ $post->created_at->toFormattedDateString() }}</small>
                     </h2>
+                    
                 </div>
                 <div class="body">
                     {!! $post->body !!}
@@ -140,6 +141,8 @@
                         alt="">
                 </div>
             </div>
+
+
 
         </div>
     </div>

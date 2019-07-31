@@ -559,8 +559,8 @@
                                                         to make your payment securely.</p>
                                                     <p>Once you make a payment,we will assign a freelancer to work on
                                                         your project within 48 hours and you will be notified.</p>
-                                                    <p>Amount: <strong>{{$post->amount}} </strong></p>
-                                                    <p>Freelancer Deadline:<strong>{{$post->deadline}}</strong></p>
+                                                    <p>Amount: $<strong>{{$post->amount}} </strong></p>
+                                                    <p>Freelancer Deadline:<strong>{{date("M d Y", strtotime($post->deadline))}}</strong></p>
                                                     <p>Thanks for trusting AswiftConnect</p>
                                                     <a href="{{route('author.post.show',$post->id)}}"
                                                         class="btn btn-primary">Make Payment</a>

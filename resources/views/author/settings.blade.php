@@ -93,7 +93,7 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <textarea rows="5" name="about" class="form-control">{{ Auth::user()->about }}</textarea>
+                                                    <textarea rows="5" name="about" class="form-control" maxlength="500">{{ Auth::user()->about }}</textarea>
                                                 </div>
                                             </div>
                                         </div>

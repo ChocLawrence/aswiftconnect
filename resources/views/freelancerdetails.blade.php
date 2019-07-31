@@ -99,10 +99,21 @@
                                     <ul class="icons">
                                         <li>SOCIAL: </li>
                                        
-                                        <li><a href="{{$userInfo->facebook_url}}"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="{{$userInfo->twitter_url}}"><i class="ion-social-twitter"></i></a></li>
-                                        <li><a href="{{$userInfo->github_url}}"><i class="ion-social-github"></i></a></li>
-                                        <li><a href="{{$userInfo->linkedin_url}}"><i class="ion-social-linkedin"></i></a></li>
+                                        @if($userInfo->facebook_url!=null)
+                                          <li><a href="{{$userInfo->facebook_url}}" target="_blank"><i class="ion-social-facebook"></i></a></li>
+                                        @endif
+
+                                        @if($userInfo->twitter_url!=null)
+                                         <li><a href="{{$userInfo->twitter_url}}" target="_blank"><i class="ion-social-twitter"></i></a></li>
+                                        @endif
+
+                                        @if($userInfo->github_url!=null)
+                                         <li><a href="{{$userInfo->github_url}}" target="_blank"><i class="ion-social-github"></i></a></li>
+                                        @endif
+
+                                        @if($userInfo->github_url!=null)
+                                         <li><a href="{{$userInfo->linkedin_url}}" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+                                        @endif
                                     </ul>
                                 </div>
     

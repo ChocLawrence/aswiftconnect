@@ -51,7 +51,7 @@
                                 <div class="single-post post-style-2">
                                     <div class="blog-info">
                                         <div class="avatar-area">
-                                            <a class="avatar"href="{{ route('browse.details',$project_owner->name) }}">
+                                            <a class="avatar" href="{{ route('browse.details',$project_owner->name) }}">
                                                 @if(Storage::disk('public')->exists('profile/'.$project_owner->image))
                                                     <img src="{{ Storage::disk('public')->url('profile/'.$project_owner->image)  }}" width="70" height="70" alt="User" />
                                                 @else
@@ -59,7 +59,7 @@
                                                 @endif
                                             </a>
                                             <div class="right-area">
-                                                <a class="name" href="#"><b>{{$project_owner->name}}</b></a><br>
+                                                <a class="name" href="{{ route('browse.details',$project_owner->name) }}"><b>{{substr($project_owner->name,0,13)}}</b></a><br>
                                                 @if( $project_owner->specialty==1)
                                                     <span class="badge bg-green">Developer</span>
                                                 @elseif( $project_owner->specialty==2)
