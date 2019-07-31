@@ -102,18 +102,19 @@
                                                 <a href="{{ route('author.post.show',$post->id) }}" class="btn btn-info waves-effect">
                                                     <i class="material-icons">visibility</i>
                                                 </a>
+
+                                                @if($post->is_approved != true)
                                                 <a href="{{ route('author.post.edit',$post->id) }}" class="btn btn-info waves-effect">
                                                     <i class="material-icons">edit</i>
                                                 </a>
-                                                @if($post->is_approved !== true)
                                                   <button class="btn btn-danger waves-effect" type="button" onclick="deletePost({{ $post->id }})">
                                                      <i class="material-icons">delete</i>
                                                   </button>
-                                                @endif
                                                 <form id="delete-form-{{ $post->id }}" action="{{ route('author.post.destroy',$post->id) }}" method="POST" style="display: none;">
                                                     @csrf
                                                     @method('DELETE')
                                                 </form>
+                                                @endif
                                             </td>
                                         </tr>
                                     @endforeach
