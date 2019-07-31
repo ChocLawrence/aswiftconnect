@@ -23,7 +23,7 @@
                         <div class="body">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="title" class="form-control" name="title" maxlength="25">
+                                        <input type="text" id="title" class="form-control" name="title" maxlength="35">
                                         <label class="form-label">Post Title</label>
                                     </div>
                                 </div>
