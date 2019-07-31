@@ -352,7 +352,7 @@ class PostController extends Controller
 
         $freelancer=User::find($userid);
 
-        //notify freelancer and make payment 
+        //notify freelancer that job was incomplete
         Notification::route('mail',$freelancer->email)
         ->notify(new  JobInCompleteToFreelancer($post,$freelancer));
             

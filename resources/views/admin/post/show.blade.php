@@ -137,7 +137,7 @@
             <!-- Exportable Table -->
             @if($post->is_paid==true)
                 @if($post->is_approved == true)
-                    @if($post->assigned_to==null)
+                    @if($post->assigned_to==null || $post->is_completed==false)
                     <div class="card">
                         <div class="header">
                             <h2>
