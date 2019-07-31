@@ -10,12 +10,12 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="block-header">
+    {{-- <div class="block-header">
         <a class="btn btn-primary waves-effect" href="{{ route('admin.post.create') }}">
             <i class="material-icons">add</i>
             <span>Add New Post</span>
         </a>
-    </div>
+    </div> --}}
     <!-- Exportable Table -->
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -107,10 +107,10 @@
                                                 class="btn btn-info waves-effect">
                                                 <i class="material-icons">visibility</i>
                                             </a>
-                                            <a href="{{ route('admin.post.edit',$post->id) }}"
+                                            {{-- <a href="{{ route('admin.post.edit',$post->id) }}"
                                                 class="btn btn-info waves-effect">
                                                 <i class="material-icons">edit</i>
-                                            </a>
+                                            </a> --}}
                                             <button class="btn btn-danger waves-effect" type="button"
                                                 onclick="deletePost({{ $post->id }})">
                                                 <i class="material-icons">delete</i>

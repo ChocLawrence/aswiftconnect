@@ -68,7 +68,12 @@ class Handler extends ExceptionHandler
             // session timeout
             case '419':
                 return \Response::view('errors.419',array(),419);
-                break;    
+                break;  
+            
+            // entity too large
+            case '413':
+            return \Response::view('errors.413',array(),413);
+            break;    
 
             default:
                 return $this->renderHttpException($e);

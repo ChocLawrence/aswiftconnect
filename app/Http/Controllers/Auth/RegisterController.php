@@ -76,7 +76,7 @@ class RegisterController extends Controller
                 'email' => 'required|string|email|max:255|unique:users',
                 'password' => 'required|string|min:6|confirmed',
                 'specialty' => 'required|in:1,2',
-                'resume' => 'required|mimes:pdf|max:10000',
+                'resume' => 'required|mimes:pdf|file|max:4000',
                 'terms'=>'required',
             ]);
 

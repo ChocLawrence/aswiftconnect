@@ -53,7 +53,6 @@ class PostController extends Controller
     {
         $this->validate($request,[
             'title' => 'required',
-            'image' => 'required',
             'categories' => 'required',
             'tags' => 'required',
             'body' => 'required',
@@ -75,7 +74,7 @@ class PostController extends Controller
             Storage::disk('public')->put('post/'.$imageName,$postImage);
 
         } else {
-            $imageName = "default.png";
+            $imageName = "post_default.jpg";
         }
         $post = new Post();
         $post->user_id = Auth::id();
@@ -151,7 +150,6 @@ class PostController extends Controller
         }
         $this->validate($request,[
             'title' => 'required',
-            'image' => 'image',
             'categories' => 'required',
             'tags' => 'required',
             'body' => 'required',
@@ -177,7 +175,7 @@ class PostController extends Controller
             Storage::disk('public')->put('post/'.$imageName,$postImage);
 
         } else {
-            $imageName = $post->image;
+            $imageName = "post_default.jpg";
         }
 
         $post->user_id = Auth::id();

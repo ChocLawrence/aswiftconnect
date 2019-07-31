@@ -60,8 +60,14 @@
                 <div class="card h-100">
                     <div class="single-post post-style-1">
 
-                        <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/'.$post->image) }}"
-                                alt="{{ $post->title }}"></div>
+                        <!--Check if author uploaded a picture-->
+                        <div class="blog-image">
+                            @if(Storage::disk('public')->exists('post/'.$post->image))
+                              <img src="{{ Storage::disk('public')->url('post/'.$post->image) }}" alt="{{ $post->title }}">
+                            @else
+                              <img src="{{  asset('assets/frontend/images/post_default.jpg') }}"  alt="Project Default Image" />
+                            @endif
+                        </div>
 
                         @if($post->assigned_to===$userId || $userId!==3)        
                             <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">

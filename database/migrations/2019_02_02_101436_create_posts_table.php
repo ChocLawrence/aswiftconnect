@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->string('image')->default('default.png');
+            $table->string('image')->default('post_default.jpg');
             $table->text('body');
             $table->integer('view_count')->default(0);
             $table->boolean('status')->default(false);

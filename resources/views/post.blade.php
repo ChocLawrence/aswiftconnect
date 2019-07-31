@@ -11,7 +11,7 @@
         .header-bg{
             height: 400px;
             width: 100%;
-            background-image: url({{ Storage::disk('public')->url('post/'.$post->image) }});
+            background-image: url({{ Storage::disk('public')->url('post/'.$post->image) }}),url({{  asset('assets/frontend/images/post_default.jpg') }});
             background-size: cover;
         }
         .favorite_posts{
@@ -225,7 +225,13 @@
                             <div class="card h-100">
                                 <div class="single-post post-style-1">
     
-                                    <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/'.$randompost->image) }}" alt="{{ $randompost->title }}"></div>
+                                    <div class="blog-image">
+                                        @if(Storage::disk('public')->exists('post/'.$randompost->image))
+                                          <img src="{{ Storage::disk('public')->url('post/'.$randompost->image) }}"  alt="{{ $randompost->title }}">
+                                        @else
+                                          <img src="{{  asset('assets/frontend/images/post_default.jpg') }}"  alt="Project Default Image" />
+                                        @endif
+                                    </div>
     
                                     <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
                                         @if(Storage::disk('public')->exists('profile/'.$post->user->image))

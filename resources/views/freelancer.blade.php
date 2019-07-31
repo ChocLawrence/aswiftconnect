@@ -154,7 +154,7 @@
 								</div>
 
 								<div class="form-input">
-									<label for="resume" class="required">Resume</label>
+									<label for="resume" class="required">Resume (max 4MB)</label>
 									<div class="input-group">
 										<span class="input-group-btn">
 											<button id="fake-file-button-browse" type="button" class="btn btn-default">
