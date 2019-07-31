@@ -150,6 +150,7 @@
                             <h4 class="title"><b>ABOUT AUTHOR</b></h4>
                             <p>{{ $author->name }}</p><br>
                             <p>{{ $author->about }}</p><br>
+                            <p>Country:<strong>{{ $author->country }}</strong></p><br>
                             <p><strong>Author Since: </strong>{{ $author->created_at->toDateString() }}</p><br>
                             <p><strong>Total Posts : </strong> {{ $author->posts->count() }}</p>
                             <div class="icons" style="position: absolute; 

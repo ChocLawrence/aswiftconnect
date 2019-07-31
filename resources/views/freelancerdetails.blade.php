@@ -52,6 +52,7 @@
     
                                     <div class="middle-area">
                                         <a class="name" href="#"><b>{{$userInfo->name}}</b></a>
+                                        <p>Country:<strong>{{$userInfo->country}}</strong></p>
                                         <h6 class="date">  | Joined {{$userInfo->created_at->toDateString()}}</h6>
                                         @if( $userInfo->specialty==1)
                                             <span class="badge bg-green">Developer</span>
