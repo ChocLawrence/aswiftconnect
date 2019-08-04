@@ -127,6 +127,7 @@
                                         <th>Comments</th>
                                         <th>Status</th>
                                         <th>Action</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -146,7 +147,13 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <a class="btn btn-sm btn-primary waves-effect" target="_blank" href="{{ route('post.details',$post->slug) }}">View</a>
+                                                @if($post->is_approved==true)
+                                                   <a class="btn btn-sm btn-primary waves-effect" target="_blank" href="{{ route('post.details',$post->slug) }}">View</a>
+                                                @else
+                                                   <a href="{{ route('admin.post.show',$post->id) }}" class="btn btn-info waves-effect">
+                                                        <i class="material-icons">visibility</i>
+                                                    </a>
+                                                @endif
                                             </td>
                                         </tr>
                                     @endforeach
