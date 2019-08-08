@@ -13,6 +13,11 @@
 
     <!-- Main css -->
 	<link rel="stylesheet" href="{{ asset('assets/frontend/css/freelancer/style.css')}}">
+
+
+<!--===============================================================================================-->
+<link rel="stylesheet" href="{{ asset('assets/frontend/country/build/css/intlTelInput.css')}}">
+<link rel="stylesheet" href="{{ asset('assets/frontend/country/build/css/demo.css')}}">
 	
     <!-- favicons
 	================================================== -->
@@ -135,7 +140,8 @@
 
 								<div class="form-input">
 									<label for="phone" class="required">Phone number</label>
-									<input type="number" name="phone" id="phone" value="{{ old('phone') }}"/>
+									{{-- <input type="number" name="phone" id="phone" value="{{ old('phone') }}"/> --}}
+									<input  id="phone" class="" name="phone" type="tel"  value="{{ old('phone') }}">
 									@if ($errors->has('phone'))
 									<span class="invalid-feedback">
 										{{ $errors->first('phone') }}
@@ -216,5 +222,36 @@
 
 		
 		</script>
+
+		<!--extra-->
+
+	  <script src="{{ asset('assets/frontend/country/build/js/intlTelInput.js')}}"></script>
+	  <script>
+		var input = document.querySelector("#phone");
+		window.intlTelInput(input, {
+		  // allowDropdown: false,
+		  // autoHideDialCode: false,
+		  // autoPlaceholder: "off",
+		  // dropdownContainer: document.body,
+		  // excludeCountries: ["us"],
+		  // formatOnDisplay: false,
+		  // geoIpLookup: function(callback) {
+		  //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+		  //     var countryCode = (resp && resp.country) ? resp.country : "";
+		  //     callback(countryCode);
+		  //   });
+		  // },
+		  // hiddenInput: "full_number",
+		  // initialCountry: "auto",
+		  // localizedCountries: { 'de': 'Deutschland' },
+		  // nationalMode: false,
+		  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+		  // placeholderNumberType: "MOBILE",
+		  // preferredCountries: ['cn', 'jp'],
+		  // separateDialCode: true,
+		  utilsScript: "{{ asset('assets/frontend/country/build/js/utils.js')}}",
+		});
+	  </script>
+		<!--extra end-->
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
