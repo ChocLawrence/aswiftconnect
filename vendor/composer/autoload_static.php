@@ -82,7 +82,6 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
-            'Spatie\\Honeypot\\' => 16,
             'Spatie\\CookieConsent\\' => 21,
         ),
         'R' => 
@@ -289,10 +288,6 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
-        ),
-        'Spatie\\Honeypot\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/spatie/laravel-honeypot/src',
         ),
         'Spatie\\CookieConsent\\' => 
         array (
@@ -3772,13 +3767,6 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Spatie\\CookieConsent\\CookieConsentMiddleware' => __DIR__ . '/..' . '/spatie/laravel-cookie-consent/src/CookieConsentMiddleware.php',
         'Spatie\\CookieConsent\\CookieConsentServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-cookie-consent/src/CookieConsentServiceProvider.php',
-        'Spatie\\Honeypot\\EncryptedTime' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/EncryptedTime.php',
-        'Spatie\\Honeypot\\HoneypotServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/HoneypotServiceProvider.php',
-        'Spatie\\Honeypot\\HoneypotViewComposer' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/HoneypotViewComposer.php',
-        'Spatie\\Honeypot\\ProtectAgainstSpam' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/ProtectAgainstSpam.php',
-        'Spatie\\Honeypot\\SpamDetected' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamDetected.php',
-        'Spatie\\Honeypot\\SpamResponder\\BlankPageResponder' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamResponder/BlankPageResponder.php',
-        'Spatie\\Honeypot\\SpamResponder\\SpamResponder' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamResponder/SpamResponder.php',
         'SpecialtySeeder' => __DIR__ . '/../..' . '/database/seeds/SpecialtySeeder.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',

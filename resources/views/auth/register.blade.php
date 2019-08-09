@@ -28,8 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/css/util.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/css/main.css')}}">
 <!--===============================================================================================-->
-<link rel="stylesheet" href="{{ asset('assets/frontend/country/build/css/intlTelInput.css')}}">
-  <link rel="stylesheet" href="{{ asset('assets/frontend/country/build/css/demo.css')}}">
+
  <!-- favicons
 	================================================== -->
     <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
@@ -60,7 +59,6 @@
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
 					@csrf
-					@honeypot
 					<span class="login100-form-title p-b-59">
 						ASwiftConnect |  Employer
 						<a href="{{route('landing')}}" title="Go Back to Homepage"><img style="border-radius: 50%;"
@@ -105,8 +103,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Phone is required">
 						<span class="label-input100">Phone</span>
-						{{-- <input class="input100 form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" type="number" name="phone" placeholder="Phone..."  value="{{ old('phone') }}"> --}}
-						<input class="input100 form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" id="phone" name="phone" type="number"  value="{{ old('phone') }}">
+						<input class="input100 form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" type="number" name="phone" placeholder="Phone..."  value="{{ old('phone') }}">
 						<span class="focus-input100"></span>
 						@if ($errors->has('phone'))
 						<span class="invalid-feedback">
@@ -190,34 +187,6 @@
 	<script src="{{ asset('assets/frontend/css/register/vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
 	<script src="{{ asset('assets/frontend/css/register/js/main.js')}}"></script>
-
-	  <script src="{{ asset('assets/frontend/country/build/js/intlTelInput.js')}}"></script>
-	  <script>
-		var input = document.querySelector("#phone");
-		window.intlTelInput(input, {
-		  // allowDropdown: false,
-		  // autoHideDialCode: false,
-		  // autoPlaceholder: "off",
-		  // dropdownContainer: document.body,
-		  // excludeCountries: ["us"],
-		  // formatOnDisplay: false,
-		  // geoIpLookup: function(callback) {
-		  //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-		  //     var countryCode = (resp && resp.country) ? resp.country : "";
-		  //     callback(countryCode);
-		  //   });
-		  // },
-		  // hiddenInput: "full_number",
-		  // initialCountry: "auto",
-		  // localizedCountries: { 'de': 'Deutschland' },
-		  // nationalMode: false,
-		  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-		  // placeholderNumberType: "MOBILE",
-		  // preferredCountries: ['cn', 'jp'],
-		  // separateDialCode: true,
-		  utilsScript: "{{ asset('assets/frontend/country/build/js/utils.js')}}",
-		});
-	  </script>
 
 </body>
 </html>

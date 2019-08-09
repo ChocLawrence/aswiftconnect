@@ -34,7 +34,6 @@ return array(
     'Symfony\\Component\\Debug\\' => array($vendorDir . '/symfony/debug'),
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
-    'Spatie\\Honeypot\\' => array($vendorDir . '/spatie/laravel-honeypot/src'),
     'Spatie\\CookieConsent\\' => array($vendorDir . '/spatie/laravel-cookie-consent/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),
     'Psy\\' => array($vendorDir . '/psy/psysh/src'),
