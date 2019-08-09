@@ -61,6 +61,7 @@
 					</div>
 					<form class="register-form" id="register-form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
 						@csrf
+						@honeypot
                         <div class="form-row">
 
                             <div class="form-group">
