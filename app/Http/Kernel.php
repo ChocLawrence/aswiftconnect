@@ -37,6 +37,7 @@ class Kernel extends HttpKernel
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
+            'block:100,/limit',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -66,5 +67,6 @@ class Kernel extends HttpKernel
         'author' => AuthorMiddleware::class,
         'freelancer' => FreelancerMiddleware::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'block' => \Potelo\LaravelBlockBots\BlockBots::class,
     ];
 }
