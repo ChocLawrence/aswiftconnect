@@ -65,6 +65,7 @@
                                                 </button>
                                                 <form id="delete-form-{{ $project->id }}" action="{{ route('freelancer.projects.destroy',$project->id) }}" method="POST" style="display: none;">
                                                     @csrf
+                                                    @honeypot
                                                     @method('DELETE')
                                                 </form>
                                             </td>

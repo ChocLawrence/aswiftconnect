@@ -64,6 +64,7 @@
                                                 </button>
                                                 <form id="remove-form-{{ $post->id }}" action="{{ route('post.favorite',$post->id) }}" method="POST" style="display: none;">
                                                     @csrf
+                                                    @honeypot
                                                 </form>
                                             </td>
                                         </tr>

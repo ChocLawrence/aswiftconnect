@@ -40,6 +40,7 @@
 			<div class="wrap-login100 p-t-20 p-b-30">
 				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">  
 				   @csrf
+				   @honeypot
 				   
                     <div class="login100-form-avatar" title="Go back to Homepage">
 					   <a href="{{route('landing')}}"><img src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="Logo"></a>

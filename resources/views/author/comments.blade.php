@@ -76,6 +76,7 @@
                                                 </button>
                                                 <form id="delete-form-{{ $comment->id }}" method="POST" action="{{ route('author.comment.destroy',$comment->id) }}" style="display: none;">
                                                     @csrf
+                                                    @honeypot
                                                     @method('DELETE')
                                                 </form>
                                             </td>

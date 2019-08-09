@@ -65,6 +65,7 @@
                                                 </button>
                                                 <form id="delete-form-{{ $author->id }}" action="{{ route('admin.author.destroy',$author->id) }}" method="POST" style="display: none;">
                                                     @csrf
+                                                    @honeypot
                                                     @method('DELETE')
                                                 </form>
                                             </td>

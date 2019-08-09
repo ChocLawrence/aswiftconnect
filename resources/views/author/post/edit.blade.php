@@ -12,6 +12,7 @@
         <!-- Vertical Layout | With Floating Label -->
         <form action="{{ route('author.post.update',$post->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @honeypot
             @method('PUT')
             <div class="row clearfix">
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">

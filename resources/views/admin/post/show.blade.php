@@ -41,6 +41,7 @@
                         <form method="post" action="{{ route('admin.post.incomplete',$post->id) }}" id="incomplete-form-{{ $post->id }}"
                             style="display: none;">
                             @csrf
+                            @honeypot
                             @method('PUT')
                         </form>
                     </span>
@@ -54,6 +55,7 @@
                         <form method="post" action="{{ route('admin.post.complete',$post->id) }}" id="complete-form-{{ $post->id }}"
                             style="display: none;">
                             @csrf
+                            @honeypot
                             @method('PUT')
                         </form>
                     </span>&nbsp;
@@ -66,6 +68,7 @@
                         <form method="post" action="{{ route('admin.post.incomplete',$post->id) }}" id="incomplete-form-{{ $post->id }}"
                             style="display: none;">
                             @csrf
+                            @honeypot
                             @method('PUT')
                         </form>
                     </span>&nbsp;
@@ -90,6 +93,7 @@
             <form method="post" action="{{ route('admin.post.approve',$post->id) }}" id="approval-form-{{ $post->id }}"
                 style="display: none;">
                 @csrf
+                @honeypot
                 @method('PUT')
             </form>
 
@@ -182,6 +186,7 @@
                                                     action="{{ route('admin.post.assign',[$post->id,$freelancer->id]) }}"
                                                     id="assign-form-{{ $freelancer->id }}" style="display:none;">
                                                     @csrf
+                                                    @honeypot
                                                     @method('PUT')
                                                 </form>
                                             </td>
@@ -254,6 +259,7 @@
             <div class="modal-body">
                 <form action="{{ route('admin.post.setinvoice',$post->id) }}" method="POST">
                     @csrf
+                    @honeypot
                     @method('PUT')
                     <div class="row clearfix">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

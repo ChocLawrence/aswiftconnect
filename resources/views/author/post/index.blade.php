@@ -112,6 +112,7 @@
                                                   </button>
                                                 <form id="delete-form-{{ $post->id }}" action="{{ route('author.post.destroy',$post->id) }}" method="POST" style="display: none;">
                                                     @csrf
+                                                    @honeypot
                                                     @method('DELETE')
                                                 </form>
                                                 @endif

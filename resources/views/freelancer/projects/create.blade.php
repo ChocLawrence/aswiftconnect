@@ -14,6 +14,7 @@
         <!-- Vertical Layout | With Floating Label -->
         <form action="{{ route('freelancer.projects.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @honeypot
             <div class="row clearfix">
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">

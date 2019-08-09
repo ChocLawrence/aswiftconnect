@@ -24,6 +24,7 @@
                         <div class="body">
                             <form action="{{route('admin.tag.update',$tag->id)}}" method="POST">
                                 @csrf
+                                @honeypot
                                 @method('PUT')
                                 <div class="form-group form-float">
                                     <div class="form-line">
