@@ -57,7 +57,6 @@
                                 @if (!session('status'))
                                 <form method="POST" action="{{ route('password.email') }}">
                                     @csrf
-                                    @honeypot
 
                                     <div class="form-group row">
 

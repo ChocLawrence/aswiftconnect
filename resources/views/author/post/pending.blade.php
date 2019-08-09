@@ -84,7 +84,6 @@
                                                     </button>
                                                     <form method="post" action="{{ route('admin.post.approve',$post->id) }}" id="approval-form-{{ $post->id }}" style="display: none">
                                                         @csrf
-                                                        @honeypot
                                                         @method('PUT')
                                                     </form>
                                                 @endif
@@ -99,7 +98,6 @@
                                                 </button>
                                                 <form id="delete-form-{{ $post->id }}" action="{{ route('admin.post.destroy',$post->id) }}" method="POST" style="display: none;">
                                                     @csrf
-                                                    @honeypot
                                                     @method('DELETE')
                                                 </form>
                                             </td>

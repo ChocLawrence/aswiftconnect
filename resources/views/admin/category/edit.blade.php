@@ -24,7 +24,6 @@
                         <div class="body">
                             <form action="{{route('admin.category.update',$category->id)}}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @honeypot
                                 @method('PUT')
                                 <div class="form-group form-float">
                                     <div class="form-line">

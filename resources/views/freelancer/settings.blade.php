@@ -38,7 +38,6 @@
                             <div role="tabpanel" class="tab-pane fade in active" id="profile_with_icon_title">
                                 <form method="POST" action="{{ route('freelancer.update') }}" class="form-horizontal" enctype="multipart/form-data">
                                     @csrf
-                                    @honeypot
                                     @method('PUT')
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -183,7 +182,6 @@
                             <div role="tabpanel" class="tab-pane fade" id="change_password_with_icon_title">
                                 <form method="POST" action="{{ route('freelancer.password.update') }}" class="form-horizontal">
                                     @csrf
-                                    @honeypot
                                     @method('PUT')
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">

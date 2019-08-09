@@ -42,7 +42,6 @@
                 <div class="body">
                     <form action="{{ route('admin.freelancer.setvetinfo',$freelancer->id) }}" method="POST">
                         @csrf
-                        @honeypot
                         @method('PUT')
                         <div class="col clearfix">
 

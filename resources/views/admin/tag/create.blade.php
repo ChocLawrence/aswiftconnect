@@ -24,7 +24,6 @@
                         <div class="body">
                             <form action="{{route('admin.tag.store')}}" method="POST">
                                 @csrf
-                                @honeypot
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="name" class="form-control" name="name">

@@ -49,7 +49,6 @@
 
                                                     <form id="favorite-form-{{ $post->id }}" method="POST" action="{{ route('post.favorite',$post->id) }}" style="display: none;">
                                                         @csrf
-                                                        @honeypot
                                                     </form>
                                                 @endguest
 

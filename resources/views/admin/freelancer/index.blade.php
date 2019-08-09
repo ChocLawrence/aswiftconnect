@@ -94,7 +94,6 @@
                                             action="{{ route('admin.freelancer.accept',$freelancer->id) }}"
                                             method="POST" style="display: none;">
                                             @csrf
-                                            @honeypot
                                             @method('PUT')
                                         </form>
                                         <button class="btn btn-warning waves-effect" type="button"
@@ -105,7 +104,6 @@
                                             action="{{ route('admin.freelancer.reject',$freelancer->id) }}"
                                             method="POST" style="display: none;">
                                             @csrf
-                                            @honeypot
                                             @method('PUT')
                                         </form>
                                         @endif
@@ -117,7 +115,6 @@
                                             action="{{ route('admin.freelancer.destroy',$freelancer->id) }}"
                                             method="POST" style="display: none;">
                                             @csrf
-                                            @honeypot
                                             @method('DELETE')
                                         </form>
                                     </td>

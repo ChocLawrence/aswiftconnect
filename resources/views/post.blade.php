@@ -88,7 +88,6 @@
 
                                         <form id="favorite-form-{{ $post->id }}" method="POST" action="{{ route('post.favorite',$post->id) }}" style="display: none;">
                                             @csrf
-                                            @honeypot
                                         </form>
                                     @endguest
 
@@ -154,7 +153,6 @@
                         @else
                             <form method="post" action="{{ route('comment.store',$post->id) }}">
                                 @csrf
-                                @honeypot
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <textarea name="comment" rows="2" class="text-area-messge form-control"
@@ -290,7 +288,6 @@
     
                                                     <form id="favorite-form-{{ $randompost->id }}" method="POST" action="{{ route('post.favorite',$randompost->id) }}" style="display: none;">
                                                         @csrf
-                                                        @honeypot
                                                     </form>
                                                 @endguest
     

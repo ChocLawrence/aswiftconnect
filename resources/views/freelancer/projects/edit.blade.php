@@ -16,7 +16,6 @@
         <!-- Vertical Layout | With Floating Label -->
         <form action="{{ route('freelancer.projects.update',$current_project->id) }}"  method="POST">
             @csrf
-            @honeypot
             @method('PUT')
             <div class="row clearfix">
                     <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">

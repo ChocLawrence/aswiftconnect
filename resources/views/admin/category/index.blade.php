@@ -65,7 +65,6 @@
                                                 </button>
                                                 <form id="delete-form-{{ $category->id }}" action="{{ route('admin.category.destroy',$category->id) }}" method="POST" style="display: none;">
                                                     @csrf
-                                                    @honeypot
                                                     @method('DELETE')
                                                 </form>
                                             </td>
