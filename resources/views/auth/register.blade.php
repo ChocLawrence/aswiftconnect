@@ -59,6 +59,7 @@
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
 					@csrf
+					@honeypot
 					<span class="login100-form-title p-b-59">
 						ASwiftConnect |  Employer
 						<a href="{{route('landing')}}" title="Go Back to Homepage"><img style="border-radius: 50%;"
