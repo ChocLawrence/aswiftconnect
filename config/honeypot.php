@@ -9,7 +9,7 @@ return [
      * value for this name will be discarded. Make sure this name does not
      * collide with a form field that is actually used.
      */
-    'name_field_name' => 'my_name',
+    'name_field_name' => 'ran',
 
     /*
      * When this is activated there will be a random string added

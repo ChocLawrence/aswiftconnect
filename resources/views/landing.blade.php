@@ -155,12 +155,12 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
             <div class="row contents">
                 <div class="home-content-left">
 
+                   
+                    <h1 data-aos="fade-up">
+                        Connecting Africa's Top Tech and Design Talent to the World <br>
+                    </h1>
                     <h3 data-aos="fade-up">We provide companies with Qualified and Vetted Freelancers to scale their teams</h3>
                     
-                    <h1 data-aos="fade-up">
-                        Connecting Africa's Top Tech <br>
-                        and Design Talent to the World <br>
-                    </h1>
 
                     <div class="buttons" data-aos="fade-up">
                         <a href="{{route('freelancer')}}" class="button stroke">
