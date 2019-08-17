@@ -1154,8 +1154,8 @@ class Router implements RegistrarContract, BindingRegistrar
 
         // Registration Routes...
         if ($options['register'] ?? true) {
-            $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register')->middleware(ProtectAgainstSpam::class);
-            $this->post('register', 'Auth\RegisterController@register')->middleware(ProtectAgainstSpam::class);
+            $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+            $this->post('register', 'Auth\RegisterController@register');
         }
 
         // Password Reset Routes...

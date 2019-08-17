@@ -22,7 +22,6 @@ use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 use Illuminate\Contracts\Routing\Registrar as RegistrarContract;
 use Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
-use Spatie\Honeypot\ProtectAgainstSpam;
 
 /**
  * @mixin \Illuminate\Routing\RouteRegistrar
@@ -1154,8 +1153,8 @@ class Router implements RegistrarContract, BindingRegistrar
 
         // Registration Routes...
         if ($options['register'] ?? true) {
-            $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register')->middleware(ProtectAgainstSpam::class);
-            $this->post('register', 'Auth\RegisterController@register')->middleware(ProtectAgainstSpam::class);
+            $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+            $this->post('register', 'Auth\RegisterController@register');
         }
 
         // Password Reset Routes...
