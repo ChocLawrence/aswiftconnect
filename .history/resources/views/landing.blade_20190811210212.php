@@ -584,7 +584,6 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                             <div class="input-area">
                                 <form method="POST" action="{{ route('subscriber.store') }}" class="group">
                                     @csrf
-                                    @honeypot
                                     <div class="row">
                                         <input class="col-md-8 email-input" id="mc-email" name="email" type="email"
                                             placeholder="Enter your email" style="color:white;" required>
