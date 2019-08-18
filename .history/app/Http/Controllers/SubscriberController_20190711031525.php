@@ -7,7 +7,6 @@ use App\Mail\SubscribeMail;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Events\NewSubscriberEvent;
-use Spatie\Honeypot\ProtectAgainstSpam;
 
 class SubscriberController extends Controller
 {
