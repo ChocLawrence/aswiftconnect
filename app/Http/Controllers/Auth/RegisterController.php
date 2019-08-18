@@ -12,6 +12,7 @@ use App\Notifications\ResumeReceived;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 class RegisterController extends Controller
 {

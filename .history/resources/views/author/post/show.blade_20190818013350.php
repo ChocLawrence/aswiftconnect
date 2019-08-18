@@ -236,7 +236,7 @@
 </script>
 
 <script
-    src="https://www.paypal.com/sdk/js?client-id=AU5ip9zAEem4z7TepiqkJP56tl4veR582csfpyiWoAtdbBkMMYA8oz41vldyWKUqyPaP3a2y0FaL15h8">
+    src="https://www.paypal.com/sdk/js?client-id=AXM_okiMmzTT4D0Dpsu51pxqWU5syXebJcOyjVqHl4Vpjp5BuCw8VZLUF6L0cD2xB4Sm84xYkYGHkrKe">
 </script>
 <script>
     var amount="{{ $post->amount }}";
