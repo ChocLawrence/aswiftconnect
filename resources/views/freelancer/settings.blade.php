@@ -75,6 +75,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!--Country-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="country">Country : </label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                   <select id="countries_phone1" type="text" name="country" class="form-control bfh-countries" data-country="{{ Auth::user()->country }}"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>       
+
+                                    <!--Phone-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="phone">Phone : </label>
@@ -82,11 +97,13 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="phone" class="form-control" placeholder="Enter your Phone number" name="phone" value="{{ Auth::user()->phone }}">
+                                                    <input class="form-control bfh-phone" data-country="countries_phone1" type="text" name="phone" placeholder="Enter your Phone number"  value="{{ Auth::user()->phone }}"  id="phone">
+									
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="email_address_2">About : </label>
@@ -103,19 +120,6 @@
 
                                      <!--extra-->
 
-                                    <!--Country-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="country">Country : </label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="country" class="form-control" placeholder="Enter a Country Name" name="country" value="{{ Auth::user()->country }}">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                         <!--Social-->
                                         <div class="row clearfix">

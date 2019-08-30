@@ -33,6 +33,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
+    <!-- Bootstrap Form Helpers -->
+	<link href="{{ asset('assets/dist/css/bootstrap-formhelpers.min.css')}}" rel="stylesheet" media="screen">
+
+	
     <!-- Bootstrap Core Css -->
     <link href="{{asset('assets/backend/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
@@ -44,6 +48,7 @@
 
     <!-- Morris Chart Css-->
     <link href="{{asset('assets/backend/plugins/morrisjs/morris.css')}}" rel="stylesheet" />
+
 
     <!-- Custom Css -->
     <link href="{{asset('assets/backend/css/style.css')}}" rel="stylesheet">
@@ -110,6 +115,10 @@
      <!-- Jquery Core Js -->
      <script src="{{asset('assets/backend/plugins/jquery/jquery.min.js')}}"></script>
 
+      <!-- Bootstrap Form Helpers -->
+      <script src="{{ asset('assets/dist/js/bootstrap-formhelpers.min.js')}}"></script>
+
+
     <!-- Slimscroll Plugin Js -->
     <script src="{{asset('assets/backend/plugins/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
 
@@ -117,7 +126,7 @@
     <script src="{{asset('assets/backend/plugins/bootstrap/js/bootstrap.js')}}"></script>
 
     <!-- Select Plugin Js -->
-    <script src="{{asset('assets/backend/plugins/bootstrap-select/js/bootstrap-select.js')}}"></script>
+    <!-- <script src="{{asset('assets/backend/plugins/bootstrap-select/js/bootstrap-select.js')}}"></script> -->
 
 
     <!-- Waves Effect Plugin Js -->
