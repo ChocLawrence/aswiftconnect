@@ -66,9 +66,10 @@ class PostController extends Controller
 
     public function postByTag($slug)
     {
+        $categories = Category::all();
         $tag = Tag::where('slug',$slug)->first();
         $posts = $tag->posts()->approved()->published()->get();
-        return view('tag',compact('tag','posts'));
+        return view('tag',compact('tag','posts','categories'));
     }
 
 }
