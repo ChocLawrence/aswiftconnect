@@ -6,6 +6,7 @@ use App\Category;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use BrightNucleus\CountryCodes\Country;
 
 class AuthorController extends Controller
 {
@@ -17,9 +18,14 @@ class AuthorController extends Controller
             $userId=2; 
         }
 
+        
+
         $categories=Category::all();
         $author = User::where('username',$username)->first();
+        // Get the name from an ISO 3166 country code.
+        $countryName = Country::getNameFromCode( $author->country ); // Returns 'United States'.
+
         $posts = $author->posts()->approved()->published()->get();
-        return view('profile',compact('author','posts','categories','userId'));
+        return view('profile',compact('author','posts','categories','userId','countryName'));
     }
 }

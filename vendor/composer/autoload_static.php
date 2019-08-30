@@ -74,6 +74,7 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\Process\\' => 26,
+            'Symfony\\Component\\OptionsResolver\\' => 34,
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
@@ -166,6 +167,9 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         ),
         'B' => 
         array (
+            'BrightNucleus\\Exception\\' => 24,
+            'BrightNucleus\\CountryCodes\\' => 27,
+            'BrightNucleus\\Config\\' => 21,
             'Brian2694\\Toastr\\' => 17,
             'BeyondCode\\DumpServer\\' => 22,
         ),
@@ -257,6 +261,10 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         'Symfony\\Component\\Process\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
+        ),
+        'Symfony\\Component\\OptionsResolver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/options-resolver',
         ),
         'Symfony\\Component\\Mime\\' => 
         array (
@@ -448,6 +456,18 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'BrightNucleus\\Exception\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brightnucleus/exceptions/src',
+        ),
+        'BrightNucleus\\CountryCodes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brightnucleus/country-codes/src',
+        ),
+        'BrightNucleus\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brightnucleus/config/src',
+        ),
         'Brian2694\\Toastr\\' => 
         array (
             0 => __DIR__ . '/..' . '/brian2694/laravel-toastr/src',
@@ -591,6 +611,49 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         'Brian2694\\Toastr\\Facades\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Facades/Toastr.php',
         'Brian2694\\Toastr\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Toastr.php',
         'Brian2694\\Toastr\\ToastrServiceProvider' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/ToastrServiceProvider.php',
+        'BrightNucleus\\Config\\AbstractConfig' => __DIR__ . '/..' . '/brightnucleus/config/src/AbstractConfig.php',
+        'BrightNucleus\\Config\\AbstractConfigSchema' => __DIR__ . '/..' . '/brightnucleus/config/src/AbstractConfigSchema.php',
+        'BrightNucleus\\Config\\Config' => __DIR__ . '/..' . '/brightnucleus/config/src/Config.php',
+        'BrightNucleus\\Config\\ConfigFactory' => __DIR__ . '/..' . '/brightnucleus/config/src/ConfigFactory.php',
+        'BrightNucleus\\Config\\ConfigInterface' => __DIR__ . '/..' . '/brightnucleus/config/src/ConfigInterface.php',
+        'BrightNucleus\\Config\\ConfigSchema' => __DIR__ . '/..' . '/brightnucleus/config/src/ConfigSchema.php',
+        'BrightNucleus\\Config\\ConfigSchemaInterface' => __DIR__ . '/..' . '/brightnucleus/config/src/ConfigSchemaInterface.php',
+        'BrightNucleus\\Config\\ConfigTrait' => __DIR__ . '/..' . '/brightnucleus/config/src/ConfigTrait.php',
+        'BrightNucleus\\Config\\ConfigValidatorInterface' => __DIR__ . '/..' . '/brightnucleus/config/src/ConfigValidatorInterface.php',
+        'BrightNucleus\\Config\\Exception\\ConfigException' => __DIR__ . '/..' . '/brightnucleus/config/src/Exception/ConfigException.php',
+        'BrightNucleus\\Config\\Exception\\FailedToInstantiateParentException' => __DIR__ . '/..' . '/brightnucleus/config/src/Exception/FailedToInstantiateParentException.php',
+        'BrightNucleus\\Config\\Exception\\FailedToLoadConfigException' => __DIR__ . '/..' . '/brightnucleus/config/src/Exception/FailedToLoadConfigException.php',
+        'BrightNucleus\\Config\\Exception\\FailedToProcessConfigException' => __DIR__ . '/..' . '/brightnucleus/config/src/Exception/FailedToProcessConfigException.php',
+        'BrightNucleus\\Config\\Exception\\FailedToResolveConfigException' => __DIR__ . '/..' . '/brightnucleus/config/src/Exception/FailedToResolveConfigException.php',
+        'BrightNucleus\\Config\\Exception\\InvalidConfigException' => __DIR__ . '/..' . '/brightnucleus/config/src/Exception/InvalidConfigException.php',
+        'BrightNucleus\\Config\\Exception\\InvalidConfigurationSourceException' => __DIR__ . '/..' . '/brightnucleus/config/src/Exception/InvalidConfigurationSourceException.php',
+        'BrightNucleus\\Config\\Exception\\KeyNotFoundException' => __DIR__ . '/..' . '/brightnucleus/config/src/Exception/KeyNotFoundException.php',
+        'BrightNucleus\\Config\\Loader' => __DIR__ . '/..' . '/brightnucleus/config/src/Loader.php',
+        'BrightNucleus\\Config\\Loader\\AbstractLoader' => __DIR__ . '/..' . '/brightnucleus/config/src/Loader/AbstractLoader.php',
+        'BrightNucleus\\Config\\Loader\\LoaderFactory' => __DIR__ . '/..' . '/brightnucleus/config/src/Loader/LoaderFactory.php',
+        'BrightNucleus\\Config\\Loader\\LoaderInterface' => __DIR__ . '/..' . '/brightnucleus/config/src/Loader/LoaderInterface.php',
+        'BrightNucleus\\Config\\Loader\\PHPLoader' => __DIR__ . '/..' . '/brightnucleus/config/src/Loader/PHPLoader.php',
+        'BrightNucleus\\CountryCodes\\Country' => __DIR__ . '/..' . '/brightnucleus/country-codes/src/Country.php',
+        'BrightNucleus\\CountryCodes\\CountryPlugin' => __DIR__ . '/..' . '/brightnucleus/country-codes/src/CountryPlugin.php',
+        'BrightNucleus\\CountryCodes\\Exception\\CountryCodesException' => __DIR__ . '/..' . '/brightnucleus/country-codes/src/Exception/CountryCodesException.php',
+        'BrightNucleus\\CountryCodes\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/brightnucleus/country-codes/src/Exception/InvalidArgumentException.php',
+        'BrightNucleus\\CountryCodes\\Exception\\InvalidCountryCode' => __DIR__ . '/..' . '/brightnucleus/country-codes/src/Exception/InvalidCountryCode.php',
+        'BrightNucleus\\CountryCodes\\Exception\\InvalidCountryName' => __DIR__ . '/..' . '/brightnucleus/country-codes/src/Exception/InvalidCountryName.php',
+        'BrightNucleus\\Exception\\BadFunctionCallException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/BadFunctionCallException.php',
+        'BrightNucleus\\Exception\\BadMethodCallException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/BadMethodCallException.php',
+        'BrightNucleus\\Exception\\DomainException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/DomainException.php',
+        'BrightNucleus\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/ExceptionInterface.php',
+        'BrightNucleus\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/InvalidArgumentException.php',
+        'BrightNucleus\\Exception\\LengthException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/LengthException.php',
+        'BrightNucleus\\Exception\\LogicException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/LogicException.php',
+        'BrightNucleus\\Exception\\ModuleExceptionTrait' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/ModuleExceptionTrait.php',
+        'BrightNucleus\\Exception\\OutOfBoundsException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/OutOfBoundsException.php',
+        'BrightNucleus\\Exception\\OutOfRangeException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/OutOfRangeException.php',
+        'BrightNucleus\\Exception\\OverflowException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/OverflowException.php',
+        'BrightNucleus\\Exception\\RangeException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/RangeException.php',
+        'BrightNucleus\\Exception\\RuntimeException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/RuntimeException.php',
+        'BrightNucleus\\Exception\\UnderflowException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/UnderflowException.php',
+        'BrightNucleus\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/brightnucleus/exceptions/src/UnexpectedValueException.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
@@ -4238,6 +4301,18 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         'Symfony\\Component\\Mime\\Part\\Multipart\\RelatedPart' => __DIR__ . '/..' . '/symfony/mime/Part/Multipart/RelatedPart.php',
         'Symfony\\Component\\Mime\\Part\\TextPart' => __DIR__ . '/..' . '/symfony/mime/Part/TextPart.php',
         'Symfony\\Component\\Mime\\RawMessage' => __DIR__ . '/..' . '/symfony/mime/RawMessage.php',
+        'Symfony\\Component\\OptionsResolver\\Debug\\OptionsResolverIntrospector' => __DIR__ . '/..' . '/symfony/options-resolver/Debug/OptionsResolverIntrospector.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\AccessException' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/AccessException.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/InvalidArgumentException.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\InvalidOptionsException' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/InvalidOptionsException.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\MissingOptionsException' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/MissingOptionsException.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\NoConfigurationException' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/NoConfigurationException.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\NoSuchOptionException' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/NoSuchOptionException.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\OptionDefinitionException' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/OptionDefinitionException.php',
+        'Symfony\\Component\\OptionsResolver\\Exception\\UndefinedOptionsException' => __DIR__ . '/..' . '/symfony/options-resolver/Exception/UndefinedOptionsException.php',
+        'Symfony\\Component\\OptionsResolver\\Options' => __DIR__ . '/..' . '/symfony/options-resolver/Options.php',
+        'Symfony\\Component\\OptionsResolver\\OptionsResolver' => __DIR__ . '/..' . '/symfony/options-resolver/OptionsResolver.php',
         'Symfony\\Component\\Process\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/process/Exception/ExceptionInterface.php',
         'Symfony\\Component\\Process\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/process/Exception/InvalidArgumentException.php',
         'Symfony\\Component\\Process\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/process/Exception/LogicException.php',
