@@ -298,7 +298,7 @@ class PostController extends Controller
             ]);
 
             $post->amount=$request->amount;
-            $post->earning=$post->amount-($post->amount * 5/100);
+            $post->earning=$post->amount-($post->amount * 25/100);
             $post->deadline=$request->deadline;
             $post->save();
 

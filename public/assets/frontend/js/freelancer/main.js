@@ -47,7 +47,6 @@
         },
         phone: {
             required: true,
-            number:true,
         }
     },
     onfocusout: function(element) {

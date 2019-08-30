@@ -13,6 +13,10 @@
 
     <!-- Main css -->
 	<link rel="stylesheet" href="{{ asset('assets/frontend/css/freelancer/style.css')}}">
+
+	<!-- Bootstrap Form Helpers -->
+	<link href="{{ asset('assets/dist/css/bootstrap-formhelpers.min.css')}}" rel="stylesheet" media="screen">
+
 	
     <!-- favicons
 	================================================== -->
@@ -70,7 +74,11 @@
 											{{ $errors->first('name') }}
 										</span>
 									@endif
-                                </div>
+								</div>
+								<div class="form-input">
+									<label for="country" class="required">Country</label>
+									<select style="height:55px;padding:10px;" id="countries_phone1" type="text" name="country" class="input100 form-control bfh-countries" data-country="US" data-flags="true" value="{{ old('country') }}"></select>
+								</div>
                                 <div class="form-input">
                                     <label for="email" class="required">Email</label>
 									<input type="text" name="email" id="email"  value="{{ old('email') }}" />
@@ -91,36 +99,24 @@
 									@endif
 								</div>
 
-								<!--test-->
-									<div class="form-select">
-										<div class="label-flex">
-											<label for="specialty" class="required">I am a freelance ...</label>
-										</div>
-										<div class="select-list">
-											<select class="form-control" id="sel1" name="specialty">
-												<option value="">Select...</option>
-												<option value="1">Developer</option>
-												<option value="2">Designer</option>
-											</select>
-										</div>
-										@if ($errors->has('specialty'))
-										<span class="invalid-feedback">
-											{{ $errors->first('specialty') }}
-										</span>
-									@endif
+								<div class="form-select">
+									<div class="label-flex">
+										<label for="specialty" class="required">I am a freelance ...</label>
 									</div>
-
-								<!--test end-->
-								{{-- <div class="form-group ">
-										<div class="label-flex">
-												<label for="specialty" class="required">I am a freelance...</label>
-											</div>
+									<div class="select-list">
 										<select class="form-control" id="sel1" name="specialty">
-										  <option value="1">1</option>
-										  <option value="2">2</option>
+											<option value="">Select...</option>
+											<option value="1">Developer</option>
+											<option value="2">Designer</option>
 										</select>
-									  </div> --}}
-								
+									</div>
+									@if ($errors->has('specialty'))
+									<span class="invalid-feedback">
+										{{ $errors->first('specialty') }}
+									</span>
+								@endif
+								</div>
+
                             </div>
                             <div class="form-group">
 
@@ -136,7 +132,8 @@
 
 								<div class="form-input">
 									<label for="phone" class="required">Phone number</label>
-									<input type="number" name="phone" id="phone" value="{{ old('phone') }}"/>
+									<input class="bfh-phone" data-country="countries_phone1" type="text" name="phone"   value="{{ old('phone') }}"  id="phone">
+									<!-- <input type="number" name="phone" id="phone" value="{{ old('phone') }}"/> -->
 									@if ($errors->has('phone'))
 									<span class="invalid-feedback">
 										{{ $errors->first('phone') }}
@@ -145,18 +142,8 @@
 								</div>
 
 								<div class="form-input">
-									<label for="confirm_password" class="required">Confirm Password</label>
-									<input type="password" name="password_confirmation" id="confirm_password" />
-									@if ($errors->has('password'))
-									<span class="invalid-feedback">
-										{{ $errors->first('password') }}
-									</span>
-									@endif
-								</div>
-
-								<div class="form-input">
 									<label for="resume" class="required">Resume (max 4MB)</label>
-									<div class="input-group">
+									<div class="input-group" style="height:55px;padding:10px;">
 										<span class="input-group-btn">
 											<button id="fake-file-button-browse" type="button" class="btn btn-default">
 												<span class="glyphicon glyphicon-file"></span>
@@ -172,21 +159,33 @@
 									@endif
 								</div>
 
+								<div class="form-input">
+									<label for="confirm_password" class="required">Confirm Password</label>
+									<input type="password" name="password_confirmation" id="confirm_password" />
+									@if ($errors->has('password'))
+									<span class="invalid-feedback">
+										{{ $errors->first('password') }}
+									</span>
+									@endif
+								</div>
+								
+								<div class="form-input">
+									
+									<input class="input-checkbox100" id="terms" type="checkbox" name="terms" value="1">
+									<label class="label-checkbox100" for="terms">
+										I Agree to the <a href="{{ url('/terms') }}">Terms and Conditions</a><br>& <a href="{{ url('/privacy') }}">Privacy Policy</a><span
+											style="color:red;">*</span>
+									</label><br>
+									@if ($errors->has('terms'))
+									<span class="invalid-feedback">
+										You must agree to our terms
+									</span>
+									@endif
+								</div>
+
                             </div>
 						</div>
-						<div class="form-input">
-									
-							<input class="input-checkbox100" id="terms" type="checkbox" name="terms" value="1">
-							<label class="label-checkbox100" for="terms">
-								I Agree to the <a href="{{ url('/terms') }}">Terms and Conditions</a><br>& <a href="{{ url('/privacy') }}">Privacy Policy</a><span
-									style="color:red;">*</span>
-							</label><br>
-							@if ($errors->has('terms'))
-							<span class="invalid-feedback">
-								You must agree to our terms
-							</span>
-							@endif
-						</div>
+						
                         <div class="form-submit">
                             <input type="submit" value="Register as Freelancer" class="submit" id="submit" name="submit" />
                         </div>
@@ -197,7 +196,10 @@
 
     </div>
 
-    <!-- JS -->
+	<!-- JS -->
+	<!-- Bootstrap Form Helpers -->
+	<script src="{{ asset('assets/dist/js/bootstrap-formhelpers.min.js')}}"></script>
+
 	<script src="{{ asset('assets/frontend/vendor/jquery/jquery.min.js')}}"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="{{ asset('assets/frontend/vendor/wnumb/wNumb.js')}}"></script>

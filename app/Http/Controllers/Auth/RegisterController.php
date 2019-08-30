@@ -73,7 +73,8 @@ class RegisterController extends Controller
             return Validator::make($data, [
                 'name' => 'required|string|max:255',
                 'username' => 'required|string|max:255|unique:users',
-                'phone' => 'required|string|max:15|unique:users',
+                'country'=>'required|string',
+                'phone' => 'required|string|unique:users',
                 'email' => 'required|string|email|max:255|unique:users',
                 'password' => 'required|string|min:6|confirmed',
                 'specialty' => 'required|in:1,2',
@@ -86,7 +87,8 @@ class RegisterController extends Controller
             return Validator::make($data, [
                 'name' => 'required|string|max:255',
                 'username' => 'required|string|max:255|unique:users',
-                'phone' => 'required|string|max:15|unique:users',
+                'country'=>'required|string',
+                'phone' => 'required|string|unique:users',
                 'email' => 'required|string|email|max:255|unique:users',
                 'password' => 'required|string|min:6|confirmed',
                 'terms'=>'required',
@@ -118,6 +120,7 @@ class RegisterController extends Controller
                 'name' => $data['name'],
                 'username' => str_slug($data['username']),
                 'email' => $data['email'],
+                'country' => $data['country'],
                 'phone' => $data['phone'],
                 'password' => Hash::make($data['password']),
                 'status'=> $status,
@@ -148,6 +151,7 @@ class RegisterController extends Controller
                 'name' => $data['name'],
                 'username' => str_slug($data['username']),
                 'email' => $data['email'],
+                'country' => $data['country'],
                 'phone' => $data['phone'],
                 'password' => Hash::make($data['password']),
                 'status'=> $status

@@ -561,6 +561,7 @@
                                                         your project within 48 hours and you will be notified.</p>
                                                     <p>Amount: $<strong>{{$post->amount}} </strong></p>
                                                     <p>Freelancer Deadline:<strong>{{date("M d Y", strtotime($post->deadline))}}</strong></p>
+                                                    <p>5% of your total amount is accounted for us vetting and picking the right professional for the job</p>
                                                     <p>Thanks for trusting AswiftConnect</p>
                                                     <a href="{{route('author.post.show',$post->id)}}"
                                                         class="btn btn-primary">Make Payment</a>

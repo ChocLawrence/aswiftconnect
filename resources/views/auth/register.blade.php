@@ -29,6 +29,9 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/css/main.css')}}">
 <!--===============================================================================================-->
 
+	<!-- Bootstrap Form Helpers -->
+	<link href="{{ asset('assets/dist/css/bootstrap-formhelpers.min.css')}}" rel="stylesheet" media="screen">
+
  <!-- favicons
 	================================================== -->
     <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
@@ -101,16 +104,32 @@
 						</span>
 						@endif
 					</div>
+					<!-- <select id="countries_phone1" class="form-control bfh-countries" data-country="US" data-flags="true"></select>
+					<br>
+					<input type="text" class="form-control bfh-phone" data-country="countries_phone1"> -->
+
 
 					<div class="wrap-input100 validate-input" data-validate="Phone is required">
-						<span class="label-input100">Phone</span>
-						<input class="input100 form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" type="number" name="phone" placeholder="Phone..."  value="{{ old('phone') }}">
-						<span class="focus-input100"></span>
-						@if ($errors->has('phone'))
-						<span class="invalid-feedback">
-							<strong>{{ $errors->first('phone') }}</strong>
-						</span>
-						@endif
+						<div class="row">
+							<div class="col-md-6">
+									<span class="label-input100">Country</span>
+									<select style="height:50px;padding:10px;" id="countries_phone1" type="text" name="country" class="input100 form-control bfh-countries" data-country="US" data-flags="true" value="{{ old('country') }}"></select>
+									<span class="focus-input100"></span>
+						   </div>
+
+						   <div class="col-md-6">
+									<span class="label-input100">Phone</span>
+									<input class="bfh-phone input100 form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" data-country="countries_phone1" type="text" name="phone" placeholder="Phone..."  value="{{ old('phone') }}">
+									<span class="focus-input100"></span>
+									@if ($errors->has('phone'))
+									<span class="invalid-feedback">
+										<strong>{{ $errors->first('phone') }}</strong>
+									</span>
+									@endif
+						    </div>
+					   </div>
+
+
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
@@ -134,6 +153,8 @@
 						</div>
 						@endif
 					</div>
+					
+
 
 					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
@@ -188,6 +209,10 @@
 	<script src="{{ asset('assets/frontend/css/register/vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
 	<script src="{{ asset('assets/frontend/css/register/js/main.js')}}"></script>
+
+
+	<!-- Bootstrap Form Helpers -->
+	<script src="{{ asset('assets/dist/js/bootstrap-formhelpers.min.js')}}"></script>
 
 </body>
 </html>
