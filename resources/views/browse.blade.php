@@ -18,6 +18,10 @@
                 color: blue;
             }
 
+            .orange{
+                color:orange;
+            }
+
         </style>
 @endpush
 
@@ -65,6 +69,7 @@
                                                 @elseif( $project_owner->specialty==2)
                                                     <span class="badge bg-green">Designer</span>
                                                 @endif
+                                                <p class="orange"><strong>{{$project_owner->country}}</strong>&nbsp;<span>{{CountryFlag::get($project_owner->country)}}</span></p>
                                                 <p>Bio:</p>
                                                 <a class="date" href="#"><b>{{substr($project_owner->about,0,20)}}...</b></a>
                                             </div>

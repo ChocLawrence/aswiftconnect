@@ -34,6 +34,7 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
         'caf23243e9cb3afd48d0414815ebf07e' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/helper.php',
+        '7f16ea5aa75e2404a3d5efc457c821da' => __DIR__ . '/..' . '/stidges/laravel-country-flags/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -83,6 +84,8 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Stidges\\LaravelCountryFlags\\' => 28,
+            'Stidges\\CountryFlags\\' => 21,
             'Spatie\\Honeypot\\' => 16,
             'Spatie\\CookieConsent\\' => 21,
         ),
@@ -297,6 +300,14 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Stidges\\LaravelCountryFlags\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stidges/laravel-country-flags/src',
+        ),
+        'Stidges\\CountryFlags\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stidges/country-flags/src',
         ),
         'Spatie\\Honeypot\\' => 
         array (
@@ -3837,6 +3848,9 @@ class ComposerStaticInitf22b0327383daf530227280b9c23b4f3
         'Spatie\\Honeypot\\SpamResponder\\BlankPageResponder' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamResponder/BlankPageResponder.php',
         'Spatie\\Honeypot\\SpamResponder\\SpamResponder' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamResponder/SpamResponder.php',
         'SpecialtySeeder' => __DIR__ . '/../..' . '/database/seeds/SpecialtySeeder.php',
+        'Stidges\\CountryFlags\\CountryFlag' => __DIR__ . '/..' . '/stidges/country-flags/src/CountryFlag.php',
+        'Stidges\\LaravelCountryFlags\\CountryFlagFacade' => __DIR__ . '/..' . '/stidges/laravel-country-flags/src/CountryFlagFacade.php',
+        'Stidges\\LaravelCountryFlags\\CountryFlagsServiceProvider' => __DIR__ . '/..' . '/stidges/laravel-country-flags/src/CountryFlagsServiceProvider.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',

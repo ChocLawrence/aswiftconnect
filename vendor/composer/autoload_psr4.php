@@ -35,6 +35,8 @@ return array(
     'Symfony\\Component\\Debug\\' => array($vendorDir . '/symfony/debug'),
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'Stidges\\LaravelCountryFlags\\' => array($vendorDir . '/stidges/laravel-country-flags/src'),
+    'Stidges\\CountryFlags\\' => array($vendorDir . '/stidges/country-flags/src'),
     'Spatie\\Honeypot\\' => array($vendorDir . '/spatie/laravel-honeypot/src'),
     'Spatie\\CookieConsent\\' => array($vendorDir . '/spatie/laravel-cookie-consent/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),

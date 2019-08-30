@@ -33,4 +33,5 @@ return array(
     '801c31d8ed748cfa537fa45402288c95' => $vendorDir . '/psy/psysh/src/functions.php',
     '0d8253363903f0ac7b0978dcde4e28a0' => $vendorDir . '/beyondcode/laravel-dump-server/helpers.php',
     'caf23243e9cb3afd48d0414815ebf07e' => $vendorDir . '/brian2694/laravel-toastr/src/helper.php',
+    '7f16ea5aa75e2404a3d5efc457c821da' => $vendorDir . '/stidges/laravel-country-flags/src/helpers.php',
 );

@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
+use BrightNucleus\CountryCodes\Country;
+use CountryFlag;
 // Add this line
 
 class BrowseController extends Controller
@@ -38,6 +40,11 @@ class BrowseController extends Controller
         Log::info("project owner searched");    
         Log::info($project_owners);
 
+         // Get the name from an ISO 3166 country code.
+        // $countryName = Country::getNameFromCode( $author->country ); // Returns 'United States'.
+        // $countryFlag=CountryFlag::get($author->country);
+ 
+
         return view('browse',compact('query','project_owners','categories'));
     }
 
@@ -54,6 +61,9 @@ class BrowseController extends Controller
         $userInfo = User::where('name',$name)->first();
         $all_projects=Project::where('user_id', $userInfo->id)->get();
         $count=Project::where('user_id', $userInfo->id)->count();
+        $countryName = Country::getNameFromCode( $userInfo->country ); // Returns 'United States'.
+        $countryFlag=CountryFlag::get($userInfo->country);
+ 
 
         Log::info($all_projects);
 
@@ -64,7 +74,7 @@ class BrowseController extends Controller
         //     Session::put($blogKey,1);
         // }
         // $randomposts = Post::approved()->published()->take(3)->inRandomOrder()->get();
-        return view('freelancerdetails',compact('userInfo','all_projects','count','categories'));
+        return view('freelancerdetails',compact('userInfo','all_projects','count','categories','countryName','countryFlag'));
 
     }
 }
