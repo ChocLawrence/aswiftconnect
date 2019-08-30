@@ -6,15 +6,22 @@
     <link href="{{ asset('assets/frontend/css/category/styles.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/frontend/css/category/responsive.css') }}" rel="stylesheet">
     <style>
+        .slider {
+                height: 400px;
+                width: 100%;
+                background-image: url({{ asset('assets/frontend/images/back.jpeg') }});
+                background-size: cover;
+        }
         .favorite_posts{
             color: blue;
         }
+        
     </style>
 @endpush
 
 @section('content')
     <div class="slider display-table center-text">
-        <h1 class="title display-table-cell"><b>{{ $tag->name }}</b></h1>
+        <h1 class="title display-table-cell stroke">{{ $tag->name }}</h1>
     </div><!-- slider -->
 
     <section class="blog-area section">
@@ -23,13 +30,22 @@
             <div class="row">
                 @if($posts->count() > 0)
                     @foreach($posts as $post)
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-3 col-md-4">
                             <div class="card h-100">
                                 <div class="single-post post-style-1">
 
-                                    <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/'.$post->image) }}" alt="{{ $post->title }}"></div>
+                                    <div class="blog-image">
+                                        <img src="{{ Storage::disk('public')->url('post/'.$post->image) }}" alt="{{ $post->title }}">
+                                    </div>
 
-                                    <a class="avatar" href="{{ route('author.profile',$post->user->username) }}"><img src="{{ Storage::disk('public')->url('profile/'.$post->user->image) }}" alt="Profile Image"></a>
+                                    <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+                                      
+                                        @if(Storage::disk('public')->exists('profile/'.$post->user->image))
+                                            <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
+                                        @else
+                                            <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
+                                        @endif
+                                    </a>
 
                                     <div class="blog-info">
 

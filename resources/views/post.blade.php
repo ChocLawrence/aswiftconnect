@@ -114,7 +114,8 @@
 
                         <div class="sidebar-area about-area">
                             <h4 class="title"><b>ABOUT AUTHOR</b></h4>
-                            <p>{{ $post->user->about }}</p>
+                            <p><strong>{{ $post->user->country}}<strong>&nbsp;{{CountryFlag::get($post->user->country)}}</p>
+                            <p>Bio:&nbsp;{{ $post->user->about }}</p>
                         </div>
 
                         <div class="tag-area">
