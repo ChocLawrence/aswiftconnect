@@ -27,7 +27,7 @@ class PostController extends Controller
             $userId=2; 
         }
         $categories=Category::all();
-        $posts = Post::latest()->approved()->published()->paginate(2);
+        $posts = Post::latest()->approved()->published()->paginate(8);
         Log::info("posts");
         Log::info($posts);
         return view('posts',compact('posts','categories','userId'));
