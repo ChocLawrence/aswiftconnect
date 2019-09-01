@@ -19,6 +19,7 @@ Route::get('browse/{name}','BrowseController@details')->name('browse.details');
 Route::get('home', 'HomeController@index')->name('home');
 Route::post('home','HomeController@store')->name('home.store');
 Route::get('faqs', 'FaqsController@index')->name('faqs');
+Route::get('journey', 'JourneyController@index')->name('journey');
 Route::get('terms', 'TermsController@index')->name('terms');
 Route::get('privacy', 'PrivacyController@index')->name('privacy');
 

@@ -122,6 +122,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
                 <li><a class="smoothscroll" href="#pricing" title="pricing">Fields</a></li>
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
+                <li><a href="{{ route('journey') }}" title="Our Journey">Our Journey</a></li>
                 <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
                 <li><a href="{{ route('browse') }}" title="Freelancers">Freelancers</a></li>
             </ul>
