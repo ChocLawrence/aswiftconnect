@@ -71,8 +71,8 @@ class RegisterController extends Controller
          if($data['role_id']=='3'){
            
             return Validator::make($data, [
-                'name' => 'required|string|max:255',
-                'username' => 'required|string|max:255|unique:users',
+                'name' => 'required|string|max:50',
+                'username' => 'required|string|max:10|unique:users',
                 'country'=>'required|string',
                 'phone' => 'required|string|min:7|max:15|unique:users',
                 'email' => 'required|string|email|max:255|unique:users',
@@ -85,8 +85,8 @@ class RegisterController extends Controller
         }else{
 
             return Validator::make($data, [
-                'name' => 'required|string|max:255',
-                'username' => 'required|string|max:255|unique:users',
+                'name' => 'required|string|max:50',
+                'username' => 'required|string|max:10|unique:users',
                 'country'=>'required|string',
                 'phone' => 'required|string|min:7|max:15|unique:users',
                 'email' => 'required|string|email|max:255|unique:users',
