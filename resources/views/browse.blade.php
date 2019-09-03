@@ -1,7 +1,7 @@
 @extends('layouts.frontend.appbrowse')
 
 @section('title')
-{{ $query }}
+{{ $query }} | Search Freelancer 
 @endsection
 
 @push('css')

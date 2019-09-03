@@ -1,3 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Terms and Conditions | ASwiftConnect</title>
+    <!-- favicons
+	================================================== -->
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/css/landing/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/css/landing/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/css/landing/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('assets/frontend/css/landing/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{ asset('assets/frontend/css/landing/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+</head>
+<body>
 <h3>Terms and Conditions</h3>
 
 <h3>Agreement between User and aswiftconnect.com</h3>
@@ -79,3 +98,6 @@
 <p>Effective as of June 22, 2019</p>
 
 <a href="{{ route('login') }}" title="login to ASwiftConnect" class="button button-primary cta">Login To AswiftConnect</a>
+    
+</body>
+</html>

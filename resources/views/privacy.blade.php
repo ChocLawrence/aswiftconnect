@@ -1,3 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Privacy | ASwiftConnect</title>
+    <!-- favicons
+	================================================== -->
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/css/landing/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/css/landing/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/css/landing/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('assets/frontend/css/landing/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{ asset('assets/frontend/css/landing/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+</head>
+<body>
 <h3>Privacy Policy</h3>
 
 <p>Protecting your private information is our priority. This Statement of Privacy applies to aswiftconnect.com and A Swift Connect LLC and governs data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references to A Swift Connect LLC include aswiftconnect.com. The A Swift Connect LLC website is a Freelance Platform site. By using the A Swift Connect LLC website, you consent to the data practices described in this statement.</p>
@@ -56,3 +75,6 @@
 <p>Effective as of July 02, 2019</p>
 
 <a href="{{ route('login') }}" title="login to ASwiftConnect" class="button button-primary cta">Login To AswiftConnect</a>
+    
+</body>
+</html>
