@@ -144,7 +144,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="aboutus-banner">
-                        <img src="{{ asset('assets/frontend/css/how/img/man.png')}}" alt="">
+                        <img src="{{ asset('assets/frontend/css/how/img/man.png')}}" alt="" width="330" height="450">
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-6 col-xs-12">
