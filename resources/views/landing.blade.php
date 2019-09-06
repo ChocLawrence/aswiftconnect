@@ -188,7 +188,7 @@
                 <br /><br /><br /><br /><br />
                 <p class="lead" data-aos="fade-up">
                     ASwiftConnect is a platform which brings together professionals and employers who
-                    want to get their projects done in the least possible amount of time and at the least cost.
+                    want to get their projects done in the least possible amount of time.
                     We pay great attention to all our customers and ensure the best results.Never fail to Contact
                     us for anything. We encourage youths to join the platform in ever growing numbers
                 </p>

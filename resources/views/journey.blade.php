@@ -118,8 +118,7 @@
         <div class="col-lg-6 order-lg-1">
           <div class="p-5">
             <h2 class="display-7">Our Solution: Bridge the gap between the African Tech Sector and the rest of the World</h2>
-            <p>With the advent of the Internet, someone doesn’t need to be located in the same geographical location
-                as the employer they are working for. All what they need, is a laptop, good internet connection, and the
+            <p>With the advent of the Internet,geographical locations should and cannot contain boundaries. All what they need, is a laptop, good internet connection, and the
                 ability to communicate in the language of their employer. A majority of African Developers and
                 Designers have what is needed to be a remote independent contractor, but lack a platform that would
                 help connect them with a company or individual who is going to hire them. That’s where A Swift
