@@ -580,11 +580,11 @@
                                 <p>Your meeting has been scheduled. Talk to you on {{$freelancer->vet_date}}<br>
                                     The time for this meeting is at GMT' {{$freelancer->vet_time }}<br>
                                     Endeavour to be on time and you have a steady internet connection <br>
-                                    Your test will take place on hackerrank<br>
-                                    You must complete the test within 48 hours  from the stated date above.
+                                    Your test will take place on DevSkiller<br>
+                                    You must complete the test before {{$freelancer->vet_deadline }}.
                                     Once you complete the test, we will be notified and will get back to you within 2 business days
                                     Thank you for trusting AswiftConnect!');</p>
-                                <h3>Your Hackerrank test can be taken at <a href="{{$freelancer->vet_url }}">Click Here</a></h3> 
+                                <h3>Your DevSkiller test can be taken at <a href="{{$freelancer->vet_url }}">Click Here</a></h3> 
                                 <p>Wishing you all the very best</p>    
                                 <p>If you cannot access the link above, copy this and place in your browser 
                                     <a href="{{$freelancer->vet_url }}">{{$freelancer->vet_url }}</a></p>

@@ -55,6 +55,7 @@ class FreelancerController extends Controller
 
         if(isset($request->vet_url)){
             $user->vet_url=$request->vet_url;
+            $user->vet_deadline=$request->vet_deadline;
         }
         
         $user->save();

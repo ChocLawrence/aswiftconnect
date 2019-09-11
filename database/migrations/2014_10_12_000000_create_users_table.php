@@ -35,6 +35,7 @@ class CreateUsersTable extends Migration
             $table->date('vet_date')->nullable();
             $table->time('vet_time')->nullable();
             $table->text('vet_url')->nullable();
+            $table->text('vet_deadline')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

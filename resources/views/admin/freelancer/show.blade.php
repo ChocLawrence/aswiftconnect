@@ -46,35 +46,50 @@
                         <div class="col clearfix">
 
                             <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="time" id="time" class="form-control" name="time"
-                                            value="{{ $freelancer->vet_time }}" style="margin-top:5px;">
-                                        <label class="form-label">Time</label>
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="time" id="time" class="form-control" name="time"
+                                                value="{{ $freelancer->vet_time }}" style="margin-top:5px;">
+                                            <label class="form-label">Time</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group form-float">
-                                    <div class="input-group input-append form-line date" id="datePicker">
-                                        <input type="text" class="form-control" name="date"
-                                            value="{{ $freelancer->vet_date}}" style="margin-top:5px;" />
-                                        <span class="input-group-addon add-on"><span
-                                                class="glyphicon glyphicon-calendar"></span></span>
-                                        <label class="form-label">Date</label>
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="input-group input-append form-line date" id="datePicker">
+                                            <input type="text" class="form-control" name="date"
+                                                value="{{ $freelancer->vet_date}}" style="margin-top:5px;" />
+                                            <span class="input-group-addon add-on"><span
+                                                    class="glyphicon glyphicon-calendar"></span></span>
+                                            <label class="form-label">Date</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
 
                             @if($freelancer->specialty==1)
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input type="text" id="vet_url" class="form-control" name="vet_url"
-                                        value="{{ $freelancer->vet_url }}" style="margin-top:5px;">
-                                    <label class="form-label">Test URL</label>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="vet_url" class="form-control" name="vet_url"
+                                                value="{{ $freelancer->vet_url }}" style="margin-top:5px;">
+                                            <label class="form-label">Test URL</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="vet_url" class="form-control" name="vet_deadline"
+                                                value="{{ $freelancer->vet_deadline }}" style="margin-top:5px;">
+                                            <label class="form-label">Test Deadline</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             @endif

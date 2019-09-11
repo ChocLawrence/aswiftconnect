@@ -561,7 +561,7 @@
                             <h2>Email : {{$freelancer->email}}</h2>
                             <p>> Download the attachment</p>
                             <p>> Read the downloaded resume extensively</p>
-                            <p>Once complete, create a test link on Hackerrank and then set vet info from your admin portal</p>
+                            <p>Once complete, create a test link on DevSkiller and then set vet info from your admin portal</p>
                             <p><a href="{{route('landing')}}" class="btn btn-primary">Go To Site</a></p>
                         </div>
                     </td>
