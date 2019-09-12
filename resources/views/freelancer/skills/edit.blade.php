@@ -1,6 +1,6 @@
 @extends('layouts.backend.app')
 
-@section('title','Edit Project')
+@section('title','Edit Skill')
 
 @push('css')
     <!-- Bootstrap Select Css -->
@@ -10,11 +10,11 @@
 @section('content')
     <div class="container-fluid">
 
-        <a href="{{ route('freelancer.projects.index') }}" class="btn btn-danger waves-effect">BACK</a>
+        <a href="{{ route('freelancer.skills.index') }}" class="btn btn-danger waves-effect">BACK</a>
         <br>
         <br>
         <!-- Vertical Layout | With Floating Label -->
-        <form action="{{ route('freelancer.projects.update',$current_project->id) }}"  method="POST">
+        <form action="{{ route('freelancer.skills.update',$current_skill->id) }}"  method="POST">
             @csrf
             @method('PUT')
             <div class="row clearfix">
@@ -22,7 +22,7 @@
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                   EDIT PROJECT
+                                   EDIT SKILL
                                 </h2>
                             </div>
                             <div class="body">
@@ -33,19 +33,19 @@
                                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <input type="text" id="title" class="form-control" placeholder="Enter your title" name="title" value="{{ $current_project->title }}">
+                                                        <input type="text" id="title" class="form-control" placeholder="Enter your skill" name="title" value="{{ $current_skill->title }}">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row clearfix">
                                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                                <label for="project_link">Project Link</label>
+                                                <label for="skill_link">Skill Link</label>
                                             </div>
                                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <input type="text" id="project_link" class="form-control" placeholder="Enter your project URL" name="project_link" value="{{ $current_project->project_link }}">
+                                                        <input type="text" id="skill_link" class="form-control" placeholder="Enter your skill URL" name="skill_link" value="{{ $current_skill->skill_link }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -57,7 +57,7 @@
                                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="5" name="description" class="form-control" >{{ $current_project->description }}</textarea>
+                                                        <textarea rows="5" name="description" class="form-control" >{{ $current_skill->description }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -66,7 +66,7 @@
     
                                         <div class="row clearfix">
                                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                                <button type="submit" class="btn btn-primary m-t-15 waves-effect">UPDATE PROJECT</button>
+                                                <button type="submit" class="btn btn-primary m-t-15 waves-effect">UPDATE Skill</button>
                                             </div>
                                         </div>
     
@@ -77,7 +77,7 @@
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    project Stats
+                                    Skill Stats
                                 </h2>
                             </div>
                             <div class="body">

@@ -175,6 +175,13 @@
                             </a>
                         </li>
                         <li class="header">System</li>
+
+                        <li class="{{ Request::is('freelancer/skills') ? 'active' : '' }}">
+                            <a href="{{ route('freelancer.skills.index') }}">
+                                <i class="material-icons">build</i>
+                                <span>Skills</span>
+                            </a>
+                        </li>
                         <li class="{{ Request::is('freelancer/projects') ? 'active' : '' }}">
                             <a href="{{ route('freelancer.projects.index') }}">
                                 <i class="material-icons">book</i>

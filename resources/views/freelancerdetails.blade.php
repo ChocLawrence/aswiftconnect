@@ -2,7 +2,10 @@
 
 @section('title','Pofile')
 @push('css')
+<link href="{{ asset('assets/frontend/css/category/styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link href="{{ asset('assets/frontend/css/category/responsive.css') }}" rel="stylesheet">
 
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
@@ -74,8 +77,20 @@
                             
 
                             <div class="post-bottom-area">
+
+                                <h5 class="pre-title">SKILLS({{$skill_count}})</h5>
+                                <div class="row">
+                                    @foreach($all_skills as $skill)
+
+                                        <div class="col-md-4">
+                                           <a href="{{$skill->skill_link}}"  target="_blank" style="color:white;"> <span class="label label-warning">{{$skill->title}}</span></a>
+                                           <p class="para">{{$skill->description}}</p>
+                                        </div>
+                                        
+                                    @endforeach
+                                </div>
                                 <br>
-                                <h5 class="pre-title">PROJECTS({{$count}})</h5>
+                                <h5 class="pre-title">PROJECTS({{$project_count}})</h5>
 
                                 @foreach($all_projects as $a_project)
 
@@ -89,6 +104,10 @@
                                     <hr>
         
                                 @endforeach
+
+
+
+                                <br>
     
                                 <div class="post-icons-area">
                                     {{-- <ul class="post-icons">
@@ -112,7 +131,7 @@
                                          <li><a href="{{$userInfo->github_url}}" target="_blank"><i class="ion-social-github"></i></a></li>
                                         @endif
 
-                                        @if($userInfo->github_url!=null)
+                                        @if($userInfo->linkedin_url!=null)
                                          <li><a href="{{$userInfo->linkedin_url}}" target="_blank"><i class="ion-social-linkedin"></i></a></li>
                                         @endif
                                     </ul>

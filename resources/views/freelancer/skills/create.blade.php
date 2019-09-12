@@ -1,6 +1,6 @@
 @extends('layouts.backend.app')
 
-@section('title','New Project')
+@section('title','Create Skill')
 
 @push('css')
     <!-- Bootstrap Select Css -->
@@ -9,17 +9,17 @@
 
 @section('content')
     <div class="container-fluid">
-        <a href="{{ route('freelancer.projects.index') }}" class="btn btn-danger waves-effect">BACK</a><br><br>
+        <a href="{{ route('freelancer.skills.index') }}" class="btn btn-danger waves-effect">BACK</a><br><br>
 
         <!-- Vertical Layout | With Floating Label -->
-        <form action="{{ route('freelancer.projects.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('freelancer.skills.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row clearfix">
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                               ADD NEW PROJECT
+                               ADD NEW SKILL
                             </h2>
                         </div>
                         <div class="body">
@@ -30,19 +30,19 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="title" class="form-control" placeholder="Enter your title" name="title" value="">
+                                                    <input type="text" id="title" class="form-control" placeholder="Enter your skill" name="title" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="project_link">Project Link</label>
+                                            <label for="skill_link">Skill Link</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="project_link" class="form-control" placeholder="Enter your project URL" name="project_link" >
+                                                    <input type="text" id="skill_link" class="form-control" placeholder="Enter your skill URL" name="skill_link" >
                                                 </div>
                                             </div>
                                         </div>
@@ -63,7 +63,7 @@
 
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">ADD PROJECT</button>
+                                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">ADD skill</button>
                                         </div>
                                     </div>
 
@@ -74,7 +74,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                project Stats
+                                Skill Stats
                             </h2>
                         </div>
                         <div class="body">

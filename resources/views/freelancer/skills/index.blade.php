@@ -1,6 +1,6 @@
 @extends('layouts.backend.app')
 
-@section('title','Projects')
+@section('title','Skills')
 
 @push('css')
     <!-- JQuery DataTable Css -->
@@ -10,9 +10,9 @@
 @section('content')
     <div class="container-fluid">
         <div class="block-header">
-            <a class="btn btn-primary waves-effect" href="{{ route('freelancer.projects.create') }}">
+            <a class="btn btn-primary waves-effect" href="{{ route('freelancer.skills.create') }}">
                 <i class="material-icons">add</i>
-                <span>Add New Project</span>
+                <span>Add New Skills</span>
             </a>
         </div>
         <!-- Exportable Table -->
@@ -21,8 +21,8 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            ALL YOUR PROJECTS
-                            <span class="badge bg-blue">{{ $projects->count() }}</span>
+                            ALL YOUR SKILLS
+                            <span class="badge bg-blue">{{ $skills->count() }}</span>
                         </h2>
                     </div>
                     <div class="body">
@@ -33,7 +33,7 @@
                                     <th>ID</th>
                                     <th>Title</th>
                                     <th>Description</th>
-                                    <th>Project Link</th>
+                                    <th>Skill Link</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -42,28 +42,28 @@
                                     <th>ID</th>
                                     <th>Title</th>
                                     <th>Description</th>
-                                    <th>Project Link</th>
+                                    <th>Skill Link</th>
                                     <th>Action</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
-                                    @foreach($projects as $key=>$project)
+                                    @foreach($skills as $key=>$skill)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ str_limit($project->title,'10') }}</td>
-                                            <td>{{ $project->description }}</td>
-                                            <td>{{ $project->project_link }}</td>
+                                            <td>{{ str_limit($skill->title,'10') }}</td>
+                                            <td>{{ $skill->description }}</td>
+                                            <td>{{ $skill->skill_link }}</td>
                                             <td class="text-center">
-                                                <a href="{{ route('freelancer.projects.show',$project->id) }}" class="btn btn-info waves-effect">
+                                                <a href="{{ route('freelancer.skills.show',$skill->id) }}" class="btn btn-info waves-effect">
                                                     <i class="material-icons">visibility</i>
                                                 </a>
-                                                <a href="{{ route('freelancer.projects.edit',$project->id) }}" class="btn btn-info waves-effect">
+                                                <a href="{{ route('freelancer.skills.edit',$skill->id) }}" class="btn btn-info waves-effect">
                                                     <i class="material-icons">edit</i>
                                                 </a>
-                                                <button class="btn btn-danger waves-effect" type="button" onclick="deleteproject({{ $project->id }})">
+                                                <button class="btn btn-danger waves-effect" type="button" onclick="deleteskill({{ $skill->id }})">
                                                     <i class="material-icons">delete</i>
                                                 </button>
-                                                <form id="delete-form-{{ $project->id }}" action="{{ route('freelancer.projects.destroy',$project->id) }}" method="POST" style="display: none;">
+                                                <form id="delete-form-{{ $skill->id }}" action="{{ route('freelancer.skills.destroy',$skill->id) }}" method="POST" style="display: none;">
                                                     @csrf
                                                     @method('DELETE')
                                                 </form>
@@ -96,7 +96,7 @@
     <script src="{{ asset('assets/backend/js/pages/tables/jquery-datatable.js') }}"></script>
     <script src="https://unpkg.com/sweetalert2@7.19.1/dist/sweetalert2.all.js"></script>
     <script type="text/javascript">
-        function deleteproject(id) {
+        function deleteskill(id) {
             swal({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",

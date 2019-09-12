@@ -22,6 +22,14 @@
   <!-- Custom styles for this template -->
   <link href="{{ asset('assets/frontend/css/how/css/one-page-wonder.css')}}" rel="stylesheet">
 
+  <style>
+  .stroke{
+	  color:rgb(220, 217, 214);
+    font-weight: bold;
+   -webkit-text-stroke: 2px rgb(0, 0, 0); 
+  }
+  </style>
+
    <!-- favicons
 	================================================== -->
   <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
@@ -61,8 +69,8 @@
   <header class="masthead text-center text-white">
     <div class="masthead-content">
       <div class="container">
-        <h3 class="masthead-heading mb-0">Our Journey to Connect Africa's Top Tech </h3>
-        <h4 class="masthead-subheading mb-0">& Design Talent to the World</h4>
+        <h3 class="masthead-heading mb-0 stroke">Our Journey to Connect Africa's Top Tech </h3>
+        <h4 class="masthead-subheading mb-0 stroke">& Design Talent to the World</h4>
         <a href="{{ route('home') }}" class="btn btn-primary btn-xl rounded-pill mt-5">Go to Homepage</a>
       </div>
     </div>

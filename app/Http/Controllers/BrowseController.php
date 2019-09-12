@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Skill;
 use App\User;
 use App\Category;
 use Illuminate\Support\Facades\Auth;
@@ -37,8 +38,21 @@ class BrowseController extends Controller
             $q->where('role_id', '3')->where('is_accepted', 1);
         })->where('name','LIKE',"%$query%")->get();
 
-        Log::info("project owner searched");    
-        Log::info($project_owners);
+
+        // $userId = Auth::user()->id;
+
+        // $skills= DB::table('skills')
+        // ->orderBy('user_id')
+        // ->get();
+
+        // $project_owners->put('skills',$skills);
+
+        // Log::info("skills"); 
+        // Log::info($project_owners);
+        // foreach ($project_owners as $user) {
+        //     Log::info($user);
+        // }
+
 
          // Get the name from an ISO 3166 country code.
         // $countryName = Country::getNameFromCode( $author->country ); // Returns 'United States'.
@@ -60,7 +74,9 @@ class BrowseController extends Controller
         $categories=Category::all();
         $userInfo = User::where('name',$name)->first();
         $all_projects=Project::where('user_id', $userInfo->id)->get();
-        $count=Project::where('user_id', $userInfo->id)->count();
+        $all_skills=Skill::where('user_id', $userInfo->id)->get();
+        $skill_count=Skill::where('user_id', $userInfo->id)->count();
+        $project_count=Project::where('user_id', $userInfo->id)->count();
         $countryName = Country::getNameFromCode( $userInfo->country ); // Returns 'United States'.
         $countryFlag=CountryFlag::get($userInfo->country);
  
@@ -74,7 +90,7 @@ class BrowseController extends Controller
         //     Session::put($blogKey,1);
         // }
         // $randomposts = Post::approved()->published()->take(3)->inRandomOrder()->get();
-        return view('freelancerdetails',compact('userInfo','all_projects','count','categories','countryName','countryFlag'));
+        return view('freelancerdetails',compact('userInfo','all_projects','all_skills','project_count','skill_count','categories','countryName','countryFlag'));
 
     }
 }

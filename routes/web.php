@@ -120,6 +120,7 @@ Route::group(['as'=>'freelancer.','prefix'=>'freelancer','namespace'=>'Freelance
 
     Route::resource('post','PostController');
     Route::resource('projects','ProjectController');
+    Route::resource('skills','SkillsController');
     Route::get('/favorite','FavoriteController@index')->name('favorite.index');
 
 
