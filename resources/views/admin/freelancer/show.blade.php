@@ -176,21 +176,25 @@
 
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-            <div class="card">
-                <div class="header bg-pink">
-                    <h2>
-                        Vetting Test
-                    </h2>
-                </div>
-                <div class="body">
-                    @if($freelancer->vet_url !== null)
-                        <span class="badge bg-blue">Set</span>
-                    @else
-                        <span class="badge bg-red">not set</span>
-                    @endif
+            @if($freelancer->specialty==1)
 
-                </div>
-            </div> 
+                <div class="card">
+                    <div class="header bg-pink">
+                        <h2>
+                            Vetting Test
+                        </h2>
+                    </div>
+                    <div class="body">
+                        @if($freelancer->vet_url !== null)
+                            <span class="badge bg-blue">Set</span>
+                        @else
+                            <span class="badge bg-red">not set</span>
+                        @endif
+
+                    </div>
+                </div> 
+                
+            @endif
             <div class="card">
                 <div class="header bg-cyan">
                     <h2>
