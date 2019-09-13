@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Log;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Notifications\FreelancerVetMeeting;
+use App\Notifications\FreelancerSetTest;
 use App\Notifications\FreelancerAccepted;
 use App\Notifications\FreelancerRejected;
 use App\Http\Controllers\Controller;
@@ -41,7 +42,34 @@ class FreelancerController extends Controller
         return view('admin.freelancer.show',compact('freelancer'));
     }
 
-    public function setvetinfo(Request $request, $id)
+    public function settestinfo(Request $request, $id)
+    {
+       
+        $user = User::find($id);
+        $this->validate($request,[
+            'vet_url' => 'required',
+            'vet_deadline' => 'required'
+        ]);
+
+     
+        $user->vet_url=$request->vet_url;
+        $user->vet_deadline=$request->vet_deadline;
+        
+        $user->save();
+
+
+        //send notification to freelancer
+
+        Notification::route('mail',$user->email)
+        ->notify(new  FreelancerSetTest($user));
+
+        Toastr::info('Freelancer Test Set Successfully','Success');
+     
+        return redirect()->back();
+    }
+
+
+    public function setmeetinginfo(Request $request, $id)
     {
        
         $user = User::find($id);
@@ -53,17 +81,7 @@ class FreelancerController extends Controller
         $user->vet_time=$request->time;
         $user->vet_date=$request->date;
 
-        if(isset($request->vet_url)){
-            $user->vet_url=$request->vet_url;
-            $user->vet_deadline=$request->vet_deadline;
-        }
-        
         $user->save();
-
-        Log::info("freelancer ");
-        Log::info($user);
-
-
 
 
         //send notification to freelancer
@@ -71,7 +89,7 @@ class FreelancerController extends Controller
         Notification::route('mail',$user->email)
         ->notify(new  FreelancerVetMeeting($user));
 
-        Toastr::info('Vet Info sent Successfully','Info');
+        Toastr::info('Vet Meeting Set Successfully','Info');
      
         return redirect()->back();
     }

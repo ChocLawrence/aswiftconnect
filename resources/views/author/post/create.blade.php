@@ -23,7 +23,7 @@
                         <div class="body">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="title" class="form-control" name="title" maxlength="35">
+                                        <input type="text" id="title" class="form-control" name="title" maxlength="35" value="{{ old('title') }}">
                                         <label class="form-label">Post Title</label>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                             </h2>
                         </div>
                         <div class="body">
-                            <textarea id="tinymce" name="body"></textarea>
+                            <textarea id="tinymce" name="body">{{ old('body') }}</textarea>
                             <a  class="btn btn-danger m-t-15 waves-effect" href="{{ route('author.post.index') }}">BACK</a>
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">SUBMIT</button>
                         </div>

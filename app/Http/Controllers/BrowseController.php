@@ -21,14 +21,6 @@ class BrowseController extends Controller
 
     public function search(Request $request)
     {
-       // $project_owners = new Collection();
-       // $users = DB::table('users')->distinct()->get();
-       // $ids= DB::table('projects')
-         //   ->select('user_id')
-         //   ->distinct()
-         //   ->pluck('user_id');
-
-        //$project_owners= User::findMany($ids);
        
         $categories=Category::all();
         $query = $request->input('query');
@@ -36,22 +28,11 @@ class BrowseController extends Controller
        $project_owners = User::whereHas(
         'role', function($q){
             $q->where('role_id', '3')->where('is_accepted', 1);
-        })->where('name','LIKE',"%$query%")->get();
+        })->where('name','LIKE',"%$query%")->with('skills')->get();
 
-
-        // $userId = Auth::user()->id;
-
-        // $skills= DB::table('skills')
-        // ->orderBy('user_id')
-        // ->get();
-
-        // $project_owners->put('skills',$skills);
 
         // Log::info("skills"); 
         // Log::info($project_owners);
-        // foreach ($project_owners as $user) {
-        //     Log::info($user);
-        // }
 
 
          // Get the name from an ISO 3166 country code.
@@ -81,14 +62,6 @@ class BrowseController extends Controller
         $countryFlag=CountryFlag::get($userInfo->country);
  
 
-        Log::info($all_projects);
-
-        // $blogKey = 'blog_' . $post->id;
-
-        // if (!Session::has($blogKey)) {
-        //     $post->increment('view_count');
-        //     Session::put($blogKey,1);
-        // }
         // $randomposts = Post::approved()->published()->take(3)->inRandomOrder()->get();
         return view('freelancerdetails',compact('userInfo','all_projects','all_skills','project_count','skill_count','categories','countryName','countryFlag'));
 

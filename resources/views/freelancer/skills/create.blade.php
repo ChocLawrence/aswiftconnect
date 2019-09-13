@@ -30,7 +30,7 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="title" class="form-control" placeholder="Enter your skill" name="title" value="">
+                                                    <input type="text" id="title" class="form-control" placeholder="Enter your skill" name="title" value="{{ old('title') }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -42,7 +42,7 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="skill_link" class="form-control" placeholder="Enter your skill URL" name="skill_link" >
+                                                    <input type="text" id="skill_link" class="form-control" placeholder="Enter your skill URL" name="skill_link" value="{{ old('skill_link') }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -54,7 +54,7 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <textarea rows="5" name="description" class="form-control"></textarea>
+                                                    <textarea rows="5" name="description" class="form-control">{{ old('description') }}</textarea>
                                                 </div>
                                             </div>
                                         </div>

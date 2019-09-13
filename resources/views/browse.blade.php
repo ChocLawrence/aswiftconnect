@@ -23,6 +23,9 @@ Search Freelancer | {{ $query }} |
             .orange{
                 color:orange;
             }
+            .skill{
+                padding:10px;
+            }
 
         </style>
 @endpush
@@ -95,14 +98,21 @@ Search Freelancer | {{ $query }} |
 
                                             <div class="col-md-4"  style="margin-bottom:0px;">
                                             <p><strong>{{$project_owner->country}}</strong>&nbsp;<span>{{CountryFlag::get($project_owner->country)}}</span></p>
+
+                                            </div>
+
+                                            <div class="skill">
+                                              @if(count($project_owner['skills'])>0)
+                                                  @foreach($project_owner['skills'] as $skill)
+                                                     <span class="badge  label-warning">{{$skill->title}}</span>
+                                                  @endforeach   
+                                              @endif
                                             </div>
                                         </div>    
 
                                         <p>Bio:
                                         <a class="date" href="#"><b>{{substr($project_owner->about,0,110)}}...</b></a></p>
                                         
-
-                                        <br>
                                         <ul class="post-footer">
                                             @if($project_owner->facebook_url!=null)
                                                 <li>

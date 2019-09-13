@@ -35,12 +35,99 @@
                 </div>
                 <div class="header">
                     <h2>
-                        SET VETTING INFO
+                        SET FREELANCER TEST
                     </h2>
 
                 </div>
                 <div class="body">
-                    <form action="{{ route('admin.freelancer.setvetinfo',$freelancer->id) }}" method="POST">
+                    <form action="{{ route('admin.freelancer.settestinfo',$freelancer->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="col clearfix">
+
+                            <!-- <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="time" id="time" class="form-control" name="time"
+                                                value="{{ $freelancer->vet_time }}" style="margin-top:5px;">
+                                            <label class="form-label">Time</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="input-group input-append form-line date" id="datePicker">
+                                            <input type="text" class="form-control" name="date"
+                                                value="{{ $freelancer->vet_date}}" style="margin-top:5px;" />
+                                            <span class="input-group-addon add-on"><span
+                                                    class="glyphicon glyphicon-calendar"></span></span>
+                                            <label class="form-label">Date</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            @if($freelancer->specialty==1)
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" id="vet_url" class="form-control" name="vet_url"
+                                                    value="{{ $freelancer->vet_url }}" style="margin-top:5px;">
+                                                <label class="form-label">Test URL</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" id="vet_deadline" class="form-control" name="vet_deadline"
+                                                    value="{{ $freelancer->vet_deadline }}" style="margin-top:5px;">
+                                                <label class="form-label">Test Deadline</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            
+                            
+        
+                                <div class="form-group">
+                                    <!-- <button class="btn btn-danger m-t-15 waves-effect pull-left" data-dismiss="modal">
+                                        <i class="material-icons">cancel</i>
+                                        <span>CANCEL</span>
+                                    </button> -->
+                                    <button type="submit" class="btn btn-success m-t-15 waves-effect pull-right">
+                                        <i class="material-icons">done</i>
+                                        <span>SET TEST</span>
+                                    </button>
+                                </div>
+                            @else
+                                <span class="badge bg-green">No test for Designers</span>
+                            @endif
+                        
+                        </div>
+
+                        
+                    </form>
+                </div>
+                
+            </div>
+
+
+            <div class="card">
+                <div class="header">
+                    <h2>
+                        SET VIRTUAL MEETING
+                    </h2>
+
+                </div>
+                <div class="body">
+                    <form action="{{ route('admin.freelancer.setmeetinginfo',$freelancer->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="col clearfix">
@@ -68,42 +155,12 @@
                                     </div>
                                 </div>
                             </div>
-
-                            @if($freelancer->specialty==1)
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" id="vet_url" class="form-control" name="vet_url"
-                                                value="{{ $freelancer->vet_url }}" style="margin-top:5px;">
-                                            <label class="form-label">Test URL</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" id="vet_url" class="form-control" name="vet_deadline"
-                                                value="{{ $freelancer->vet_deadline }}" style="margin-top:5px;">
-                                            <label class="form-label">Test Deadline</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endif
-                          
                            
     
                             <div class="form-group">
-                                <button class="btn btn-danger m-t-15 waves-effect pull-left" data-dismiss="modal">
-                                    <i class="material-icons">cancel</i>
-                                    <span>CANCEL</span>
-                                </button>
                                 <button type="submit" class="btn btn-success m-t-15 waves-effect pull-right">
                                     <i class="material-icons">done</i>
-                                    <span>SUBMIT</span>
+                                    <span>SET MEETING</span>
                                 </button>
                             </div>
                         
@@ -112,12 +169,28 @@
                         
                     </form>
                 </div>
+                
             </div>
 
 
 
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="header bg-pink">
+                    <h2>
+                        Vetting Test
+                    </h2>
+                </div>
+                <div class="body">
+                    @if($freelancer->vet_url !== null)
+                        <span class="badge bg-blue">Set</span>
+                    @else
+                        <span class="badge bg-red">not set</span>
+                    @endif
+
+                </div>
+            </div> 
             <div class="card">
                 <div class="header bg-cyan">
                     <h2>

@@ -48,9 +48,9 @@ class SkillsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'title' => 'required',
+            'title' => 'required|min:2|max:15',
             'skill_link' => 'required',
-            'description' => 'required',
+            'description' => 'required|min:25|max:100',
         ]);
         
         $Skill = new Skill();

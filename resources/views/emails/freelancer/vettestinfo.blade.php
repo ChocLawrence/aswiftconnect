@@ -543,7 +543,7 @@
             <table>
                 <tr>
                     <td valign="middle" class="hero bg_white"
-                        style="background-image: url({{ asset('assets/frontend/images/blog-2.jpg')}}); background-size: cover; height: 400px;">
+                        style="background-image: url({{ asset('assets/frontend/images/caroline-veronez-165944.jpg')}}); background-size: cover; height: 400px;">
                         <div class="overlay"></div>
                         <table>
                             <tr>
@@ -558,21 +558,20 @@
                 </tr><!-- end tr -->
                 <tr>
                     <td class="bg_dark email-section" style="text-align:center;">
-                      
                             <div class="heading-section heading-section-white">
                                 <h2>We will be glad to have you on our platform</h2>
-                                <p>Your meeting has been scheduled. Talk to you on {{$freelancer->vet_date}}<br>
-                                    The time for this meeting is at GMT {{$freelancer->vet_time }}<br>
-                                    Endeavour to be on time and you have a steady internet connection including a good
-                                    microphone and webcam. <br>
-                                    We will have this meeting on Google Hangouts.Be sure to get the extension installed before our meeting on your browser.<br>
-                                    We would also like to know more about you and your experience.prepare your portfolio
-                                    online.We might have to share screens.
-                                    Set it up and if you will like to have the meeting with an email of your choice, let us
-                                    know so we call you through that email.
+                                <p>Your test has been successfully set based on your skillset.
+                                    It will take place on the DevSkiller platform<br>
+                                    You must complete the test before {{$freelancer->vet_deadline }}.
+                                    Once you complete the test, we will be notified and will get back to you within 2 business days
                                     Thank you for trusting AswiftConnect!');</p>
+                                <h3>Your DevSkiller test can be taken at <a href="{{$freelancer->vet_url }}">Click Here</a></h3> 
+                                <p>Wishing you all the very best</p>    
+                                <p>If you cannot access the link above, copy this and place in your browser 
+                                    <a href="{{$freelancer->vet_url }}">{{$freelancer->vet_url }}</a></p>
                                 <p><a href="{{route('landing')}}" class="btn btn-primary">Go To Site</a></p> 
                                 <p>Thanks for trusting AswiftConnect</p>
+
                             </div>
                     </td>
                 </tr><!-- end: tr -->
