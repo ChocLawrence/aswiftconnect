@@ -342,7 +342,7 @@ Search Freelancer | {{ $query }} |
                                     @endif
                                 </div>
                             </div>
-                            <b>Bio:{{substr($project_owner->about,0,110)}}...</b>
+                            <b><p style="font-size:12px;">Bio:{{substr($project_owner->about,0,110)}}...</p></b>
                             <div class="bottom">
 
                                 @if($project_owner->github_url!=null)
