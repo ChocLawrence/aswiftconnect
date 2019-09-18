@@ -327,7 +327,7 @@ Search Freelancer | {{ $query }} |
                                             @if( $project_owner->specialty==1)
                                                 <span class="badge label-primary">Developer</span>
                                             @elseif( $project_owner->specialty==2)
-                                                <span class="badge label-info">Designer</span>
+                                                <span class="badge label-success">Designer</span>
                                             @endif
                                     </div>
                                     <div class="col" style="margin-bottom:0px;">
@@ -337,7 +337,7 @@ Search Freelancer | {{ $query }} |
                                 <div class="skill">
                                     @if(count($project_owner['skills'])>0)
                                         @foreach($project_owner['skills'] as $skill)
-                                            <span class="badge  label-warning">{{$skill->title}}</span>
+                                            <span class="badge  label-default">{{$skill->title}}</span>
                                         @endforeach   
                                     @endif
                                 </div>
