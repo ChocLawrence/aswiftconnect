@@ -175,12 +175,12 @@
                 <h1 class="intro-header" data-aos="fade-up">About ASwiftConnect</h1>
 
                 <div class="fluid-video-wrapper" style="margin-top:40px;">
-                    {{-- <iframe
-                        src="https://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39"
-                        width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                        allowfullscreen></iframe> --}}
-                        
-                        <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">         
+                    <iframe
+                        src="{{ asset('assets/ad/ad.mp4')}}" 
+                        width="500" height="281" frameborder="0" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen
+                        allowfullscreen></iframe>
+            
+                        <!-- <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">          -->
                 </div>
 
             </div>
