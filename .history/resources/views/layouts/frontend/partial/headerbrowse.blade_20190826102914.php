@@ -23,7 +23,7 @@
                 @endguest
             </ul><!-- main-menu -->
     
-            <!-- @if(Request::is('browse/*'))
+            @if(Request::is('browse/*'))
             <ul class="main-menu visible-on-click" id="main-menu">
                <li><a href="{{ route('browse') }}">Browse Freelancers</a></li>
             </ul>
@@ -34,7 +34,7 @@
                         <input class="src-input" value="{{ isset($query) ? $query : '' }}" name="query" type="text" placeholder="Type of search">
                     </form>
                 </div>
-            @endif -->
+            @endif
     
         </div><!-- conatiner -->
     </header>
