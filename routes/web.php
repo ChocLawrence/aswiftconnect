@@ -14,8 +14,8 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 
 Route::get('', 'LandingController@index')->name('landing');
-Route::get('browse', 'BrowseController@search')->name('browse');
-Route::get('browse/{name}','BrowseController@details')->name('browse.details');
+// Route::get('browse', 'BrowseController@search')->name('browse');
+// Route::get('browse/{name}','BrowseController@details')->name('browse.details');
 Route::get('projects', 'HomeController@index')->name('home');
 Route::post('home','HomeController@store')->name('home.store');
 Route::get('faqs', 'FaqsController@index')->name('faqs');

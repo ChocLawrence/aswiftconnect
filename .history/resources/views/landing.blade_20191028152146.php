@@ -72,7 +72,7 @@
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
                 <li><a href="{{ route('journey') }}" title="Our Journey">Our Journey</a></li>
                 <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
-                {{-- <li><a href="{{ route('browse') }}" title="Freelancers">Freelancers</a></li> --}}
+                <!-- <li><a href="{{ route('browse') }}" title="Freelancers">Freelancers</a></li> -->
             </ul>
 
             <a href="{{ route('login') }}" title="login to ASwiftConnect" class="button button-primary cta">Login</a>

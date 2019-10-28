@@ -10,13 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Spatie\Honeypot\ProtectAgainstSpam;
+
 
 Route::get('', 'LandingController@index')->name('landing');
-Route::get('browse', 'BrowseController@search')->name('browse');
-Route::get('browse/{name}','BrowseController@details')->name('browse.details');
-Route::get('home', 'HomeController@index')->name('home');
+// Route::get('browse', 'BrowseController@search')->name('browse');
+// Route::get('browse/{name}','BrowseController@details')->name('browse.details');
+Route::get('projects', 'HomeController@index')->name('home');
 Route::post('home','HomeController@store')->name('home.store');
 Route::get('faqs', 'FaqsController@index')->name('faqs');
+Route::get('journey', 'JourneyController@index')->name('journey');
 Route::get('terms', 'TermsController@index')->name('terms');
 Route::get('privacy', 'PrivacyController@index')->name('privacy');
 
@@ -28,7 +31,7 @@ Route::get('/tag/{slug}','PostController@postByTag')->name('tag.posts');
 
 Route::get('profile/{username}','AuthorController@profile')->name('author.profile');
 
-Route::post('subscriber','SubscriberController@store')->name('subscriber.store');
+Route::post('subscriber','SubscriberController@store')->name('subscriber.store')->middleware(ProtectAgainstSpam::class);
 
 Route::get('search','SearchController@search')->name('search');
 Route::get('freelancer','FreelancerController@index')->name('freelancer');
@@ -57,7 +60,8 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin','middleware'
     Route::resource('post','PostController');
     Route::resource('freelancer','FreelancerController');
 
-    Route::put('/freelancer/{id}/setvetinfo','FreelancerController@setvetinfo')->name('freelancer.setvetinfo');
+    Route::put('/freelancer/{id}/settestinfo','FreelancerController@settestinfo')->name('freelancer.settestinfo');
+    Route::put('/freelancer/{id}/setmeetinginfo','FreelancerController@setmeetinginfo')->name('freelancer.setmeetinginfo');
     Route::get('/pending/post','PostController@pending')->name('post.pending');
     Route::put('/post/{id}/approve','PostController@approval')->name('post.approve');
     Route::put('/post/{id}/setinvoice','PostController@setinvoice')->name('post.setinvoice');
@@ -117,6 +121,7 @@ Route::group(['as'=>'freelancer.','prefix'=>'freelancer','namespace'=>'Freelance
 
     Route::resource('post','PostController');
     Route::resource('projects','ProjectController');
+    Route::resource('skills','SkillsController');
     Route::get('/favorite','FavoriteController@index')->name('favorite.index');
 
 

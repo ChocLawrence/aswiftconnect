@@ -1,4 +1,3 @@
-@include('cookieConsent::index')
 <!DOCTYPE html>
 <!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
@@ -11,9 +10,10 @@
     <!--- basic page needs
    ================================================== -->
     <meta charset="utf-8">
-    <title>ASwiftConnect | Home</title>
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <title>ASwiftConnect | Home</title>
 
     <!-- mobile specific metas
    ================================================== -->
@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
     <!-- favicons
 	================================================== -->
     <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
@@ -49,59 +50,6 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
-    <style>
-       
-    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-h1, h2, h3, h4, h5, h6 { color: black; margin: 0px 0px 12px 0px;font-weight: 400; line-height: 1; }
-h1 { font-size: 36px; }
-h2 { font-size: 26px; line-height: 38px; }
-h3 { font-size: 22px; line-height: 32px; }
-h4 { font-size: 20px; }
-h5 { font-size: 16px; line-height: 27px; }
-h6 { font-size: 12px; }
-p { margin: 0 0 20px; line-height: 1.7; }
-p:last-child { margin: 0px; }
-ul, ol { font-family: 'Montserrat', sans-serif; }
-a { text-decoration: none; color: #55595d; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
-a:focus, a:hover { text-decoration: none; color: #c38d3f; }
-.content{padding-top:80px; padding-bottom:80px;}
-.mb40{margin-bottom:40px;}
-
-.team-block { }
-.team-img { margin-bottom: 20px; position: relative; }
-.team-img img { width: 100%; }
-.team-img img.border { border-color: #fff !important; }
-.fa {
-  padding: 5px;
-  font-size: 15px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-
-    </style>
-
 </head>
 
 <body id="top">
@@ -112,7 +60,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
 
         <div class="header-logo">
             <a href="{{route('landing')}}">
-                ASWIFTCONNECT
+                ASWIFTCONNECT &nbsp;<img src="{{ asset('assets/frontend/css/landing/favicon.ico')}}" width="20" height="20">
             </a>
         </div>
 
@@ -122,8 +70,8 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
                 <li><a class="smoothscroll" href="#pricing" title="pricing">Fields</a></li>
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
+                <li><a href="{{ route('journey') }}" title="Our Journey">Our Journey</a></li>
                 <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
-                <li><a href="{{ route('browse') }}" title="Freelancers">Freelancers</a></li>
             </ul>
 
             <a href="{{ route('login') }}" title="login to ASwiftConnect" class="button button-primary cta">Login</a>
@@ -226,12 +174,12 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                 <h1 class="intro-header" data-aos="fade-up">About ASwiftConnect</h1>
 
                 <div class="fluid-video-wrapper" style="margin-top:40px;">
-                    {{-- <iframe
-                        src="https://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39"
-                        width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                        allowfullscreen></iframe> --}}
-                        
-                        <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">         
+                    <iframe
+                        src="{{ asset('assets/ad/ad.mp4')}}" 
+                        width="500" height="281" frameborder="0" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen
+                        allowfullscreen></iframe>
+            
+                        <!-- <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">          -->
                 </div>
 
             </div>
@@ -239,7 +187,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                 <br /><br /><br /><br /><br />
                 <p class="lead" data-aos="fade-up">
                     ASwiftConnect is a platform which brings together professionals and employers who
-                    want to get their projects done in the least possible amount of time and at the least cost.
+                    want to get their projects done in the least possible amount of time.
                     We pay great attention to all our customers and ensure the best results.Never fail to Contact
                     us for anything. We encourage youths to join the platform in ever growing numbers
                 </p>
@@ -584,6 +532,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
                             <div class="input-area">
                                 <form method="POST" action="{{ route('subscriber.store') }}" class="group">
                                     @csrf
+                                    @honeypot
                                     <div class="row">
                                         <input class="col-md-8 email-input" id="mc-email" name="email" type="email"
                                             placeholder="Enter your email" style="color:white;" required>
@@ -653,6 +602,7 @@ a:focus, a:hover { text-decoration: none; color: #c38d3f; }
         @endif
     </script>
 
+@include('cookieConsent::index')
 </body>
 
 </html>
