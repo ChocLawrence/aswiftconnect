@@ -23,7 +23,7 @@ class SettingsController extends Controller
     {
         $this->validate($request,[
             'name' => 'required|string|min:2|max:50',
-            'email' => 'required|email|max:255|unique:users,email,' .Auth::id(),
+            'email' => 'required|string|email|max:255|unique:users',
             'phone' => 'required|string|min:7|max:17|',
             'about' => 'required|min:30|max:300'
         ]);

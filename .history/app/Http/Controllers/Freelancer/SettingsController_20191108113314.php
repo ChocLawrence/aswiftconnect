@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Author;
+namespace App\Http\Controllers\Freelancer;
 
 use App\User;
 use Brian2694\Toastr\Facades\Toastr;
@@ -8,7 +8,10 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
+use App\Notifications\ResumeUploaded;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
@@ -16,17 +19,31 @@ class SettingsController extends Controller
 {
     public function index()
     {
-        return view('author.settings');
+        $user_id = Auth::id();
+        $freelancer = User::find($user_id);
+        Log::info($freelancer);
+        return view('freelancer.settings',compact('freelancer'));
     }
 
     public function updateProfile(Request $request)
     {
-        $this->validate($request,[
+        //$user_id = Auth::id();
+        $userId = isset($user) ? $user->id : null;
+        $u = User::find($id);
+        Log::info($u);
+
+
+        $rules = [
             'name' => 'required|string|min:2|max:50',
-            'email' => 'required|email|max:255|unique:users,email,' .Auth::id(),
+            //'email' => 'required|string|max:50|unique:users,email,',
+            //'email' => 'required|email|max:255|unique:users,email,'.Auth::user()->id.',id',
+            //'email' => 'required|email|unique:users,email,'.Auth::user()->id,
+            'email' => 'required|unique:users,email,' .Auth::user()->id,
             'phone' => 'required|string|min:7|max:17|',
             'about' => 'required|min:30|max:300'
-        ]);
+        ];
+
+        $this->validate($request, $rules);
         $image = $request->file('image');
         $slug = str_slug($request->name);
         $user = User::findOrFail(Auth::id());
@@ -48,11 +65,13 @@ class SettingsController extends Controller
         } else {
             $imageName = $user->image;
         }
+
         $user->name = $request->name;
         $user->email = $request->email;
         $user->phone = $request->phone;
+        
         if (isset($image)){
-           $user->image = $imageName;
+            $user->image = $imageName;
         }
 
         $country=$request->country;
@@ -116,5 +135,45 @@ class SettingsController extends Controller
             return redirect()->back();
         }
 
+    }
+
+    public function uploadResume(Request $request)
+    {
+        $this->validate($request,[
+            'name' => 'required',
+            'email' => 'required|email',
+            'resume' => 'required|mimes:pdf'
+        ]);
+        
+        $resume = $request->file('resume');
+        $user = User::findOrFail(Auth::id());
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->resume=1;
+       
+
+        Log::info($resume);
+
+        if (isset($resume)){
+
+            //stor in memory
+            $user->save();
+
+
+           //send notification to freelancer
+           Notification::route('mail',$user->email)
+           ->notify(new  ResumeReceived($user));
+          
+
+           //send notification to infoaswiftconnect
+
+            Notification::route('mail',"info@aswiftconnect.com")
+            ->notify(new  ResumeUploaded($user,$resume));
+           
+
+           Toastr::success('Resume Successfully Uploaded:)','Success'); 
+
+        }
+        return redirect()->back();
     }
 }

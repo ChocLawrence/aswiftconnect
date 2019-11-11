@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Author;
+namespace App\Http\Controllers\Admin;
 
 use App\User;
 use Brian2694\Toastr\Facades\Toastr;
@@ -16,14 +16,14 @@ class SettingsController extends Controller
 {
     public function index()
     {
-        return view('author.settings');
+        return view('admin.settings');
     }
 
     public function updateProfile(Request $request)
     {
         $this->validate($request,[
             'name' => 'required|string|min:2|max:50',
-            'email' => 'required|email|max:255|unique:users,email,' .Auth::id(),
+            'email' => 'required|string|email|max:255|unique:users',
             'phone' => 'required|string|min:7|max:17|',
             'about' => 'required|min:30|max:300'
         ]);
@@ -36,7 +36,7 @@ class SettingsController extends Controller
             $imageName = $slug.'-'.$currentDate.'-'.uniqid().'.'.$image->getClientOriginalExtension();
             if (!Storage::disk('public')->exists('profile'))
             {
-                Storage::disk('public')->makeDirectory('profile');
+             Storage::disk('public')->makeDirectory('profile');
             }
 //            Delete old image form profile folder
             if (Storage::disk('public')->exists('profile/'.$user->image))
@@ -51,8 +51,9 @@ class SettingsController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->phone = $request->phone;
+
         if (isset($image)){
-           $user->image = $imageName;
+            $user->image = $imageName;
         }
 
         $country=$request->country;
@@ -83,6 +84,7 @@ class SettingsController extends Controller
         }
 
 
+        
         $user->about = $request->about;
         $user->save();
         Toastr::success('Profile Successfully Updated :)','Success');
