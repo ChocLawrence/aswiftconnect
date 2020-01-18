@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta property="og:title" content="ASwiftConnect" />
-    <meta property="og:image" content="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg') }}" />
-    <meta property="og:type" content="website" />
 
     <!--SEO-->
     <meta name="description" content="Looking for freelance tech jobs remotely, apply to work with us and get lots of projects and earn.">
@@ -54,7 +51,7 @@
 </head>
 <body>
 
-    @include('layouts.frontend.partial.headerbrowse')
+    @include('layouts.frontend.partial.header')
 
 	@yield('content')
 

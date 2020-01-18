@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <meta property="og:title" content="ASwiftConnect" />
-    <meta property="og:image" content="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg') }}" />
-    <meta property="og:type" content="website" />
     <!-- The title tag shows in email notifications, like Android 4.4. -->
     <title>Frequently Asked Questions | ASwiftConnect</title>
 

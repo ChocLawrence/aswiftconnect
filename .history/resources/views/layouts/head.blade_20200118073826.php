@@ -3,9 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta property="og:title" content="ASwiftConnect" />
-    <meta property="og:image" content="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg') }}" />
-    <meta property="og:type" content="website" />
 
     <!--SEO-->
     <meta name="description" content="AswiftConnect is an information technology company.Are you ooking for freelance tech jobs remotely? Apply to work with us and get lots of projects and earn.">

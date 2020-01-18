@@ -9,9 +9,6 @@
                Our dream is to provide good paying gigs in the tech sector to the highly qualified but
                unemployed or underemployed tech ">
   <meta name="author" content="">
-  <meta property="og:title" content="ASwiftConnect" />
-  <meta property="og:image" content="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg') }}" />
-  <meta property="og:type" content="website" />
 
   <title>ASwiftConnect | Our Story</title>
 
