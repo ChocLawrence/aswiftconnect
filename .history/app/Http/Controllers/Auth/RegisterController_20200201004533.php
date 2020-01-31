@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
 use App\Notifications\ResumeUploaded;
-use App\Notifications\WelcomeAuthor;
 use App\Notifications\ResumeReceived;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator;

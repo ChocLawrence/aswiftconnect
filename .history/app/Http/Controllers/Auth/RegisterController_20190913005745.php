@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
 use App\Notifications\ResumeUploaded;
-use App\Notifications\WelcomeAuthor;
 use App\Notifications\ResumeReceived;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator;
@@ -157,12 +156,6 @@ class RegisterController extends Controller
                 'password' => Hash::make($data['password']),
                 'status'=> $status
             ]);
-
-             //send notification to employer
-
-             Notification::route('mail',$user->email)
-             ->notify(new  WelcomeAuthor($user));
- 
         }
 
        
