@@ -165,7 +165,10 @@ class RegisterController extends Controller
 
  
         }
-               
+
+        $user->sendEmailVerificationNotification();       
+        
+        
         return $user;
     }
 }
