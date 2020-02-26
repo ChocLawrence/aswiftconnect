@@ -42,15 +42,8 @@ class MyResetPassword extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        //return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
-       // ->subject("Reset ASwiftConnect Password")->markdown('vendor.notifications.email', ['token' => $this->token]);
-        return (new MailMessage)
-        ->from('info@aswiftconnect.com',"ASwiftConnect Inc")
-        ->subject("Reset ASwiftConnect Password")
-        ->line('Your password reset link is ready')
-        ->action('Reset Password Now', url('password/reset', $this->token))
-        ->line('If you did not request this action, no further action is needed');
-   
+        return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
+        ->subject("Reset ASwiftConnect Password")->markdown('vendor.notifications.email', ['token' => $this->token]);
     }
 
     /**
