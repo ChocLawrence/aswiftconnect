@@ -181,7 +181,7 @@
                 <h1 class="intro-header" data-aos="fade-up">About ASwiftConnect</h1>
 
                 <div class="fluid-video-wrapper" style="margin-top:40px;">
-                    <iframe src="{{ asset('assets/ad/ad.mp4')}}" width="500" height="281" frameborder="0"
+                    <iframe src="{{ asset('assets/ad/ad.mp4')}}" width="100%" height="281" frameborder="0"
                         allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
                     <!-- <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">          -->

@@ -20,6 +20,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="eN4C0is58cktJ0lC3SMuGVW5MX6kWopf4_Hj2r5kkM4" />
 
+    <meta property="og:title" content="ASwiftConnect" />
+    <meta property="og:image" content="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg') }}" />
+    <meta property="og:type" content="website" />
+
     <!-- CSS
    ================================================== -->
     <link href="{{ asset('assets/frontend/css/landing/css/base.css') }}" rel="stylesheet">
@@ -60,7 +64,8 @@
 
         <div class="header-logo">
             <a href="{{route('landing')}}">
-                ASWIFTCONNECT &nbsp;<img src="{{ asset('assets/frontend/css/landing/favicon.ico')}}" width="20" height="20">
+                ASWIFTCONNECT &nbsp;<img src="{{ asset('assets/frontend/css/landing/favicon.ico')}}" width="20"
+                    height="20">
             </a>
         </div>
 
@@ -72,7 +77,7 @@
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
                 <li><a href="{{ route('journey') }}" title="Our Journey">Our Journey</a></li>
                 <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
-                <!-- <li><a href="{{ route('browse') }}" title="Freelancers">Freelancers</a></li> -->
+                {{-- <li><a href="{{ route('browse') }}" title="Freelancers">Freelancers</a></li> --}}
             </ul>
 
             <a href="{{ route('login') }}" title="login to ASwiftConnect" class="button button-primary cta">Login</a>
@@ -104,12 +109,13 @@
             <div class="row contents">
                 <div class="home-content-left">
 
-                   
+
                     <h1 data-aos="fade-up">
                         Connecting Africa's Top Tech and Design Talent to the World <br>
                     </h1>
-                    <h3 data-aos="fade-up">We provide companies with Qualified and Vetted Freelancers to scale their teams</h3>
-                    
+                    <h3 data-aos="fade-up">We provide companies with Qualified and Vetted Freelancers to scale their
+                        teams</h3>
+
 
                     <div class="buttons" data-aos="fade-up">
                         <a href="{{route('freelancer')}}" class="button stroke">
@@ -175,12 +181,10 @@
                 <h1 class="intro-header" data-aos="fade-up">About ASwiftConnect</h1>
 
                 <div class="fluid-video-wrapper" style="margin-top:40px;">
-                    <iframe
-                        src="{{ asset('assets/ad/ad.mp4')}}" 
-                        width="500" height="281" frameborder="0" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen
-                        allowfullscreen></iframe>
-            
-                        <!-- <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">          -->
+                    <iframe src="{{ asset('assets/ad/ad.mp4')}}" width="100%" height="281" frameborder="0"
+                        allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                    <!-- <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">          -->
                 </div>
 
             </div>
@@ -238,7 +242,8 @@
                         <h3>Bonuses</h3>
 
                         <p>Loyal clients who always work with us are given free bonuses. This includes having a project
-                            done for free whose price is covered by ASwiftConnect.We connect with our clients and we keep
+                            done for free whose price is covered by ASwiftConnect.We connect with our clients and we
+                            keep
                             them close.</p>
 
                     </div>
@@ -258,7 +263,7 @@
 
                     <div class="bgrid step" data-item="1">
                         <h3>Registration</h3>
-                        <p>Employers register through the employer portal  while
+                        <p>Employers register through the employer portal while
                             professionals do same through the freelancer
                             portal.
                         </p>
@@ -267,7 +272,8 @@
                     <div class="bgrid step" data-item="2">
                         <h3>Posting Projects</h3>
                         <p>Jobs are posted by the employers whenever a job is to be done.Posting
-                            a job requires the employer to login to his or her dashboard and create a post. Our reviewers will review the post and 
+                            a job requires the employer to login to his or her dashboard and create a post. Our
+                            reviewers will review the post and
                             either accept or reject based on many criteria which span from clarity to feasibility.
                         </p>
                     </div>
@@ -282,7 +288,7 @@
                     <div class="bgrid step" data-item="4">
                         <h3>Job Completion</h3>
                         <p>When the freelancer(s) have finished working on the project, payments are then made to
-                           them.
+                            them.
                         </p>
                     </div>
 
@@ -388,7 +394,8 @@
 
                     <div>
                         <p>
-                            For all the software solutions I need, I am sure to be covered by ASwiftConnect. They are reliable and can 
+                            For all the software solutions I need, I am sure to be covered by ASwiftConnect. They are
+                            reliable and can
                             be counted on. Link up with them and have affordable rates.
                         </p>
 
@@ -603,7 +610,7 @@
         @endif
     </script>
 
-@include('cookieConsent::index')
+    @include('cookieConsent::index')
 </body>
 
 </html>
