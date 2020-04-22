@@ -69,7 +69,6 @@
 
     <!-- Facebook Pixel Code -->
     <script>
-        
         !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -80,11 +79,6 @@
     'https://connect.facebook.net/en_US/fbevents.js');
      fbq('init', '255693655560742'); 
     fbq('track', 'PageView');
-    fbq('track', 'CompleteRegistration');
-    fbq('track', 'Contact');
-    fbq('track', 'Search');
-    fbq('track', 'ViewContent');
-
     </script>
     <noscript>
         <img height="1" width="1" src="https://www.facebook.com/tr?id=255693655560742&ev=PageView

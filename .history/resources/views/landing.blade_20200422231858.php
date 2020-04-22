@@ -54,6 +54,25 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+     fbq('init', '255693655560742'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=255693655560742&ev=PageView
+    &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
 </head>
 
 <body id="top">
@@ -181,7 +200,7 @@
                 <h1 class="intro-header" data-aos="fade-up">About ASwiftConnect</h1>
 
                 <div class="fluid-video-wrapper" style="margin-top:40px;">
-                    <iframe src="{{ asset('assets/ad/ad.mp4')}}" width="auto" height="281" frameborder="0"
+                    <iframe src="{{ asset('assets/ad/ad.mp4')}}" width="100%" height="281" frameborder="0"
                         allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
                     <!-- <img src="{{ asset('assets/frontend/images/zoom.jpg')}}" alt="About image">          -->

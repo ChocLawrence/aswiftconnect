@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!--SEO-->
-    <meta name="description"
-        content="AswiftConnect is an information technology company.Are you ooking for freelance tech jobs remotely? Apply to work with us and get lots of projects and earn.">
-
+    <meta name="description" content="AswiftConnect is an information technology company.Are you ooking for freelance tech jobs remotely? Apply to work with us and get lots of projects and earn.">
+    
     <!---Meta keywords--->
 
     <meta name="keywords" content="ASwiftConnect Information Technology Company,freelance jobs,tech jobs" />
-
+    
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')-{{ config('app.name', 'ASwiftConnect') }}</title>
 
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/css/landing/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/css/landing/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/css/landing/favicon-16x16.png')}}">
-    <link rel="manifest" href="{{ asset('assets/frontend/css/landing/site.webmanifest')}}">
-    <link rel="mask-icon" href="{{ asset('assets/frontend/css/landing/safari-pinned-tab.svg')}}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+     <!-- Favicon-->
+     <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/css/landing/apple-touch-icon.png')}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/css/landing/favicon-32x32.png')}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/css/landing/favicon-16x16.png')}}">
+	<link rel="manifest" href="{{ asset('assets/frontend/css/landing/site.webmanifest')}}">
+	<link rel="mask-icon" href="{{ asset('assets/frontend/css/landing/safari-pinned-tab.svg')}}" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
-
+    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
-        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Form Helpers -->
-    <link href="{{ asset('assets/dist/css/bootstrap-formhelpers.min.css')}}" rel="stylesheet" media="screen">
+	<link href="{{ asset('assets/dist/css/bootstrap-formhelpers.min.css')}}" rel="stylesheet" media="screen">
 
-
+	
     <!-- Bootstrap Core Css -->
     <link href="{{asset('assets/backend/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
@@ -59,41 +56,15 @@
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{{asset('assets/backend/css/themes/all-themes.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
-    <!-- favicons
+   
+   <!-- favicons
 	================================================== -->
     <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
     @stack('css')
 
-    <!-- Facebook Pixel Code -->
-    <script>
-        
-        !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
-    fbq('track', 'PageView');
-    fbq('track', 'CompleteRegistration');
-    fbq('track', 'Contact');
-    fbq('track', 'Search');
-    fbq('track', 'ViewContent');
-
-    </script>
-    <noscript>
-        <img height="1" width="1" src="https://www.facebook.com/tr?id=255693655560742&ev=PageView
-    &noscript=1" />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
-
 </head>
-
 <body class="theme-black">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
@@ -141,11 +112,11 @@
     </section>
 
     <!-- SCIPTS -->
-    <!-- Jquery Core Js -->
-    <script src="{{asset('assets/backend/plugins/jquery/jquery.min.js')}}"></script>
+     <!-- Jquery Core Js -->
+     <script src="{{asset('assets/backend/plugins/jquery/jquery.min.js')}}"></script>
 
-    <!-- Bootstrap Form Helpers -->
-    <script src="{{ asset('assets/dist/js/bootstrap-formhelpers.min.js')}}"></script>
+      <!-- Bootstrap Form Helpers -->
+      <script src="{{ asset('assets/dist/js/bootstrap-formhelpers.min.js')}}"></script>
 
 
     <!-- Slimscroll Plugin Js -->
@@ -161,14 +132,14 @@
     <!-- Waves Effect Plugin Js -->
     <script src="{{asset('assets/backend/plugins/node-waves/waves.js')}}"></script>
 
-
+    
     <!-- Custom Js -->
     <script src="{{asset('assets/backend/js/admin.js')}}"></script>
 
     <!-- Demo Js -->
     <script src="{{asset('assets/backend/js/demo.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    {!! Toastr::message() !!}
+        {!! Toastr::message() !!}
 
     <script>
         @if($errors->any())
@@ -184,7 +155,7 @@
        
         @endif
     
-    </script>
+    </script> 
     {{-- <script type="text/javascript">
        $(document).ready(function(){
             $.ajaxSetup({
@@ -196,7 +167,6 @@
     </script> --}}
     @stack('js')
 
-
+    
 </body>
-
 </html>
