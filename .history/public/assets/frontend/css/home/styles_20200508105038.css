@@ -103,8 +103,7 @@ header{ overflow: hidden; background: black; box-shadow: 0px 2px 10px rgba(0,0,0
 header .logo{ 
 	font-family: 'Pacifico', cursive;
 	font-size:20px;
-	float: left; height: 20px; margin:20px 30px;
-color:white;}
+	float: left; height: 20px; margin:20px 30px;}
 
 header .logo img{ height: 100%; width: auto; }
 
@@ -186,7 +185,7 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 .single-post .avatar{ margin: 0 auto; margin-top: -40px; width: 70px; overflow: hidden; z-index: 10;
 	border-radius: 100px; position: relative; border: 9px solid #fff; box-shadow: 0px 0px 10px rgba(0,0,0,.2); }
 
-.single-post .post-footer{ position: relative; bottom: 0; left: 0; right: 0; text-align: center;color:black;}
+.single-post .post-footer{ position: absolute; bottom: 0; left: 0; right: 0; text-align: center;color:black;}
 
 .single-post .post-footer > li{ width: 33.33%; display: inline-block; border-right: 1px solid #fff; background: #EDF3F3; }
 
