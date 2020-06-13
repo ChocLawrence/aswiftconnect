@@ -5,7 +5,6 @@
 @push('css')
     <!-- Bootstrap Select Css -->
     <link href="{{ asset('assets/backend/plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet" />
-
 @endpush
 
 @section('content')
@@ -64,7 +63,7 @@
                             <div class="form-group form-float">
                                 <div class="form-line {{ $errors->has('tags') ? 'focused error' : '' }}">
                                     <label for="tag">Select Tags</label>
-                                    <select name="tags[]" id="tag" class="form-control show-tick" data-live-search="true" multiple>
+                                    <select name="tags[]" id="tag" class="container form-control show-tick" data-live-search="true" multiple>
                                         @foreach($tags as $tag)
                                             <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                                         @endforeach

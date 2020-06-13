@@ -38,11 +38,6 @@
 
     <!-- Bootstrap Form Helpers -->
     <link href="{{ asset('assets/dist/css/bootstrap-formhelpers.min.css')}}" rel="stylesheet" media="screen">
-    <style type="text/css">
-        .dropdown-menu .inner {
-            margin-left: 30px !important;
-        }
-    </style>
 
 
     <!-- Bootstrap Core Css -->
@@ -161,9 +156,9 @@
     <script src="{{asset('assets/backend/plugins/bootstrap/js/bootstrap.js')}}"></script>
 
     <!-- Select Plugin Js -->
-    <!-- <script src="asset('assets/backend/plugins/bootstrap-select/js/bootstrap-select.js')"></script> -->
+   <script src="{{asset('assets/backend/plugins/bootstrap-select/js/bootstrap-select.js')}}"></script>
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 
 

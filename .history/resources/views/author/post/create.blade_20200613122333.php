@@ -4,8 +4,8 @@
 
 @push('css')
     <!-- Bootstrap Select Css -->
-    <link href="{{ asset('assets/backend/plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet" />
-
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 @endpush
 
 @section('content')

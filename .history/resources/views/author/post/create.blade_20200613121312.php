@@ -5,7 +5,6 @@
 @push('css')
     <!-- Bootstrap Select Css -->
     <link href="{{ asset('assets/backend/plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet" />
-
 @endpush
 
 @section('content')
@@ -51,7 +50,7 @@
                         </div>
                         <div class="body">
                             <div class="form-group form-float">
-                                <div class="form-line {{ $errors->has('categories') ? 'focused error' : '' }}">
+                                <div class="form-line form-group {{ $errors->has('categories') ? 'focused error' : '' }}">
                                     <label for="category">Select Category</label>
                                     <select name="categories[]" id="category" class="form-control show-tick" data-live-search="true" multiple>
                                         @foreach($categories as $category)
@@ -62,7 +61,7 @@
                             </div>
 
                             <div class="form-group form-float">
-                                <div class="form-line {{ $errors->has('tags') ? 'focused error' : '' }}">
+                                <div class="form-line form-group {{ $errors->has('tags') ? 'focused error' : '' }}">
                                     <label for="tag">Select Tags</label>
                                     <select name="tags[]" id="tag" class="form-control show-tick" data-live-search="true" multiple>
                                         @foreach($tags as $tag)

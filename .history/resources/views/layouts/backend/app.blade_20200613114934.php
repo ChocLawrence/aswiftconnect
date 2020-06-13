@@ -38,11 +38,6 @@
 
     <!-- Bootstrap Form Helpers -->
     <link href="{{ asset('assets/dist/css/bootstrap-formhelpers.min.css')}}" rel="stylesheet" media="screen">
-    <style type="text/css">
-        .dropdown-menu .inner {
-            margin-left: 30px !important;
-        }
-    </style>
 
 
     <!-- Bootstrap Core Css -->
@@ -71,32 +66,6 @@
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
 
-    @push('scripts')
-    <!-- Facebook Pixel Code -->
-
-    <script>
-        !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742');
-    fbq('track', 'PageView');
-    fbq('track', 'CompleteRegistration');
-    fbq('track', 'Contact');
-    fbq('track', 'Search');
-    fbq('track', 'ViewContent');
-
-    </script>
-    <noscript>
-        <img height="1" width="1" src="https://www.facebook.com/tr?id=255693655560742&ev=PageView
-    &noscript=1" />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
-    @endpush
 
 </head>
 
@@ -161,10 +130,8 @@
     <script src="{{asset('assets/backend/plugins/bootstrap/js/bootstrap.js')}}"></script>
 
     <!-- Select Plugin Js -->
-    <!-- <script src="asset('assets/backend/plugins/bootstrap-select/js/bootstrap-select.js')"></script> -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.17/js/bootstrap-select.min.js"></script>
+
 
 
     <!-- Waves Effect Plugin Js -->
@@ -203,7 +170,6 @@
             });
         });
     </script> --}}
-    @stack('js')
 
 
 </body>

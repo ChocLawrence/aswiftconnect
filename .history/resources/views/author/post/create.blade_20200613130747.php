@@ -5,6 +5,11 @@
 @push('css')
     <!-- Bootstrap Select Css -->
     <link href="{{ asset('assets/backend/plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet" />
+    <style>
+        .inner{
+            margin-left: 30px;
+        }
+     </style>
 
 @endpush
 

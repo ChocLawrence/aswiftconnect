@@ -5,13 +5,12 @@
 @push('css')
     <!-- Bootstrap Select Css -->
     <link href="{{ asset('assets/backend/plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet" />
-
 @endpush
 
 @section('content')
     <div class="container-fluid">
         <!-- Vertical Layout | With Floating Label -->
-        <form action="{{ route('author.post.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row clearfix">
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
@@ -24,7 +23,7 @@
                         <div class="body">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="title" class="form-control" name="title" maxlength="35" value="{{ old('title') }}">
+                                        <input type="text" id="title" class="form-control" name="title">
                                         <label class="form-label">Post Title</label>
                                     </div>
                                 </div>
@@ -71,7 +70,6 @@
                                     </select>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -85,13 +83,13 @@
                             </h2>
                         </div>
                         <div class="body">
-                            <textarea id="tinymce" name="body">{{ old('body') }}</textarea>
-                            <a  class="btn btn-danger m-t-15 waves-effect" href="{{ route('author.post.index') }}">BACK</a>
+                            <textarea id="tinymce" name="body"></textarea>
+                            <a  class="btn btn-danger m-t-15 waves-effect" href="{{ route('admin.category.index') }}">BACK</a>
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">SUBMIT</button>
+
                         </div>
                     </div>
                 </div>
-
             </div>
         </form>
     </div>

@@ -65,11 +65,11 @@
     <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
-    @stack('css')
 
+    @push('scripts')
     <!-- Facebook Pixel Code -->
+
     <script>
-        
         !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -78,7 +78,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
+     fbq('init', '255693655560742');
     fbq('track', 'PageView');
     fbq('track', 'CompleteRegistration');
     fbq('track', 'Contact');
@@ -91,6 +91,7 @@
     &noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
+    @endpush
 
 </head>
 
@@ -155,7 +156,9 @@
     <script src="{{asset('assets/backend/plugins/bootstrap/js/bootstrap.js')}}"></script>
 
     <!-- Select Plugin Js -->
-    <!-- <script src="{{asset('assets/backend/plugins/bootstrap-select/js/bootstrap-select.js')}}"></script> -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 
 
     <!-- Waves Effect Plugin Js -->
@@ -174,16 +177,16 @@
         @if($errors->any())
 
           @foreach($errors->all() as $error)
-                 
+
                  toastr.error('{{$error}}','Error',{
                      closeButton:true,
                      progressBar:true,
                  });
 
           @endforeach
-       
+
         @endif
-    
+
     </script>
     {{-- <script type="text/javascript">
        $(document).ready(function(){

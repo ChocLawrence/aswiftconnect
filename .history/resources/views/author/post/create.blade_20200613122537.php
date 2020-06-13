@@ -2,11 +2,6 @@
 
 @section('title','Post')
 
-@push('css')
-    <!-- Bootstrap Select Css -->
-    <link href="{{ asset('assets/backend/plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet" />
-
-@endpush
 
 @section('content')
     <div class="container-fluid">

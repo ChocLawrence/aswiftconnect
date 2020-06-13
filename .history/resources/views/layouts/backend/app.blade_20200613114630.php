@@ -65,32 +65,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
-    @stack('css')
 
-    <!-- Facebook Pixel Code -->
-    <script>
-        
-        !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
-    fbq('track', 'PageView');
-    fbq('track', 'CompleteRegistration');
-    fbq('track', 'Contact');
-    fbq('track', 'Search');
-    fbq('track', 'ViewContent');
-
-    </script>
-    <noscript>
-        <img height="1" width="1" src="https://www.facebook.com/tr?id=255693655560742&ev=PageView
-    &noscript=1" />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
 
 </head>
 
@@ -174,16 +149,16 @@
         @if($errors->any())
 
           @foreach($errors->all() as $error)
-                 
+
                  toastr.error('{{$error}}','Error',{
                      closeButton:true,
                      progressBar:true,
                  });
 
           @endforeach
-       
+
         @endif
-    
+
     </script>
     {{-- <script type="text/javascript">
        $(document).ready(function(){
@@ -194,7 +169,6 @@
             });
         });
     </script> --}}
-    @stack('js')
 
 
 </body>
