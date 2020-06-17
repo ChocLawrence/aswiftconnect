@@ -98,7 +98,7 @@
 
                                             @if($post->is_completed==true)
                                             <span class="col label label-success"
-                                                style="color:white"><strong>Completed</strong></span>
+                                                style="float:right;color:white"><strong>Completed</strong></span>
                                             @endif
 
                                         @endif
