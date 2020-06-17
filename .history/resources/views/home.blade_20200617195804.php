@@ -2,10 +2,11 @@
 
 @section('title','Projects')
 
+@push('css')
 <link href="{{ asset('assets/frontend/css/home/styles.css') }}" rel="stylesheet">
 
 <link href="{{ asset('assets/frontend/css/home/responsive.css') }}" rel="stylesheet">
-
+@endpush
 
 @section('content')
 <div class="main-slider">
@@ -68,35 +69,35 @@
                             @endif
                         </div>
 
-                        @if($post->assigned_to===$userId || $userId!==3)        
+                        @if($post->assigned_to===$userId || $userId!==3)
                             <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
-                                
+
                                 @if(Storage::disk('public')->exists('profile/'.$post->user->image))
                                     <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
                                 @else
                                     <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
                                 @endif
-                            
+
                             </a>
                         @else
 
                             <a class="avatar">
-                                
+
                                 @if(Storage::disk('public')->exists('profile/'.$post->user->image))
                                     <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
                                 @else
                                     <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
                                 @endif
-                            
+
                             </a>
-                        
+
                         @endif
 
                         <div class="blog-info">
 
-                            <h4 class="title"><a href="{{ route('post.details',$post->slug) }}"
-                                    style="color:black;"><strong>{{ substr($post->title,0,25)}}.</strong></a></h4>
-                            <div>
+                            <h5 class="title"><a href="{{ route('post.details',$post->slug) }}"
+                                    style="color:black;font-size:small;"><strong>{{ substr($post->title,0,25)}}.</strong></a></h5>
+                            <div class="row">
                                 @if($userId===1)
                                     @if($post->is_paid==true)
                                     <span class="label badge-inverse" style="float:left;color:white"><strong>$
@@ -123,12 +124,12 @@
                                         style="float:right;color:white"><strong>Unassigned</strong></span>
                                     @endif
                                 @else
-                                    
+
                                     @if($post->is_completed==true)
                                     <span class="label label-success"
                                         style="float:right;color:white"><strong>Completed</strong></span>
                                     @endif
-                                 
+
                                 @endif
                             </div>
 
