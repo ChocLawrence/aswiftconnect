@@ -60,15 +60,15 @@
 
                                     <div class="blog-info">
 
-                                        <h5 class="title"><a href="{{ route('post.details',$post->slug) }}" style="font-size: small"><b>{{ $post->title }}</b></a></h5>
-                                        <div class="row">
+                                        <h4 class="title"><a href="{{ route('post.details',$post->slug) }}"><b>{{ $post->title }}</b></a></h4>
+                                        <div>
                                             @if($post->is_paid==true)
                                                 <span class="label badge-inverse" style="float:left;color:white"><strong>$ {{$post->amount}}</strong></span>
                                                 <span class="label label-success" style="float:right;color:white"><strong>Paid</strong></span>
                                             @elseif($post->is_paid!=true)
                                                 <span class="label label-large label-pink" style="float:right;color:white"><strong>Unpaid</strong></span>
-                                            @endif
-
+                                            @endif 
+    
                                             @if($post->assigned_to!=null)
                                                 <span class="label label-info" style="float:right;color:white"><strong>Assigned</strong></span>
                                                 @if($post->is_completed==true)
