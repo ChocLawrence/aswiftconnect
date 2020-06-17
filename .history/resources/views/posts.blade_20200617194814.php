@@ -73,7 +73,7 @@
 
                                 <div class="blog-info">
 
-                                    <h5 class="title"><a href="{{ route('post.details',$post->slug) }}" style="color:black; font-size:small">{{ $post->title }}</a></h5>
+                                    <h4 class="title"><a href="{{ route('post.details',$post->slug) }}" style="color:black;">{{ $post->title }}</a></h4>
 
                                     <div class="row">
                                         @if($userId===1)
