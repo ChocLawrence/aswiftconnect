@@ -217,9 +217,7 @@
             <div class="col-six">
                 <br /><br /><br /><br /><br />
                 <p class="lead" data-aos="fade-up">
-                    A Swift Connect is a social enterprise whose mission is to create jobs on the African Continent for
-                    the millions of unemployed youth. We have a vast pool of diverse and highly vetted Programmers,
-                    Ux/Ui Designers, and Videographers who are ready to help you achieve your wildest projects.
+                    A Swift Connect is a social enterprise whose mission is to create jobs on the African Continent for the millions of unemployed youth. We have a vast pool of diverse and highly vetted Programmers, Ux/Ui Designers, and Videographers who are ready to help you achieve your wildest projects.
 
                 </p>
             </div>
@@ -279,45 +277,6 @@
             </div> <!-- end features-list -->
 
         </div> <!-- end about-features -->
-
-        <div class="row about-how">
-
-            <h1 class="intro-header" data-aos="fade-up">Why Us?</h1>
-
-            <div class="about-how-content" data-aos="fade-up">
-                <div class="about-how-steps">
-
-                    <div class="bgrid step" data-item="1" style="min-height: 150px;">
-                        <h3>Reducing unemployment</h3>
-                        <p>By hiring a freelancer on our platform you are contributing to reducing the unemployment gap
-                            on the African Continent, and therefore stimulating the economy in the region where that
-                            Freelancer resides. You automatically become part of the movement to help Africa become
-                            self-sufficient.
-                            <a href="#">Click below to see how</a>
-                        </p>
-                    </div>
-
-                    <div class="bgrid step" data-item="2" style="min-height: 150px;">
-                        <h3>Diversity</h3>
-                        <p>You have a unique value proposition which is diversity. You have the opportunity to have
-                            someone on your team who has a different way of looking at things due to being from a
-                            different country and has a different culture which can be a competitive advantage if you
-                            have plans of expanding to international markets.
-
-                        </p>
-                    </div>
-
-                    <div class="bgrid step" data-item="3" style="min-height: 150px;">
-                        <h3>Competitive prices</h3>
-                        <p>Our prices are one of the most competitive in the industry.By working with us, you are
-                            guaranteed to get your projects done with quality at lesser costs.
-                        </p>
-                    </div>
-
-                </div>
-            </div> <!-- end about-how-content -->
-
-        </div> <!-- end about-how -->
 
         <div class="row about-how">
 

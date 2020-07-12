@@ -54,7 +54,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
+    @push('scripts')
     <!-- Facebook Pixel Code -->
+
     <script>
         !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -64,7 +66,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
+     fbq('init', '255693655560742');
     fbq('track', 'PageView');
     fbq('track', 'CompleteRegistration');
     fbq('track', 'Contact');
@@ -77,12 +79,12 @@
     &noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
-
+    @endpush
 </head>
 
 <body id="top">
 
-    <!-- header 
+    <!-- header
    ================================================== -->
     <header id="header" class="row">
 
@@ -124,7 +126,7 @@
     <!-- home
    ================================================== -->
     <section id="home" data-parallax="scroll"
-        data-image-src="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg')}}" data-natural-width=3000
+        data-image-src="{{ asset('assets/frontend/css/landing/images/hero-bg.png')}}" data-natural-width=3000
         data-natural-height=2000>
 
         <div class="overlay"></div>
@@ -159,8 +161,8 @@
                 </div>
 
                 <!-- <div class="home-image-right">
-                    <img src="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}}" 
-                        srcset="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}} 1x, {{asset('assets/frontend/css/landing/images/iphone-app-940.png')}} 2x"  
+                    <img src="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}}"
+                        srcset="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}} 1x, {{asset('assets/frontend/css/landing/images/iphone-app-940.png')}} 2x"
                         data-aos="fade-up">
                 </div> -->
             </div>
@@ -623,14 +625,14 @@
         @if($errors->any())
 
             @foreach($errors->all() as $error)
-                    
+
                     toastr.error('{{$error}}','Error',{
                         closeButton:true,
                         progressBar:true,
                     });
 
             @endforeach
-    
+
         @endif
     </script>
 

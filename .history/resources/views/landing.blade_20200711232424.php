@@ -287,7 +287,7 @@
             <div class="about-how-content" data-aos="fade-up">
                 <div class="about-how-steps">
 
-                    <div class="bgrid step" data-item="1" style="min-height: 150px;">
+                    <div class="bgrid step" data-item="1">
                         <h3>Reducing unemployment</h3>
                         <p>By hiring a freelancer on our platform you are contributing to reducing the unemployment gap
                             on the African Continent, and therefore stimulating the economy in the region where that
@@ -297,7 +297,7 @@
                         </p>
                     </div>
 
-                    <div class="bgrid step" data-item="2" style="min-height: 150px;">
+                    <div class="bgrid step" data-item="2">
                         <h3>Diversity</h3>
                         <p>You have a unique value proposition which is diversity. You have the opportunity to have
                             someone on your team who has a different way of looking at things due to being from a
@@ -307,7 +307,7 @@
                         </p>
                     </div>
 
-                    <div class="bgrid step" data-item="3" style="min-height: 150px;">
+                    <div class="bgrid step" data-item="3">
                         <h3>Competitive prices</h3>
                         <p>Our prices are one of the most competitive in the industry.By working with us, you are
                             guaranteed to get your projects done with quality at lesser costs.

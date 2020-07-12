@@ -54,7 +54,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
+    @push('scripts')
     <!-- Facebook Pixel Code -->
+
     <script>
         !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -64,20 +66,25 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
+     fbq('init', '255693655560742');
     fbq('track', 'PageView');
+    fbq('track', 'CompleteRegistration');
+    fbq('track', 'Contact');
+    fbq('track', 'Search');
+    fbq('track', 'ViewContent');
+
     </script>
     <noscript>
         <img height="1" width="1" src="https://www.facebook.com/tr?id=255693655560742&ev=PageView
     &noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
-
+    @endpush
 </head>
 
 <body id="top">
 
-    <!-- header 
+    <!-- header
    ================================================== -->
     <header id="header" class="row">
 
@@ -119,7 +126,7 @@
     <!-- home
    ================================================== -->
     <section id="home" data-parallax="scroll"
-        data-image-src="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg')}}" data-natural-width=3000
+        data-image-src="{{ asset('assets/frontend/css/landing/images/hero-bg.png')}}" data-natural-width=3000
         data-natural-height=2000>
 
         <div class="overlay"></div>
@@ -154,8 +161,8 @@
                 </div>
 
                 <!-- <div class="home-image-right">
-                    <img src="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}}" 
-                        srcset="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}} 1x, {{asset('assets/frontend/css/landing/images/iphone-app-940.png')}} 2x"  
+                    <img src="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}}"
+                        srcset="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}} 1x, {{asset('assets/frontend/css/landing/images/iphone-app-940.png')}} 2x"
                         data-aos="fade-up">
                 </div> -->
             </div>
@@ -210,10 +217,8 @@
             <div class="col-six">
                 <br /><br /><br /><br /><br />
                 <p class="lead" data-aos="fade-up">
-                    ASwiftConnect is a platform which brings together professionals and employers who
-                    want to get their projects done in the least possible amount of time.
-                    We pay great attention to all our customers and ensure the best results.Never fail to Contact
-                    us for anything. We encourage youths to join the platform in ever growing numbers
+                    A Swift Connect is a social enterprise whose mission is to create jobs on the African Continent for the millions of unemployed youth. We have a vast pool of diverse and highly vetted Programmers, Ux/Ui Designers, and Videographers who are ready to help you achieve your wildest projects.
+
                 </p>
             </div>
 
@@ -272,6 +277,49 @@
             </div> <!-- end features-list -->
 
         </div> <!-- end about-features -->
+
+        <div class="row about-how">
+
+            <h1 class="intro-header" data-aos="fade-up">Why Us?</h1>
+
+            <div class="about-how-content" data-aos="fade-up">
+                <div class="about-how-steps">
+
+                    <div class="bgrid step" data-item="1">
+                        <h3>Registration</h3>
+                        <p>Employers register through the employer portal while
+                            professionals do same through the freelancer
+                            portal.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="2">
+                        <h3>Posting Projects</h3>
+                        <p>Jobs are posted by the employers whenever a job is to be done.Posting
+                            a job requires the employer to login to his or her dashboard and create a post. Our
+                            reviewers will review the post and
+                            either accept or reject based on many criteria which span from clarity to feasibility.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="3">
+                        <h3>Freelancer Selection</h3>
+                        <p>Our Management team, using an expert based algorithm, will get the professionals
+                            who are fit for the job and assign them to the project.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="4">
+                        <h3>Job Completion</h3>
+                        <p>When the freelancer(s) have finished working on the project, payments are then made to
+                            them.
+                        </p>
+                    </div>
+
+                </div>
+            </div> <!-- end about-how-content -->
+
+        </div> <!-- end about-how -->
 
         <div class="row about-how">
 
@@ -618,14 +666,14 @@
         @if($errors->any())
 
             @foreach($errors->all() as $error)
-                    
+
                     toastr.error('{{$error}}','Error',{
                         closeButton:true,
                         progressBar:true,
                     });
 
             @endforeach
-    
+
         @endif
     </script>
 

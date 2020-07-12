@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
 use App\Notifications\ResumeUploaded;
+use App\Notifications\WelcomeAuthor;
 use App\Notifications\ResumeReceived;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator;
@@ -50,7 +51,7 @@ class RegisterController extends Controller
         }elseif(Auth::check() && Auth::user()->role->id == 2)
         {
             $this->redirectTo = route('author.dashboard');
-        
+
         } else {
 
             $this->redirectTo = route('freelancer.dashboard');
@@ -69,7 +70,7 @@ class RegisterController extends Controller
 
          //fix registraion role id
          if($data['role_id']=='3'){
-           
+
             return Validator::make($data, [
                 'name' => 'required|string|max:50',
                 'username' => 'required|string|max:10|unique:users',
@@ -94,7 +95,7 @@ class RegisterController extends Controller
                 'terms'=>'required',
             ]);
         }
-       
+
     }
 
     /**
@@ -107,7 +108,7 @@ class RegisterController extends Controller
     {
         //fix registraion role id
         if($data['role_id']=='3'){
-           
+
             $role_id=3;
             $status=0;
             if($data['resume']){
@@ -140,7 +141,7 @@ class RegisterController extends Controller
             ->notify(new  ResumeReceived($user));
 
 
-    
+
 
         }else{
             $role_id=2;
@@ -161,12 +162,10 @@ class RegisterController extends Controller
 
              Notification::route('mail',$user->email)
              ->notify(new  WelcomeAuthor($user));
- 
+
+
         }
 
-       
-        
-        
         return $user;
     }
 }

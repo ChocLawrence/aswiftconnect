@@ -66,7 +66,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
+     fbq('init', '255693655560742');
     fbq('track', 'PageView');
     fbq('track', 'CompleteRegistration');
     fbq('track', 'Contact');
@@ -84,7 +84,7 @@
 
 <body id="top">
 
-    <!-- header 
+    <!-- header
    ================================================== -->
     <header id="header" class="row">
 
@@ -126,7 +126,7 @@
     <!-- home
    ================================================== -->
     <section id="home" data-parallax="scroll"
-        data-image-src="{{ asset('assets/frontend/css/landing/images/hero-bg.jpg')}}" data-natural-width=3000
+        data-image-src="{{ asset('assets/frontend/css/landing/images/hero-bg.png')}}" data-natural-width=3000
         data-natural-height=2000>
 
         <div class="overlay"></div>
@@ -161,8 +161,8 @@
                 </div>
 
                 <!-- <div class="home-image-right">
-                    <img src="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}}" 
-                        srcset="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}} 1x, {{asset('assets/frontend/css/landing/images/iphone-app-940.png')}} 2x"  
+                    <img src="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}}"
+                        srcset="{{ asset('assets/frontend/css/landing/images/iphone-app-470.png')}} 1x, {{asset('assets/frontend/css/landing/images/iphone-app-940.png')}} 2x"
                         data-aos="fade-up">
                 </div> -->
             </div>
@@ -217,10 +217,10 @@
             <div class="col-six">
                 <br /><br /><br /><br /><br />
                 <p class="lead" data-aos="fade-up">
-                    ASwiftConnect is a platform which brings together professionals and employers who
-                    want to get their projects done in the least possible amount of time.
-                    We pay great attention to all our customers and ensure the best results.Never fail to Contact
-                    us for anything. We encourage youths to join the platform in ever growing numbers
+                    A Swift Connect is a social enterprise whose mission is to create jobs on the African Continent for
+                    the millions of unemployed youth. We have a vast pool of diverse and highly vetted Programmers,
+                    Ux/Ui Designers, and Videographers who are ready to help you achieve your wildest projects.
+
                 </p>
             </div>
 
@@ -279,6 +279,45 @@
             </div> <!-- end features-list -->
 
         </div> <!-- end about-features -->
+
+        <div class="row about-how">
+
+            <h1 class="intro-header" data-aos="fade-up">Why Us?</h1>
+
+            <div class="about-how-content" data-aos="fade-up">
+                <div class="about-how-steps">
+
+                    <div class="bgrid step" data-item="1">
+                        <h3>Reducing unemployment</h3>
+                        <p>By hiring a freelancer on our platform you are contributing to reducing the unemployment gap
+                            on the African Continent, and therefore stimulating the economy in the region where that
+                            Freelancer resides. You automatically become part of the movement to help Africa become
+                            self-sufficient.
+                            <a href="#">Click below to see how</a>
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="2">
+                        <h3>Diversity</h3>
+                        <p>You have a unique value proposition which is diversity. You have the opportunity to have
+                            someone on your team who has a different way of looking at things due to being from a
+                            different country and has a different culture which can be a competitive advantage if you
+                            have plans of expanding to international markets.
+
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="3">
+                        <h3>Competitive prices</h3>
+                        <p>Our prices are one of the most competitive in the industry.By working with us, you are
+                            guaranteed to get your projects done with quality at lesser costs.
+                        </p>
+                    </div>
+
+                </div>
+            </div> <!-- end about-how-content -->
+
+        </div> <!-- end about-how -->
 
         <div class="row about-how">
 
@@ -625,14 +664,14 @@
         @if($errors->any())
 
             @foreach($errors->all() as $error)
-                    
+
                     toastr.error('{{$error}}','Error',{
                         closeButton:true,
                         progressBar:true,
                     });
 
             @endforeach
-    
+
         @endif
     </script>
 
