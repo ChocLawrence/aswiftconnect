@@ -33,12 +33,6 @@
     <link href="{{ asset('assets/frontend/css/landing/css/main.css') }}" rel="stylesheet">
 
 
-    <style>
-        .about-how-content::before,
-        .about-how-content::after {
-            background-color: rgba(255, 255, 255, 0);
-        }
-    </style>
     <!-- script
    ================================================== -->
     <script src="{{ asset('assets/frontend/css/landing/js/modernizr.js') }}"></script>

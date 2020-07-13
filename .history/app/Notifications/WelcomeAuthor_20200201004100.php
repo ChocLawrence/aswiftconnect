@@ -42,7 +42,7 @@ class WelcomeAuthor extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
          return (new MailMessage)->from('info@aswiftconnect.com',"ASwiftConnect Inc")
-         ->subject("You registered successfully as an employer")->markdown('emails.author.welcomeAuthor', ['author' => $this->author]);
+         ->subject("You registered successfully as an author")->markdown('emails.author.welcomeAuthor', ['author' => $this->author]);      
     }
 
     /**

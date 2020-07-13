@@ -329,7 +329,7 @@
 
             <h1 class="intro-header" data-aos="fade-up">How ASwiftConnect Works?</h1>
 
-            <div class="about-how-content" data-aos="fade-up">
+            <div class="about-how-content" data-aos="fade-up" style="background-color: white !important;">
                 <div class="about-how-steps block-1-2 block-tab-full group">
 
                     <div class="bgrid step" data-item="1">

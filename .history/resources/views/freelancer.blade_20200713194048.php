@@ -135,18 +135,23 @@
                                     @endif
                                 </div>
 
-
-                                <div class="form-input">
-                                    <label for="confirm_password" class="required">Confirm Password</label>
-                                    <input type="password" name="password_confirmation" id="confirm_password" />
-                                    @if ($errors->has('password'))
+                                <div class="form-select">
+                                    <div class="label-flex">
+                                        <label for="specialty" class="required">I am a freelance ...</label>
+                                    </div>
+                                    <div class="select-list">
+                                        <select class="form-control" id="sel1" name="specialty">
+                                            <option value="">Select...</option>
+                                            <option value="1">Developer</option>
+                                            <option value="2">Designer</option>
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('specialty'))
                                     <span class="invalid-feedback">
-                                        {{ $errors->first('password') }}
+                                        {{ $errors->first('specialty') }}
                                     </span>
                                     @endif
                                 </div>
-
-
 
                             </div>
                             <div class="form-group">
@@ -196,32 +201,23 @@
                             </div>
 
 
-                            <div class="form-select">
-                                <div class="label-flex">
-                                    <label for="specialty" class="required">I am a freelance ...</label>
-                                </div>
-                                <div class="select-list">
-                                    <select class="form-control" id="sel1" name="specialty">
-                                        <option value="">Select...</option>
-                                        <option value="1">Developer</option>
-                                        <option value="2">Designer</option>
-                                    </select>
-                                </div>
-                                @if ($errors->has('specialty'))
+                            <div class="form-input">
+                                <label for="confirm_password" class="required">Confirm Password</label>
+                                <input type="password" name="password_confirmation" id="confirm_password" />
+                                @if ($errors->has('password'))
                                 <span class="invalid-feedback">
-                                    {{ $errors->first('specialty') }}
+                                    {{ $errors->first('password') }}
                                 </span>
                                 @endif
                             </div>
 
                             <div class="form-input">
 
+                                <input class="input-checkbox100" id="terms" type="checkbox" name="terms" value="1">
                                 <label class="label-checkbox100" for="terms">
                                     I Agree to the <a href="{{ url('/terms') }}">Terms and Conditions</a><br>& <a
                                         href="{{ url('/privacy') }}">Privacy Policy</a><span style="color:red;">*</span>
-                                    <input class="input-checkbox100" type="checkbox" name="terms" value="1">
-                                </label>
-                                <br>
+                                </label><br>
                                 @if ($errors->has('terms'))
                                 <span class="invalid-feedback">
                                     You must agree to our terms

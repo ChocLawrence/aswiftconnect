@@ -33,12 +33,6 @@
     <link href="{{ asset('assets/frontend/css/landing/css/main.css') }}" rel="stylesheet">
 
 
-    <style>
-        .about-how-content::before,
-        .about-how-content::after {
-            background-color: rgba(255, 255, 255, 0);
-        }
-    </style>
     <!-- script
    ================================================== -->
     <script src="{{ asset('assets/frontend/css/landing/js/modernizr.js') }}"></script>
@@ -329,7 +323,7 @@
 
             <h1 class="intro-header" data-aos="fade-up">How ASwiftConnect Works?</h1>
 
-            <div class="about-how-content" data-aos="fade-up">
+            <div class="about-how-content" data-aos="fade-up" style="background-color: white; !important;">
                 <div class="about-how-steps block-1-2 block-tab-full group">
 
                     <div class="bgrid step" data-item="1">

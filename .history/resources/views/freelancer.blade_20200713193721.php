@@ -34,29 +34,32 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 	<link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+	@push('scripts')
 	<!-- Facebook Pixel Code -->
+
 	<script>
 		!function(f,b,e,v,n,t,s)
-	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-	n.queue=[];t=b.createElement(e);t.async=!0;
-	t.src=v;s=b.getElementsByTagName(e)[0];
-	s.parentNode.insertBefore(t,s)}(window,document,'script',
-	'https://connect.facebook.net/en_US/fbevents.js');
-	 fbq('init', '255693655560742'); 
-	fbq('track', 'PageView');
-	fbq('track', 'CompleteRegistration');
-	fbq('track', 'Contact');
-	fbq('track', 'Search');
-	fbq('track', 'ViewContent');
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+     fbq('init', '255693655560742');
+    fbq('track', 'PageView');
+    fbq('track', 'CompleteRegistration');
+    fbq('track', 'Contact');
+    fbq('track', 'Search');
+    fbq('track', 'ViewContent');
 
 	</script>
 	<noscript>
 		<img height="1" width="1" src="https://www.facebook.com/tr?id=255693655560742&ev=PageView
-	&noscript=1" />
+    &noscript=1" />
 	</noscript>
 	<!-- End Facebook Pixel Code -->
+	@endpush
 </head>
 
 <body>
@@ -153,7 +156,7 @@
 							</div>
 							<div class="form-group">
 
-								<div class="form-input">
+								{{-- <div class="form-input">
 									<label for="username" class="required">Username</label>
 									<input type="text" name="username" id="username" value="{{ old('username') }}" />
 									@if ($errors->has('username'))
@@ -161,7 +164,7 @@
 										{{ $errors->first('username') }}
 									</span>
 									@endif
-								</div>
+								</div> --}}
 
 								<div class="form-input">
 									<label for="phone" class="required">Phone number</label>
@@ -249,13 +252,13 @@
 		document.getElementById('fake-file-button-browse').addEventListener('click', function() {
 			document.getElementById('files-input-upload').click();
 		});
-		
+
 		document.getElementById('files-input-upload').addEventListener('change', function() {
 			document.getElementById('fake-file-input-name').value = this.value;
-			
+
 		});
 
-		
+
 	</script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 

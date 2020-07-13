@@ -46,7 +46,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
+     fbq('init', '255693655560742');
     fbq('track', 'PageView');
     fbq('track', 'CompleteRegistration');
     fbq('track', 'Contact');
@@ -252,13 +252,13 @@
 		document.getElementById('fake-file-button-browse').addEventListener('click', function() {
 			document.getElementById('files-input-upload').click();
 		});
-		
+
 		document.getElementById('files-input-upload').addEventListener('change', function() {
 			document.getElementById('fake-file-input-name').value = this.value;
-			
+
 		});
 
-		
+
 	</script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 

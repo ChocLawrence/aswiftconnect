@@ -4,7 +4,7 @@
 	<title>Register as Employer | ASwiftConnect</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
+<!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/vendor/bootstrap/css/bootstrap.min.css')}}">
@@ -16,13 +16,13 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/fonts/iconic/css/material-design-iconic-font.min.css')}}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/vendor/animate/animate.css')}}">
-<!--===============================================================================================-->
+<!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/vendor/css-hamburgers/hamburgers.min.css')}}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/vendor/animsition/css/animsition.min.css')}}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/vendor/select2/select2.min.css')}}">
-<!--===============================================================================================-->
+<!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/vendor/daterangepicker/daterangepicker.css')}}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/register/css/util.css')}}">
@@ -45,7 +45,7 @@
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 </head>
 <body style="background-color: #000000;">
-
+	
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="login100-more" style="background-image: url('{{ asset('assets/frontend/css/register/images/bg-01.jpg')}}');">
@@ -56,9 +56,9 @@
 						<strong><h3 style="background:black;padding:10px;border-radius: 25px;">Our freelancers are professionals</h3></strong><br>
 						<a class="txt2" href="{{route('freelancer')}}"><button class="btn btn-primary">Join us as Freelancer</button><br><br></a>
 				</div>
-
+	
 			</div>
-
+		
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
 					@csrf
@@ -68,7 +68,7 @@
 						<a href="{{route('landing')}}" title="Go Back to Homepage"><img style="border-radius: 50%;"
 							width="50" height="50"
 							src="{{ asset('assets/frontend/css/login/images/avatar-01.png')}}" alt="AVATAR"></a>
-
+						
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
@@ -94,7 +94,7 @@
 						@endif
 					</div>
 
-					{{-- <div class="wrap-input100 validate-input" data-validate="Username is required">
+					<div class="wrap-input100 validate-input" data-validate="Username is required">
 						<span class="label-input100">Username</span>
 						<input class="input100 form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" type="text" name="username" placeholder="Username..."  value="{{ old('username') }}">
 						<span class="focus-input100"></span>
@@ -103,13 +103,13 @@
 							<strong>{{ $errors->first('username') }}</strong>
 						</span>
 						@endif
-					</div> --}}
+					</div>
 					<!-- <select id="countries_phone1" class="form-control bfh-countries" data-country="US" data-flags="true"></select>
 					<br>
 					<input type="text" class="form-control bfh-phone" data-country="countries_phone1"> -->
 
 
-					{{-- <div class="wrap-input100 validate-input" data-validate="Phone is required">
+					<div class="wrap-input100 validate-input" data-validate="Phone is required">
 						<div class="row">
 							<div class="col-md-6">
 									<span class="label-input100">Country</span>
@@ -130,7 +130,7 @@
 					   </div>
 
 
-					</div> --}}
+					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
@@ -153,7 +153,7 @@
 						</div>
 						@endif
 					</div>
-
+					
 
 
 					<div class="flex-m w-full p-b-33">
@@ -172,7 +172,7 @@
 						</div>
 						@endif
 
-
+						
 					</div>
 
 					<div class="container-login100-form-btn">
@@ -192,7 +192,7 @@
 			</div>
 		</div>
 	</div>
-
+	
 <!--===============================================================================================-->
 	<script src="{{ asset('assets/frontend/css/register/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <!--===============================================================================================-->
