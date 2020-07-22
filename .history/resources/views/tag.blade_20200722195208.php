@@ -49,7 +49,7 @@
 
                                     <div class="blog-info">
 
-                                        <h5 class="title"><a href="{{ route('post.details',$post->slug) }}" style="color:black; font-size:small"><b>{{ $post->title }}</b></a></h5>
+                                        <h4 class="title"><a href="{{ route('post.details',$post->slug) }}" style="color:black; font-size:small"><b>{{ $post->title }}</b></a></h4>
 
                                         <ul class="post-footer">
 

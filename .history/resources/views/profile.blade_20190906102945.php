@@ -61,7 +61,7 @@
 
                                         <div class="blog-info">
 
-                                            <h5 class="title"><a href="{{ route('post.details',$post->slug) }}"  style="color:black; font-size:small">{{ $post->title }}</a></h5>
+                                            <h4 class="title"><a href="{{ route('post.details',$post->slug) }}">{{ $post->title }}</a></h4>
                                             <div>
                                                 @if($userId===1)
                                                     @if($post->is_paid==true)
@@ -69,8 +69,8 @@
                                                         <span class="label label-success" style="float:right;color:white"><strong>Paid</strong></span>
                                                     @elseif($post->is_paid!=true)
                                                         <span class="label label-large label-pink" style="float:right;color:white"><strong>Unpaid</strong></span>
-                                                    @endif
-
+                                                    @endif 
+            
                                                     @if($post->assigned_to!=null)
                                                         <span class="label label-info" style="float:right;color:white"><strong>Assigned</strong></span>
                                                         @if($post->is_completed==true)
@@ -82,13 +82,13 @@
                                                         <span class="label label-large label-grey" style="float:right;color:white"><strong>Unassigned</strong></span>
                                                     @endif
                                                 @else
-
+                                    
                                                     @if($post->is_completed==true)
                                                     <span class="label label-success"
                                                         style="float:right;color:white"><strong>Completed</strong></span>
                                                     @endif
-
-                                                @endif
+                                                 
+                                                @endif    
                                             </div>
 
                                             <ul class="post-footer">
@@ -153,10 +153,10 @@
                             <p>Country:&nbsp;<strong>{{ $countryName }}</strong>&nbsp;{{$countryFlag}}</p><br>
                             <p><strong>Author Since: </strong>{{ $author->created_at->toDateString() }}</p><br>
                             <p><strong>Total Posts : </strong> {{ $author->posts->count() }}</p>
-                            <div class="icons" style="position: absolute;
+                            <div class="icons" style="position: absolute; 
                             bottom: 0;padding:10px;float:right;">
                                 <ul  style="font-size:20px;">
-
+                                   
                                     @if($author->facebook_url!=null)
                                       <li><a href="{{$author->facebook_url}}" target="_blank"><i class="ion-social-facebook"></i></a></li>
                                     @endif

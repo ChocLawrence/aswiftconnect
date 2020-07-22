@@ -3,11 +3,11 @@
 ====================================================
 
 * 	[Master Stylesheet]
-	
-	Theme Name :  
-	Version    :  
-	Author     :  
-	Author URI :  
+
+	Theme Name :
+	Version    :
+	Author     :
+	Author URI :
 
 ====================================================
 
@@ -20,7 +20,7 @@
 html{ font-size: 100%; height: 100%;  overflow-x: hidden; touch-action: manipulation; }
 
 body{ font-size: 15px; font-family: 'Merriweather', serif sans-serif; width: 100%; height: 100%; margin: 0; font-weight: 300;
-	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word; 
+	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word;
 	background: rgb(0, 0, 0); color: white; }
 
 h1, h2, h3, h4, h5, h6, p, a, ul, span, li, img{ margin: 0; padding: 0; font-weight: 300; }
@@ -32,7 +32,7 @@ p{ line-height: 1.6; font-family: 'Maven Pro', sans-serif; font-weight: 400; col
 h1{ font-size: 4em; line-height: 1; }
 h2{ font-size: 2.8em; line-height: 1.1; }
 h3{ font-size: 1.5em; }
-h4{ font-size: 1.2em; }
+h4{ font-size: 1.2em; color:black; }
 h5{ font-size: 1.1em; }
 h6{ font-size: .9em; letter-spacing: 1px; }
 
@@ -41,7 +41,7 @@ a, button{ display: inline-block; text-decoration: none; color: darkgray; transi
 a:focus, a:active, a:hover,
 button:focus, button:active, button:hover{ text-decoration: none; color: rgb(206, 130, 16); }
 
-b{ font-weight: 600; color:white;}
+b{ font-weight: 600; color:black;}
 
 img{ width: 100%; }
 
@@ -61,15 +61,11 @@ header{ font-weight: 400; }
 
 .section .heading{ padding-bottom: 70px; }
 
-.center-text{ text-align: center; } 
+.center-text{ text-align: center; }
 
 .color-white{ color: #fff; }
 
-.display-table{ 
-	display: table;
-	height: 100%; 
-	width: 100%;
- }
+.display-table{ display: table; height: 100%; width: 100%; }
 
 .display-table-cell{ display: table-cell; vertical-align: middle; }
 
@@ -100,11 +96,10 @@ header{ font-weight: 400; }
 
 header{ overflow: hidden; background: black; box-shadow: 0px 2px 10px rgba(0,0,0, .3); }
 
-header .logo{ 
+header .logo{
 	font-family: 'Pacifico', cursive;
 	font-size:20px;
-	float: left; height: 20px; margin:20px 30px;
-color:white;}
+	float: left; height: 20px; margin:20px 30px;}
 
 header .logo img{ height: 100%; width: auto; }
 
@@ -134,44 +129,44 @@ header .src-area .src-input{ position: absolute; top: 0; bottom: 0; left: 0; rig
 header .src-area .src-input:focus{ box-shadow: 0px 0px 1px #aaa; }
 
 header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width: 40px; background: none; border: 0;
-	color:black; 
+	color:black;
 	font-size: 1.2em; outline: 0; margin-left: 20px; opacity: .6; cursor: pointer; z-index: 10; }
 
 
 /* NAV ICON */
 
-.menu-nav-icon{ display: none; height: 60px; width: 50px; text-align: center; line-height: 60px; cursor: pointer; 
+.menu-nav-icon{ display: none; height: 60px; width: 50px; text-align: center; line-height: 60px; cursor: pointer;
 	position: absolute; right: 0; font-size: 1.8em; }
 
-	
+
 
 /* ---------------------------------
 4. SLIDER
 --------------------------------- */
 
-.main-slider{ width: 100%; padding-right: 150px; }  
- 
+.main-slider{ width: 100%; padding-right: 150px; }
+
 .main-slider{ overflow: hidden; position: relative; }
 
 .main-slider .swiper-container{ overflow: visible; }
 
 .main-slider .category{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1; color: #fff; }
- 
-.main-slider .category:after{ content:''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; 
-	background: rgba(0,0,0,.4); } 
+
+.main-slider .category:after{ content:''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1;
+	background: rgba(0,0,0,.4); }
 
 
 /* SLIDER CONTROLER */
 
-.main-slider .swiper-button-prev, 
-.main-slider .swiper-button-next{ top: 0; bottom: 0; width: auto; margin: 0; background: none; font-size: 4em; 
+.main-slider .swiper-button-prev,
+.main-slider .swiper-button-next{ top: 0; bottom: 0; width: auto; margin: 0; background: none; font-size: 4em;
 	top: 50%; margin-top: -50px; height: 100px; color: #fff; }
 
 .main-slider .swiper-button-prev{ left: 20px; }
 
 .main-slider .swiper-button-next{ right: 20px; }
 
- 
+
 /* ---------------------------------
 5. SINGLE POST
 --------------------------------- */
@@ -180,13 +175,19 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 
 .blog-area{ text-align: center; background: #EDF3F3; }
 
-.blog-area .single-post{ height: 100%; position: relative;
+.stroke{
+	color:rgb(255, 255, 255);
+  font-weight: bold;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.blog-area .single-post{ height: 100%; position: relative; padding-bottom: 45px;
 	overflow: hidden; box-shadow: 0px 0px 5px rgba(0,0,0,.1); border: 1px solid #ddd; background: #fff; }
 
-.single-post .avatar{ margin: 0 auto; margin-top: -40px; width: 70px; overflow: hidden; z-index: 10;
-	border-radius: 100px; position: relative; border: 9px solid #fff; box-shadow: 0px 0px 10px rgba(0,0,0,.2); }
+.single-post .avatar{ margin: 0 auto; margin-top: -40px; width: 60px; overflow: hidden; z-index: 10;
+	border-radius: 100px; position: relative; border: 7px solid #fff; box-shadow: 0px 0px 10px rgba(0,0,0,.2); }
 
-.single-post .post-footer{ position: relative; bottom: 0; left: 0; right: 0; text-align: center;color:black;}
+.single-post .post-footer{ position: absolute; bottom: -15px !important; left: 0; right: 0; text-align: center;color:black;}
 
 .single-post .post-footer > li{ width: 33.33%; display: inline-block; border-right: 1px solid #fff; background: #EDF3F3; }
 
@@ -218,8 +219,8 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 .post-style-2 .avatar-area{ padding: 25px 0 15px; position: relative; }
 
 .post-style-2 .avatar{ margin: 0px; }
-	
-.post-style-2 .avatar-area .right-area{ margin-left: 90px; position: absolute; top: 50%; transform: translateY(-50%); }
+
+.post-style-2 .avatar-area .right-area{ margin-left: 90px; position: absolute; top: 50%; transform: translateY(-50%);width: 200px; }
 
 .post-style-2 .blog-image{ width: 50%; float: left; height: 100%; }
 
@@ -248,7 +249,7 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 .load-more-btn{ padding: 15px 40px; margin: 10px 0 30px; transition: all .3s; box-shadow: 0px 0px 2px rgba(0,0,0,.4);
 	background: #C3D8F5; }
 
-.load-more-btn:hover{ transform: translateY(-2px); box-shadow: 5px 10px 20px rgba(0,0,0,.3); } 
+.load-more-btn:hover{ transform: translateY(-2px); box-shadow: 5px 10px 20px rgba(0,0,0,.3); }
 
 
 
@@ -268,7 +269,7 @@ footer .footer-section ul > li{ margin-right: 10px; margin-top: 10px; }
 footer .copyright{ margin: 10px 0; color:darkgray;}
 
 
-footer .icons > li > a{ height: 40px; width: 40px; border-radius: 40px; line-height: 40px; text-align: center; 
+footer .icons > li > a{ height: 40px; width: 40px; border-radius: 40px; line-height: 40px; text-align: center;
 	transition: all .3s; font-size: 1.2em; box-shadow: 0px 0px 2px rgba(0,0,0,1); background: #498BF9; color: #fff; }
 
 footer .icons > li > a:hover{ transform: translateY(-2px); box-shadow: 5px 10px 20px rgba(0,0,0,.3); }
@@ -281,7 +282,7 @@ footer .input-area .email-input{ position: absolute; top: 0; bottom: 0; left: 0;
 
 footer .input-area .email-input:focus{ box-shadow: 0px 0px 1px #aaa; }
 
-footer .input-area .submit-btn{ position: absolute; top: 0; bottom: 0; right: 0; width: 50px; background: none; 
+footer .input-area .submit-btn{ position: absolute; top: 0; bottom: 0; right: 0; width: 50px; background: none;
 	border: 0; outline: 0; margin-right: 10px; opacity: .8; cursor: pointer; transition: all .2s; }
 
 
@@ -327,23 +328,3 @@ background-color: #ABBAC3!important; }
 .label-yellow { color: #963!important; border-color: #fee188 }
 .badge-light,
 .label-light { color: #888!important }
-
-/* ------------------------------------------------------------------- 
- * alert box - (_alert-box.scss)
- * ------------------------------------------------------------------- */
-
-.alert-box {
-	border-radius: 3px;
-    font-family: "montserrat-regular", sans-serif;
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    background-color: #caf9ca;
-    z-index: 1000;
-}
-
-.alert-box .close {
-	position: absolute;
-    right: 1.8rem;
-    top: 0.01rem;
-	cursor: pointer;
-}

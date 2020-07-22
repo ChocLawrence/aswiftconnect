@@ -134,7 +134,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="password">
+						<input class="input100" type="password" name="password" >
 						<span class="focus-input100"></span>
 						@if ($errors->has('password'))
 						<span class="invalid-feedback">

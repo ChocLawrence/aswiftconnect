@@ -70,7 +70,7 @@
                         </div>
 
                         @if($post->assigned_to===$userId || $userId!==3)
-                            <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+                            <a class="avatar" href="{{ route('author.profile',$post->user->name) }}">
 
                                 @if(Storage::disk('public')->exists('profile/'.$post->user->image))
                                     <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
@@ -100,34 +100,34 @@
                             <div class="row">
                                 @if($userId===1)
                                     @if($post->is_paid==true)
-                                    <span class="label badge-inverse" style="float:left;color:white"><strong>$
+                                    <span class="col label badge-inverse" style="color:white"><strong>$
                                             {{$post->earning}}</strong></span>
-                                    <span class="label label-success"
-                                        style="float:right;color:white"><strong>Paid</strong></span>
+                                    <span class="col label label-success"
+                                        style="color:white"><strong>Paid</strong></span>
                                     @elseif($post->is_paid!=true)
-                                    <span class="label label-large label-pink"
-                                        style="float:right;color:white"><strong>Unpaid</strong></span>
+                                    <span class="col label label-large label-pink"
+                                        style="color:white"><strong>Unpaid</strong></span>
                                     @endif
 
                                     @if($post->assigned_to!=null)
-                                    <span class="label label-info"
-                                        style="float:right;color:white"><strong>Assigned</strong></span>
+                                    <span class="col label label-info"
+                                        style="color:white"><strong>Assigned</strong></span>
                                     @if($post->is_completed==true)
-                                    <span class="label label-success"
-                                        style="float:right;color:white"><strong>Completed</strong></span>
+                                    <span class="col label label-success"
+                                        style="color:white"><strong>Completed</strong></span>
                                     @elseif($post->is_completed==false)
-                                    <span class="label label-large label-amber" style="float:right;color:white"><strong>In
+                                    <span class="col label label-large label-amber" style="color:white"><strong>In
                                             Progress</strong></span>
                                     @endif
                                     @elseif($post->assigned_to==null)
-                                    <span class="label label-large label-grey"
-                                        style="float:right;color:white"><strong>Unassigned</strong></span>
+                                    <span class="col label label-large label-grey"
+                                        style="color:white"><strong>Unassigned</strong></span>
                                     @endif
                                 @else
 
                                     @if($post->is_completed==true)
-                                    <span class="label label-success"
-                                        style="float:right;color:white"><strong>Completed</strong></span>
+                                    <span class="col label label-success"
+                                        style="color:white"><strong>Completed</strong></span>
                                     @endif
 
                                 @endif

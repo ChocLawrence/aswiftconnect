@@ -85,7 +85,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">Email</span>
-						<input class="input100 form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" name="email" placeholder="Email address..."  value="{{ old('email') }}">
+						<input class="input100 form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" name="email" placeholder="Email addess..."  value="{{ old('email') }}">
 						<span class="focus-input100"></span>
 						@if ($errors->has('email'))
 						<span class="invalid-feedback">
@@ -134,7 +134,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="password">
+						<input class="input100" type="password" name="password" placeholder="*************">
 						<span class="focus-input100"></span>
 						@if ($errors->has('password'))
 						<span class="invalid-feedback">
@@ -145,7 +145,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
-						<input class="input100 form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password_confirmation">
+						<input class="input100 form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password_confirmation" placeholder="*************">
 						<span class="focus-input100"></span>
 						@if ($errors->has('password'))
 						<div class="invalid-feedback">

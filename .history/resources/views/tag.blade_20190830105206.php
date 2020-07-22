@@ -15,7 +15,7 @@
         .favorite_posts{
             color: blue;
         }
-
+        
     </style>
 @endpush
 
@@ -39,7 +39,7 @@
                                     </div>
 
                                     <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
-
+                                      
                                         @if(Storage::disk('public')->exists('profile/'.$post->user->image))
                                             <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
                                         @else
@@ -49,7 +49,7 @@
 
                                     <div class="blog-info">
 
-                                        <h5 class="title"><a href="{{ route('post.details',$post->slug) }}" style="color:black; font-size:small"><b>{{ $post->title }}</b></a></h5>
+                                        <h4 class="title"><a href="{{ route('post.details',$post->slug) }}"><b>{{ $post->title }}</b></a></h4>
 
                                         <ul class="post-footer">
 

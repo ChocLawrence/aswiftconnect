@@ -70,7 +70,7 @@
                         </div>
 
                         @if($post->assigned_to===$userId || $userId!==3)
-                            <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+                            <a class="avatar" href="{{ route('author.profile',$post->user->name) }}">
 
                                 @if(Storage::disk('public')->exists('profile/'.$post->user->image))
                                     <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />

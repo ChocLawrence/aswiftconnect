@@ -1,27 +1,29 @@
 @extends('layouts.frontend.app')
 
-@section('title','Tag')
+@section('title','Category')
 
 @push('css')
     <link href="{{ asset('assets/frontend/css/category/styles.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/frontend/css/category/responsive.css') }}" rel="stylesheet">
     <style>
         .slider {
-                height: 400px;
-                width: 100%;
-                background-image: url({{ asset('assets/frontend/images/back.jpeg') }});
-                background-size: cover;
+            height: 400px;
+            width: 100%;
+            background-image: url({{ Storage::disk('public')->url('category/'.$category->image) }});
+            background-size: cover;
         }
         .favorite_posts{
             color: blue;
         }
-
     </style>
 @endpush
 
 @section('content')
     <div class="slider display-table center-text">
-        <h1 class="title display-table-cell stroke">{{ $tag->name }}</h1>
+        <h1 class="title display-table-cell"><span style="font-weight: 600;
+             color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;">{{ $category->name }}</span></h1>
     </div><!-- slider -->
 
     <section class="blog-area section">
@@ -35,22 +37,57 @@
                                 <div class="single-post post-style-1">
 
                                     <div class="blog-image">
-                                        <img src="{{ Storage::disk('public')->url('post/'.$post->image) }}" alt="{{ $post->title }}">
+                                        @if(Storage::disk('public')->exists('post/'.$post->image))
+                                          <img src="{{ Storage::disk('public')->url('post/'.$post->image) }}" alt="{{ $post->title }}">
+                                        @else
+                                          <img src="{{  asset('assets/frontend/images/post_default.jpg') }}"  alt="Project Default Image" />
+                                        @endif
                                     </div>
 
-                                    <a class="avatar" href="{{ route('author.profile',$post->user->username) }}">
+
+                                    <a class="avatar" href="{{ route('author.profile',$post->user->name) }}">
 
                                         @if(Storage::disk('public')->exists('profile/'.$post->user->image))
-                                            <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" width="48" height="48" alt="User" />
+                                            <img src="{{ Storage::disk('public')->url('profile/'.$post->user->image)  }}" alt="User" />
                                         @else
-                                            <img src="{{  asset('assets/frontend/images/default.png') }}" width="48" height="48" alt="User" />
+                                            <img src="{{  asset('assets/frontend/images/default.png') }}"  alt="User" />
                                         @endif
+
                                     </a>
 
                                     <div class="blog-info">
 
-                                        <h5 class="title"><a href="{{ route('post.details',$post->slug) }}" style="color:black; font-size:small"><b>{{ $post->title }}</b></a></h5>
+                                        <h5 class="title"><a href="{{ route('post.details',$post->slug) }}" style="font-size: small;"><b>{{ $post->title }}</b></a></h5>
 
+                                        <div class="row">
+
+                                            @if($userId===1)
+                                                @if($post->is_paid==true)
+                                                    <span class="col label badge-inverse" style="color:white"><strong>$ {{$post->earning}}</strong></span>
+                                                    <span class="col label label-success" style="color:white"><strong>Paid</strong></span>
+                                                @elseif($post->is_paid!=true)
+                                                    <span class="col label label-large label-pink" style="color:white"><strong>Unpaid</strong></span>
+                                                @endif
+
+                                                @if($post->assigned_to!=null)
+                                                    <span class="col label label-info" style="color:white"><strong>Assigned</strong></span>
+                                                    @if($post->is_completed==true)
+                                                    <span class="col label label-success" style="color:white"><strong>Completed</strong></span>
+                                                    @elseif($post->is_completed==false)
+                                                        <span class="col label label-large label-grey" style="color:white"><strong>In Progress</strong></span>
+                                                    @endif
+                                                @elseif($post->assigned_to==null)
+                                                    <span class="col label label-large label-grey" style="color:white"><strong>Unassigned</strong></span>
+                                                @endif
+                                            @else
+
+                                                @if($post->is_completed==true)
+                                                <span class="col label label-success"
+                                                    style="color:white"><strong>Completed</strong></span>
+                                                @endif
+
+                                            @endif
+                                        </div>
                                         <ul class="post-footer">
 
                                             <li>

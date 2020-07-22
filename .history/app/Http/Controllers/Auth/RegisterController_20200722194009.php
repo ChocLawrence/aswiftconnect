@@ -78,7 +78,7 @@ class RegisterController extends Controller
                 'email' => 'required|string|email|max:255|unique:users',
                 'password' => 'required|string|min:6|confirmed',
                 'specialty' => 'required|in:1,2',
-                'resume' => 'required|mimes:pdf|file|max:1000',
+                'resume' => 'required|mimes:pdf|file|max:4000',
                 'terms'=>'required',
             ]);
 
@@ -103,7 +103,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         //fix registraion role id
-        $random = rand(2,29999);
+        $random = rand(2,20000);
         if($data['role_id']=='3'){
             //freelancer
 

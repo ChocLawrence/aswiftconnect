@@ -78,7 +78,7 @@ class RegisterController extends Controller
                 'email' => 'required|string|email|max:255|unique:users',
                 'password' => 'required|string|min:6|confirmed',
                 'specialty' => 'required|in:1,2',
-                'resume' => 'required|mimes:pdf|file|max:1000',
+                'resume' => 'required|mimes:pdf|file|max:4000',
                 'terms'=>'required',
             ]);
 
@@ -103,7 +103,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         //fix registraion role id
-        $random = rand(2,29999);
+        $random = rand(2,20000);
         if($data['role_id']=='3'){
             //freelancer
 
@@ -111,8 +111,8 @@ class RegisterController extends Controller
             $status=0;
 
             $slug = str_slug($data['name']);
-            $username = $slug.$random;
 
+            $username = $slug + $random;
             if($data['resume']){
                 $resume=1;
                 $resumePdf=$data['resume'];
@@ -126,7 +126,6 @@ class RegisterController extends Controller
                 'phone' => $data['phone'],
                 'password' => Hash::make($data['password']),
                 'status'=> $status,
-                'username'=> $username,
                 'specialty' => $data['specialty'],
                 'resume' => $resume
             ]);
@@ -150,13 +149,10 @@ class RegisterController extends Controller
 
             $role_id=2;
             $status=1;
-            $slug = str_slug($data['name']);
-            $username = $slug.$random;
 
             $user = User::create([
                 'role_id' => $role_id,
                 'name' => $data['name'],
-                'username' => $username,
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
                 'status'=> $status

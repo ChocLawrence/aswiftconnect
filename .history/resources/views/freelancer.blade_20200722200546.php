@@ -101,7 +101,7 @@
 
                                 <div class="form-input">
                                     <label for="name" class="required">Full names</label>
-                                    <input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Enter first and last name"/>
+                                    <input type="text" name="name" id="name" value="{{ old('name') }}" />
                                     <input id="role_id" type="text" name="role_id" value="3" style="display:none;">
                                     @if ($errors->has('name'))
                                     <span class="invalid-feedback">
