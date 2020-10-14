@@ -54,6 +54,15 @@
 
 
     @stack('scripts')
+
+    <!-- Mailchimp-->
+    <script id="mcjs">
+        !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c6ca13401775eb3c3707dec66/e1e805a8e4c5ed53bc5ee65c6.js");
+    </script>
+
+
+
+
     <!-- Facebook Pixel Code -->
 
     <script>
@@ -65,7 +74,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
+     fbq('init', '255693655560742');
     fbq('track', 'PageView');
     fbq('track', 'CompleteRegistration');
     fbq('track', 'Contact');
@@ -110,16 +119,16 @@
         @if($errors->any())
 
           @foreach($errors->all() as $error)
-                 
+
                  toastr.error('{{$error}}','Error',{
                      closeButton:true,
                      progressBar:true,
                  });
 
           @endforeach
-       
+
         @endif
-    
+
     </script>
     @stack('js')
 

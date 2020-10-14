@@ -19,7 +19,14 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
+    @push('scripts')
+    <!-- Mailchimp-->
+    <script id="mcjs">
+        !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c6ca13401775eb3c3707dec66/e1e805a8e4c5ed53bc5ee65c6.js");
+    </script>
+
     <!-- Facebook Pixel Code -->
+
     <script>
         !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -29,7 +36,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '255693655560742'); 
+     fbq('init', '255693655560742');
     fbq('track', 'PageView');
     fbq('track', 'CompleteRegistration');
     fbq('track', 'Contact');
@@ -42,6 +49,7 @@
     &noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
+    @endpush
 </head>
 
 <body>

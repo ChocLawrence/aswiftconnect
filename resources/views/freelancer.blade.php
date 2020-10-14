@@ -35,6 +35,13 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
     @push('scripts')
+
+    <!-- Mailchimp-->
+    <script id="mcjs">
+        !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c6ca13401775eb3c3707dec66/e1e805a8e4c5ed53bc5ee65c6.js");
+    </script>
+
+
     <!-- Facebook Pixel Code -->
 
     <script>
@@ -101,7 +108,8 @@
 
                                 <div class="form-input">
                                     <label for="name" class="required">Full names</label>
-                                    <input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Enter first and last name"/>
+                                    <input type="text" name="name" id="name" value="{{ old('name') }}"
+                                        placeholder="Enter first and last name" />
                                     <input id="role_id" type="text" name="role_id" value="3" style="display:none;">
                                     @if ($errors->has('name'))
                                     <span class="invalid-feedback">

@@ -61,6 +61,12 @@
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
 
     @push('scripts')
+
+    <!-- Mailchimp-->
+    <script id="mcjs">
+        !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c6ca13401775eb3c3707dec66/e1e805a8e4c5ed53bc5ee65c6.js");
+    </script>
+
     <!-- Facebook Pixel Code -->
 
     <script>
@@ -108,7 +114,7 @@
                 <li><a class="smoothscroll" href="#pricing" title="pricing">Fields</a></li>
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
                 <li><a href="{{ route('journey') }}" title="Our Journey">Our Journey</a></li>
-                <li><a href="{{ route('home') }}" title="Projects">Projects</a></li>
+                {{-- <li><a href="{{ route('home') }}" title="Projects">Projects</a></li> --}}
                 {{-- <li><a href="{{ route('browse') }}" title="Freelancers">Freelancers</a></li> --}}
             </ul>
 
@@ -329,7 +335,7 @@
 
             <h1 class="intro-header" data-aos="fade-up">How ASwiftConnect Works?</h1>
 
-            <div class="about-how-content" data-aos="fade-up" style="background-color: white !important;">
+            <div class="about-how-content" data-aos="fade-up">
                 <div class="about-how-steps block-1-2 block-tab-full group">
 
                     <div class="bgrid step" data-item="1">

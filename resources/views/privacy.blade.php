@@ -20,6 +20,12 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
     @push('scripts')
+
+    <!-- Mailchimp-->
+    <script id="mcjs">
+        !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c6ca13401775eb3c3707dec66/e1e805a8e4c5ed53bc5ee65c6.js");
+    </script>
+
     <!-- Facebook Pixel Code -->
 
     <script>
@@ -31,13 +37,13 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window,document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-       fbq('init', '255693655560742'); 
+       fbq('init', '255693655560742');
       fbq('track', 'PageView');
       fbq('track', 'CompleteRegistration');
       fbq('track', 'Contact');
       fbq('track', 'Search');
       fbq('track', 'ViewContent');
-  
+
     </script>
     <noscript>
         <img height="1" width="1" src="https://www.facebook.com/tr?id=255693655560742&ev=PageView

@@ -35,6 +35,13 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="{{ asset('assets/frontend/css/landing/favicon.ico')}}" type="image/x-icon">
     @push('scripts')
+
+    <!-- Mailchimp-->
+    <script id="mcjs">
+        !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c6ca13401775eb3c3707dec66/e1e805a8e4c5ed53bc5ee65c6.js");
+    </script>
+
+
     <!-- Facebook Pixel Code -->
 
     <script>
@@ -101,7 +108,8 @@
 
                                 <div class="form-input">
                                     <label for="name" class="required">Full names</label>
-                                    <input type="text" name="name" id="name" value="{{ old('name') }}" />
+                                    <input type="text" name="name" id="name" value="{{ old('name') }}"
+                                        placeholder="Enter first and last name" />
                                     <input id="role_id" type="text" name="role_id" value="3" style="display:none;">
                                     @if ($errors->has('name'))
                                     <span class="invalid-feedback">
@@ -135,23 +143,18 @@
                                     @endif
                                 </div>
 
-                                <div class="form-select">
-                                    <div class="label-flex">
-                                        <label for="specialty" class="required">I am a freelance ...</label>
-                                    </div>
-                                    <div class="select-list">
-                                        <select class="form-control" id="sel1" name="specialty">
-                                            <option value="">Select...</option>
-                                            <option value="1">Developer</option>
-                                            <option value="2">Designer</option>
-                                        </select>
-                                    </div>
-                                    @if ($errors->has('specialty'))
+
+                                <div class="form-input">
+                                    <label for="confirm_password" class="required">Confirm Password</label>
+                                    <input type="password" name="password_confirmation" id="confirm_password" />
+                                    @if ($errors->has('password'))
                                     <span class="invalid-feedback">
-                                        {{ $errors->first('specialty') }}
+                                        {{ $errors->first('password') }}
                                     </span>
                                     @endif
                                 </div>
+
+
 
                             </div>
                             <div class="form-group">
@@ -168,7 +171,7 @@
 
 
                             <div class="form-input">
-                                <label for="resume" class="required">Resume (max 4MB)</label>
+                                <label for="resume" class="required">Resume (max 1MB)</label>
                                 <div class="input-group" style="height:55px;padding:10px;">
                                     <span class="input-group-btn">
                                         <button id="fake-file-button-browse" type="button" class="btn btn-default">
@@ -201,12 +204,20 @@
                             </div>
 
 
-                            <div class="form-input">
-                                <label for="confirm_password" class="required">Confirm Password</label>
-                                <input type="password" name="password_confirmation" id="confirm_password" />
-                                @if ($errors->has('password'))
+                            <div class="form-select">
+                                <div class="label-flex">
+                                    <label for="specialty" class="required">I am a freelance ...</label>
+                                </div>
+                                <div class="select-list">
+                                    <select class="form-control" id="sel1" name="specialty">
+                                        <option value="">Select...</option>
+                                        <option value="1">Developer</option>
+                                        <option value="2">Designer</option>
+                                    </select>
+                                </div>
+                                @if ($errors->has('specialty'))
                                 <span class="invalid-feedback">
-                                    {{ $errors->first('password') }}
+                                    {{ $errors->first('specialty') }}
                                 </span>
                                 @endif
                             </div>
@@ -216,9 +227,9 @@
                                 <label class="label-checkbox100" for="terms">
                                     I Agree to the <a href="{{ url('/terms') }}">Terms and Conditions</a><br>& <a
                                         href="{{ url('/privacy') }}">Privacy Policy</a><span style="color:red;">*</span>
-                                        <input class="input-checkbox100" type="checkbox" name="terms" value="1">
+                                    <input class="input-checkbox100" type="checkbox" name="terms" value="1">
                                 </label>
-                               <br>
+                                <br>
                                 @if ($errors->has('terms'))
                                 <span class="invalid-feedback">
                                     You must agree to our terms
